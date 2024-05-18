@@ -1,21 +1,10 @@
 import Image from "next/image";
+import Hero from "@/components/hero-section";
 
 export default function Home() {
   return (
-    <main className=" flex min-h-[120vh] flex-col bg-[#AEDCEE]">
-      {/* <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1> */}
+    <main className=" flex flex-col bg-[#AEDCEE]">
+      <Hero />
     </main>
   );
 }
