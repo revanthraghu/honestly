@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-ppmori">
+      <body className="font-ppmori bg-[#AEDCEE]">
         <Navbar />
         {children}
       </body>
