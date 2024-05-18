@@ -1,4 +1,5 @@
-// components/Navbar.tsx
+"use client";
+
 import Link from "next/link";
 import logoWebImg from "@/public/navbar/logo-web.svg";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
@@ -8,6 +9,10 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "./ui/badge";
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav
       className="fixed top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-full  md:w-[520px]  md:m-[25px]"
@@ -25,10 +30,10 @@ const Navbar = () => {
     >
       <div className="px-12 md:px-9">
         <div className="flex items-center justify-between h-[60px] md:h-[63px]">
-          <Link href="/">
+          <div onClick={scrollToTop} className="cursor-pointer">
             <Image src={logoWebImg} alt="logo" className="hidden md:block" />
             <Image src={logoMobileImg} alt="logo" className="block md:hidden" />
-          </Link>
+          </div>
           {/* </div> */}
           {/* <div className="flex items-center"> */}
           <Link href="/faqs" className="text-sm hidden font-semibold md:flex">
