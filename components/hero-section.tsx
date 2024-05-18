@@ -4,7 +4,7 @@ import JoinButton from "./ui/join-button";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen mx-6 md:mx-auto ">
+    <div className="flex flex-col items-center justify-center h-screen mx-4 md:mx-auto ">
       <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
         <div className="flex flex-row">
           <span>Find your holy-grail&nbsp;</span>
@@ -51,7 +51,7 @@ export default function Hero() {
           <span className="text-center md:hidden">real people</span>
         </div>
       </div>
-      <div className="my-7 mx-6 text-center text-[13px] leading-[16.9px] tracking-[4%] md:text-[16px] md:leading-[20.8px]  md:max-w-[520px] md:mx-auto">
+      <div className="my-7 mx-8 text-center text-[13px] leading-[16.9px] tracking-[4%] md:text-[16px] md:leading-[20.8px]  md:max-w-[520px] md:mx-auto">
         We match people who have the same skin tone, skin type, age, gender,
         weather—you get the gist. A bit like Bumble, but for beauty
       </div>

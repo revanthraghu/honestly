@@ -31,8 +31,18 @@ const Navbar = () => {
       <div className="px-12 md:px-9">
         <div className="flex items-center justify-between h-[60px] md:h-[63px]">
           <div onClick={scrollToTop} className="cursor-pointer">
-            <Image src={logoWebImg} alt="logo" className="hidden md:block" />
-            <Image src={logoMobileImg} alt="logo" className="block md:hidden" />
+            <Image
+              src={logoWebImg}
+              alt="logo"
+              className="hidden md:block"
+              priority
+            />
+            <Image
+              src={logoMobileImg}
+              alt="logo"
+              className="block md:hidden"
+              priority
+            />
           </div>
           {/* </div> */}
           {/* <div className="flex items-center"> */}
