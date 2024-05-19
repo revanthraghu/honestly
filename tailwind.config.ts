@@ -69,18 +69,10 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        // fadeInOut: {
-        //   "0%, 5%": { opacity: "0" },
-        //   "8%": { opacity: "0.8" },
-        //   "10%, 22%, 25%": { opacity: "1" },
-        //   "28%, 30%": { opacity: "0" },
-        //   "80%, 100%": { opacity: "0" },
-        // },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        // fadeInOut: "fadeInOut 40s linear infinite",
       },
       fontFamily: {
         ppmori: ["PPMori", "sans-serif"],

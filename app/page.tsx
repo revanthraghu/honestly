@@ -24,6 +24,7 @@ export default function Home() {
         aria-hidden
       />
       <Section2 />
+      <Section3 />
     </main>
   );
 }
