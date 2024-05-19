@@ -3,10 +3,12 @@ import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
 import iceberg1Web from "@/public/background/iceberg1-web.svg";
 import Hero from "@/components/hero-section";
 import Section2 from "@/components/section2";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <main className=" flex flex-col bg-[#AEDCEE]">
+      <Navbar/>
       <Hero />
       <Image
         src={iceberg1Mobile}
