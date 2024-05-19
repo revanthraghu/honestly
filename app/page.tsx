@@ -3,10 +3,11 @@ import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
 import iceberg1Web from "@/public/background/iceberg1-web.svg";
 import Hero from "@/components/hero-section";
 import Section2 from "@/components/section2";
+import Section3 from "@/components/section3";
 
 export default function Home() {
   return (
-    <main className=" flex flex-col bg-[#AEDCEE]">
+    <main className="flex flex-col bg-[#AEDCEE]">
       <Hero />
       <Image
         src={iceberg1Mobile}
@@ -22,6 +23,7 @@ export default function Home() {
         aria-hidden
       />
       <Section2 />
+      <Section3 />
     </main>
   );
 }
