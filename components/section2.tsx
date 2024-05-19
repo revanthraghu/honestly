@@ -5,7 +5,7 @@ import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg
 
 export default function Section2() {
   return (
-    <div className="relative flex flex-col items-center h-screen mt-[200px]">
+    <div className="relative flex flex-col items-center mt-[200px] mb-[71px]">
       <Image src={icebergUnion} alt="background-image-2" className="absolute" />
       <Image
         src={dashedSeparatorWeb}
@@ -41,7 +41,7 @@ export default function Section2() {
             How we <span className="italic">actually</span> buy
           </div>
 
-          <div className="mt-[42px] mb-[71px] md:mt-[32px] flex flex-col items-center text-[#00A8FE] opacity-30 text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-[40%]">
+          <div className="mt-[42px] md:mt-[32px] flex flex-col items-center text-[#00A8FE] opacity-30 text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-[40%]">
             <span className="h-[36px] flex justify-center items-center w-full">
               INGREDIENTS
             </span>
