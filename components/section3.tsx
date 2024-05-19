@@ -3,18 +3,6 @@ import Image from "next/image";
 
 export default function Section3() {
   return (
-    // <div className="flex md:flex-row flex-col h-[780px] md:h-[384px]">
-    //   <div className="relative flex flex-1 justify-center items-center bg-[#F4434D]">
-    //     <div className="absolute inset-4 border-2 p-4 border-black border-dashed">
-    //       Red
-    //     </div>
-    //   </div>
-    //   <div className="relative flex flex-1 justify-center items-center bg-[#F9F7EF]">
-    //     <div className="absolute inset-4 border-2 p-4 border-black border-dashed">
-    //       Beige
-    //     </div>
-    //   </div>
-    // </div>
     <div className="flex md:flex-row flex-col h-[780px] md:h-[384px]">
       <div className="relative flex-1 bg-[#F4434D]">
         <div className="absolute inset-4 flex justify-center border-2 border-black border-dashed">

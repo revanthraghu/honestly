@@ -4,6 +4,7 @@ import iceberg1Web from "@/public/background/iceberg1-web.svg";
 import Hero from "@/components/hero-section";
 import Section2 from "@/components/section2";
 import Section3 from "@/components/section3";
+import Ticker from "@/components/ticker";
 import Navbar from "@/components/navbar";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       />
       <Section2 />
       <Section3 />
+      <Ticker />
     </main>
   );
 }
