@@ -24,8 +24,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        filledEllipse: "#00A8FE",
-        mutedEllipse: "#D9D9D9",
+
+        filledEllipse : "#00A8FE",
+        mutedEllipse : "#D9D9D9",
+        topShade : "#AEDCEE",
+        bottomShade : "#F4F5F0",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
