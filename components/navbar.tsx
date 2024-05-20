@@ -61,8 +61,6 @@ const Navbar = ({
                   priority
                 />
               </div>
-              {/* </div> */}
-              {/* <div className="flex items-center"> */}
               <Link href="/faqs" className="text-sm hidden font-semibold md:flex">
                 FAQS
               </Link>
@@ -79,7 +77,6 @@ const Navbar = ({
               <div className="relative cursor-pointer">
                 <Image src={chatIcon} alt="chat" onClick={handleMessageBox} />
                 <Badge
-                  //   variant="default"
                   className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600"
                 >
                   1

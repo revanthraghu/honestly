@@ -4,7 +4,10 @@ import Image from "next/image";
 export default function Info() {
     return (
         <div
-            className="block md:hidden top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-full  md:w-[520px]  md:m-[25px]">
+            className="block md:hidden top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-full  md:w-[520px]  md:m-[25px]" 
+            style={{                
+                boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)"
+                }}>
             <div>
                 <div className="flex flex-row justify-center items-center">
                     <div className="border-black border-[0.5px] h-[292px] sm:mt-[73px] ">

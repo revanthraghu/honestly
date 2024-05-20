@@ -8,7 +8,6 @@ interface Props {
     setIsMessageBoxOpen: (arg0: boolean) => void;
 }
 
-
 const Modal = ({
     isMobile,
     isMessageBoxOpen,
@@ -23,7 +22,8 @@ const Modal = ({
         <div
             className="top-0 z-50 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4">
             <div className="h-[60px] mt-[8px] rounded-[100px]" style={{
-                background: "#00A8FE"
+                background: "#00A8FE",
+                boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
             }}>
                 <div className="px-8">
                     <div className="flex items-center justify-between h-[60px]">
@@ -37,7 +37,7 @@ const Modal = ({
                 </div>
             </div>
 
-            <div className="mx-[4px] w-[98%] md:w-full flex flex-col md:h-[544px] rounded-[32px] h-[365px] mt-[7px]"
+            <div className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-[365px] mt-[7px]"
                 style={{
                     background: "rgba(255, 255, 255, 1)"
                 }}>
