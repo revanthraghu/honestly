@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'darkEffect': "url('/iceberg/dark.svg')",
+        'fadeEffect': "url('/iceberg/fade.svg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -25,10 +29,10 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
 
-        filledEllipse: "#00A8FE",
-        mutedEllipse: "#D9D9D9",
-        topShade: "#AEDCEE",
-        bottomShade: "#F4F5F0",
+        filledEllipse : "#00A8FE",
+        mutedEllipse : "#D9D9D9",
+        topShade : "#AEDCEE",
+        bottomShade : "#F4F5F0",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -64,6 +68,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        color: {
+          '50%': { backgroundImage: "url('/iceberg/fade.svg')", color: "#00A8FE", width:"330px" },
+          '100%': { backgroundImage: "url('/iceberg/dark.svg')", color: "#122B2E", width:"330px" },
+        },
+        diamond: {
+          '50%': { backgroundColor: "#AEDCEE" },
+          '100%': { backgroundColor: "#FFFFFF" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -84,6 +96,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        color: 'color 0.1s forwards',
+        diamond: 'diamond 0.1s forwards',
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
       },
