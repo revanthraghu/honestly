@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import review1 from "@/public/reviews/1.svg";
 import review2 from "@/public/reviews/2.svg";
@@ -14,31 +13,11 @@ import reviewGif7 from "@/public/reviews/gifs/7.gif";
 import leafImg from "@/public/reviews/leaf.svg";
 import invertedLeafImg from "@/public/reviews/inverted-leaf.svg";
 import JoinButton from "./ui/join-button";
-import useMeasure from "react-use-measure";
-import { useMotionValue, animate, motion } from "framer-motion";
-import { useEffect } from "react";
 
 export default function ReviewSection() {
-  let [ref, { width }] = useMeasure();
-  const xTranslation = useMotionValue(0);
-
-  useEffect(() => {
-    let controls;
-    let finalPosition = -width / 2 - 8;
-    controls = animate(xTranslation, [0, finalPosition], {
-      ease: "linear",
-      duration: 25,
-      repeat: Infinity,
-      repeatType: "loop",
-      repeatDelay: 0,
-    });
-
-    return controls.stop;
-  }, [xTranslation, width]);
-
   return (
     // <div className="bg-white">
-    <div className="bg-white flex flex-col justify-center items-center h-full  ">
+    <div className="bg-white flex flex-col justify-center items-center h-full ">
       <div className="h-[50px] md:h-[96px]" />
       <div className="flex flex-col font-normal text-[36px] leading-[41.4px] px-[34px] md:px-0 md:max-w-[793px] font-ppeditorialnew text-center md:text-[52px] md:leading-[59.8px]">
         <span>
@@ -86,168 +65,8 @@ export default function ReviewSection() {
           </div>
         </div>
       </div>
-      <div className="h-[354px] mt-8 min-[850px]:hidden">
-        <motion.div
-          className="absolute left-0 w-screen flex gap-4 items-center overflow-hidden"
-          ref={ref}
-        >
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={review2}
-              alt="review2"
-              quality={100}
-              width={295}
-              height={285}
-              unoptimized
-            />
-          </div>
-
-          <div
-            className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] my-[6px] min-w-[184px] min-h-[328px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif4}
-              alt="reviewGif4"
-              quality={100}
-              width={168}
-              height={309}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[205px] min-h-[322px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif7}
-              alt="reviewGif7"
-              quality={100}
-              width={189}
-              height={322}
-            />
-          </div>
-
-          <div className="flex min-w-[294px] min-h-[322px] flex-col gap-2 justify-center items-center ">
-            <Image
-              src={review1}
-              alt="review1"
-              quality={100}
-              width={286}
-              height={158}
-              unoptimized
-              // className="bg-[#E9E5DE]"
-              style={{
-                clipPath:
-                  "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-              }}
-            />
-            <Image
-              src={review3}
-              alt="review3"
-              quality={100}
-              width={294}
-              height={138}
-              unoptimized
-              style={{
-                clipPath:
-                  "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-              }}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center min-w-[178px] bg-[#E9E5DE] min-h-[301px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif5}
-              alt="reviewGif5"
-              quality={100}
-              width={160}
-              height={287}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE]  min-w-[185px] min-h-[318px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif6}
-              alt="reviewGif6"
-              quality={100}
-              width={169}
-              height={300}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[178px] min-h-[325px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif1}
-              alt="reviewGif1"
-              quality={100}
-              width={162}
-              height={309}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[193px] min-h-[330px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif3}
-              alt="reviewGif3"
-              quality={100}
-              width={177}
-              height={312}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[190px] min-h-[328px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif2}
-              alt="reviewGif2"
-              quality={100}
-              width={174}
-              height={309}
-            />
-          </div>
-        </motion.div>
+      <div className="flex gap-2 h-[354px] w-[354px] mt-8 bg-red-600 min-[850px]:hidden">
+        <div className="relative overflow-hidden flex justify-center items-center"></div>
       </div>
       <div className="md:h-[84px]" />
     </div>
@@ -264,7 +83,9 @@ export function Collage() {
             "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
         }}
       >
+        {/* 01 */}
         <Image src={review1} alt="review1" quality={100} unoptimized />
+        {/* <img src="/reviews/1.svg" alt="review1" /> */}
       </div>
       <div
         className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] -ml-[14px] p-[6px] w-[91px] h-[165px]"

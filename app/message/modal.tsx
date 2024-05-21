@@ -34,39 +34,28 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
         </div>
       </div>
 
-
-            <div className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
-                style={{
-                    background: "rgba(255, 255, 255, 1)",
-                    boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)"
-                }}>
-                <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider">
-                    <div>
-                        👋 Hey. We’re Vivek and Karishma
-                        We’re building Bumble for beauty & personal care needs ?
-                    </div>
-                    <div className="mt-4">
-                        <span className="font-semibold ">Huh, you ask?</span>
-                        {isMobile ? <>
-                            <div>
-                                We match you with people who are the same skin tone,
-                                skin type, age, gender, hair type as you, and have
-                                tried a whole bunch of products to give you
-                                <span className="italic"> honest</span>, and <span className="italic">nuanced</span> reviews
-                            </div></> : <>
-                            <div>
-                                Well, let’s start with a stat. 65% of people have bought a beauty product in the last 3 months that they regret. Even though they read reviews, and watched hours and hours of Youtube and Instagram reels before buying.
-                            </div>
-                            <div className="mt-4">
-                                And another stat—24% of all complaints made to Advertising Standards Council of India during Covid years were against beauty brands for misleading advertising.
-                            </div>
-                            <div className="mt-4" >
-                                So we’ve decided to solve this problem. And while we know we have a long way to go, we’re starting with something super simple: match you with people who are the same skin tone, skin type, age, gender, hair type as you, and have tried a whole bunch of products, to give you honest, nuanced and helpful reviews before you buy.
-                            </div>
-
-                            <div className="mt-4">All you have to do?</div></>}
-                    </div>
-
+      <div
+        className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
+        style={{
+          background: "rgba(255, 255, 255, 1)",
+          boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",
+        }}
+      >
+        <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider">
+          <div>
+            👋 Hey. We’re Vivek and Karishma We’re building Bumble for beauty &
+            personal care needs ?
+          </div>
+          <div className="mt-4">
+            <span className="font-semibold ">Huh, you ask?</span>
+            {isMobile ? (
+              <>
+                <div>
+                  We match you with people who are the same skin tone, skin
+                  type, age, gender, hair type as you, and have tried a whole
+                  bunch of products to give you
+                  <span className="italic"> honest</span>, and{" "}
+                  <span className="italic">nuanced</span> reviews
                 </div>
               </>
             ) : (
