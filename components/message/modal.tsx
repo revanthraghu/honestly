@@ -1,6 +1,6 @@
 import Cross from "@/public/messageHeader/Frame.svg";
 import Image from "next/image";
-import JoinButton from "../../components/ui/join-button";
+import JoinButton from "../ui/join-button";
 
 interface Props {
   isMobile: boolean;

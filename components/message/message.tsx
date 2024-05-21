@@ -1,18 +1,17 @@
-"use client";
 import Info from "./info";
 import Modal from "./modal";
 
-interface MessageProps {
+interface Props {
   isMobile: boolean;
   isMessageBoxOpen: boolean;
   setIsMessageBoxOpen: (arg0: boolean) => void;
 }
 
-export default function Message({
+const Message = ({
   isMobile,
   isMessageBoxOpen,
   setIsMessageBoxOpen,
-}: MessageProps) {
+}: Props) => {
   return (
     <main className="md:fixed flex flex-col h-[100%] z-50 md:bg-none bg-gradient-to-b from-topShade to-bottomShade ">
       <Modal
@@ -23,4 +22,6 @@ export default function Message({
       <Info />
     </main>
   );
-}
+};
+
+export default Message;
