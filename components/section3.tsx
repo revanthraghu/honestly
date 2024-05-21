@@ -27,14 +27,15 @@ export default function Section3() {
             {/* <span> */}
             <ol className="px-4 text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal">
               <li>
-                Most reviews skip the important stuff: who's using them, what’s
-                their skin tone, skin type, age, and what they really liked
-                about the product
+                Most reviews skip the important stuff: who&apos;s using them,
+                what&apos;s their skin tone, skin type, age, and what they
+                really liked about the product
               </li>
               {/* <br /> */}
               <div className="h-[16px]" />
               <span className="text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal">
-                Unless you’re one of the 3 people who found “it’s nice”
+                Unless you&apos;re one of the 3 people who found “it&apos;s
+                nice”
                 <Image
                   src={helpfulImg}
                   alt="helpful"
@@ -45,7 +46,8 @@ export default function Section3() {
               <div className="h-[16px]" />
               <li>
                 We keep falling for brand claims or what brands paid our
-                favourite influencers to say (it’s ok, we’ve all been there)
+                favourite influencers to say (it&apos;s ok, we&apos;ve all been
+                there)
               </li>
             </ol>
             {/* </span> */}
