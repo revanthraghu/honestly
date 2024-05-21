@@ -55,7 +55,7 @@ export default function Hero() {
         We match people who have the same skin tone, skin type, age, gender,
         weather—you get the gist. A bit like Bumble, but for beauty
       </div>
-      <JoinButton />
+      <JoinButton>JOIN THE WISHLIST</JoinButton>
       <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
         993 spots left
       </div>

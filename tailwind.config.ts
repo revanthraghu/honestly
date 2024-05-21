@@ -25,10 +25,10 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
 
-        filledEllipse : "#00A8FE",
-        mutedEllipse : "#D9D9D9",
-        topShade : "#AEDCEE",
-        bottomShade : "#F4F5F0",
+        filledEllipse: "#00A8FE",
+        mutedEllipse: "#D9D9D9",
+        topShade: "#AEDCEE",
+        bottomShade: "#F4F5F0",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -90,6 +90,9 @@ const config = {
       fontFamily: {
         ppmori: ["PPMori", "sans-serif"],
         ppeditorialnew: ["PPEditorialNew", "serif"],
+      },
+      boxShadow: {
+        custom: "1px 1px 2px 0px #00000099",
       },
     },
   },
