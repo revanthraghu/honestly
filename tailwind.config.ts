@@ -28,6 +28,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
         filledEllipse : "#00A8FE",
         mutedEllipse : "#D9D9D9",
         topShade : "#AEDCEE",
@@ -103,6 +104,9 @@ const config = {
       fontFamily: {
         ppmori: ["PPMori", "sans-serif"],
         ppeditorialnew: ["PPEditorialNew", "serif"],
+      },
+      boxShadow: {
+        custom: "1px 1px 2px 0px #00000099",
       },
     },
   },

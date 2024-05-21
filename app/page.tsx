@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
 import iceberg1Web from "@/public/background/iceberg1-web.svg";
@@ -7,10 +7,10 @@ import Section2 from "@/components/section2";
 import Section3 from "@/components/section3";
 import Ticker from "@/components/ticker";
 import Navbar from "@/components/navbar";
+import ReviewSection from "@/components/section4-reviews";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -19,18 +19,21 @@ export default function Home() {
       setIsMobile(window.innerWidth < 768);
     }
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [isMobile])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
 
   // Mobile
   if (isMobile) {
     return (
       <>
         <main className="flex flex-col bg-[#AEDCEE]">
-          <Navbar isMobile={isMobile} isMessageBoxOpen={isMessageBoxOpen}
-            setIsMessageBoxOpen={setIsMessageBoxOpen} />
-          {!isMessageBoxOpen &&
+          <Navbar
+            isMobile={isMobile}
+            isMessageBoxOpen={isMessageBoxOpen}
+            setIsMessageBoxOpen={setIsMessageBoxOpen}
+          />
+          {!isMessageBoxOpen && (
             <>
               <Hero />
               <Image
@@ -49,18 +52,23 @@ export default function Home() {
               <Section2 />
               <Section3 />
               <Ticker />
-            </>}
+              <ReviewSection />
+            </>
+          )}
         </main>
       </>
-    )
+    );
   }
   // Non Mobile
   else {
     return (
       <>
         <main className="flex flex-col bg-[#AEDCEE]">
-          <Navbar isMobile={isMobile} isMessageBoxOpen={isMessageBoxOpen}
-            setIsMessageBoxOpen={setIsMessageBoxOpen} />
+          <Navbar
+            isMobile={isMobile}
+            isMessageBoxOpen={isMessageBoxOpen}
+            setIsMessageBoxOpen={setIsMessageBoxOpen}
+          />
           <Hero />
           <Image
             src={iceberg1Mobile}
@@ -78,8 +86,9 @@ export default function Home() {
           <Section2 />
           <Section3 />
           <Ticker />
+          <ReviewSection />
         </main>
       </>
-    )
+    );
   }
 }
