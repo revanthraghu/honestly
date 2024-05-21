@@ -37,9 +37,10 @@ const Modal = ({
                 </div>
             </div>
 
-            <div className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-[365px] mt-[7px]"
+            <div className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
                 style={{
-                    background: "rgba(255, 255, 255, 1)"
+                    background: "rgba(255, 255, 255, 1)",
+                    boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)"
                 }}>
                 <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider">
                     <div>
