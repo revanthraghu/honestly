@@ -14,7 +14,7 @@ const Message = ({
     setIsMessageBoxOpen,
 }: Props) => {
     return (
-        <main className="md:fixed flex flex-col min-h-screen z-50 md:bg-none bg-gradient-to-b from-topShade to-bottomShade">
+        <main className="md:fixed flex flex-col h-[100%] z-50 md:bg-none bg-gradient-to-b from-topShade to-bottomShade ">
             <Modal isMobile={isMobile} isMessageBoxOpen={isMessageBoxOpen}
                 setIsMessageBoxOpen={setIsMessageBoxOpen} />
             <Info />
