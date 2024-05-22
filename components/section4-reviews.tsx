@@ -13,28 +13,26 @@ import reviewGif6 from "@/public/reviews/gifs/6.gif";
 import reviewGif7 from "@/public/reviews/gifs/7.gif";
 import leafImg from "@/public/reviews/leaf.svg";
 import invertedLeafImg from "@/public/reviews/inverted-leaf.svg";
+import leafMobileImg from "@/public/reviews/leaf-mobile.svg";
+import invertedLeafMobileImg from "@/public/reviews/inverted-leaf-mobile.svg";
 import JoinButton from "./ui/join-button";
-import useMeasure from "react-use-measure";
-import { useMotionValue, animate, motion } from "framer-motion";
-import { useEffect } from "react";
 
 export default function ReviewSection() {
-  let [ref, { width }] = useMeasure();
-  const xTranslation = useMotionValue(0);
-
-  useEffect(() => {
-    let controls;
-    let finalPosition = -width / 2 - 8;
-    controls = animate(xTranslation, [0, finalPosition], {
-      ease: "linear",
-      duration: 25,
-      repeat: Infinity,
-      repeatType: "loop",
-      repeatDelay: 0,
-    });
-
-    return controls.stop;
-  }, [xTranslation, width]);
+  const contents = [
+    {
+      title: "Real people only",
+      description: "You can report any user who seems to be a brand rep",
+    },
+    {
+      title: "AI powered matching engine",
+      description: "We’ll find you the best match",
+    },
+    {
+      title: "Match with 5-6 folks at a time",
+      description:
+        "Too many cooks spoil the broth (aka no more being overwhelmed with too many reccos)",
+    },
+  ];
 
   return (
     // <div className="bg-white">
@@ -87,169 +85,55 @@ export default function ReviewSection() {
         </div>
       </div>
       <div className="h-[354px] mt-8 min-[850px]:hidden">
-        <motion.div
-          className="absolute left-0 w-screen flex gap-4 items-center overflow-hidden"
-          ref={ref}
-        >
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={review2}
-              alt="review2"
-              quality={100}
-              width={295}
-              height={285}
-              unoptimized
-            />
-          </div>
-
-          <div
-            className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] my-[6px] min-w-[184px] min-h-[328px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif4}
-              alt="reviewGif4"
-              quality={100}
-              width={168}
-              height={309}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[205px] min-h-[322px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif7}
-              alt="reviewGif7"
-              quality={100}
-              width={189}
-              height={322}
-            />
-          </div>
-
-          <div className="flex min-w-[294px] min-h-[322px] flex-col gap-2 justify-center items-center ">
-            <Image
-              src={review1}
-              alt="review1"
-              quality={100}
-              width={286}
-              height={158}
-              unoptimized
-              // className="bg-[#E9E5DE]"
-              style={{
-                clipPath:
-                  "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-              }}
-            />
-            <Image
-              src={review3}
-              alt="review3"
-              quality={100}
-              width={294}
-              height={138}
-              unoptimized
-              style={{
-                clipPath:
-                  "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-              }}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center min-w-[178px] bg-[#E9E5DE] min-h-[301px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif5}
-              alt="reviewGif5"
-              quality={100}
-              width={160}
-              height={287}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE]  min-w-[185px] min-h-[318px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif6}
-              alt="reviewGif6"
-              quality={100}
-              width={169}
-              height={300}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[178px] min-h-[325px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif1}
-              alt="reviewGif1"
-              quality={100}
-              width={162}
-              height={309}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[193px] min-h-[330px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif3}
-              alt="reviewGif3"
-              quality={100}
-              width={177}
-              height={312}
-            />
-          </div>
-
-          <div
-            className="flex justify-center items-center bg-[#E9E5DE] min-w-[190px] min-h-[328px]"
-            style={{
-              clipPath:
-                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
-            }}
-          >
-            <Image
-              src={reviewGif2}
-              alt="reviewGif2"
-              quality={100}
-              width={174}
-              height={309}
-            />
-          </div>
-        </motion.div>
+        <ReviewSlideShow />
       </div>
-      <div className="md:h-[84px]" />
+      <div className="w-screen mt-8 min-[850px]:hidden">
+        <div className="justify-center flex flex-row px-4">
+          <div className="flex-shrink-0 flex flex-row items-center h-min max-w-[200px]">
+            <Image
+              src={leafMobileImg}
+              alt="leafMobileImg"
+              width={49}
+              height={94}
+            />
+            <div className="flex flex-col font-ppeditorialnew text-[13px] italic leading-[16.64px] text-center">
+              <span className="font-extralight">honestly,</span>
+              <span className="font-extrabold">never biased.</span>
+              <span className="font-extrabold">always neutral.</span>
+            </div>
+            <Image
+              src={invertedLeafMobileImg}
+              alt="invertedLeafMobileImg"
+              width={49}
+              height={94}
+            />
+          </div>
+          {/* <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
+            <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
+              Real people only
+            </span>
+            <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px]">
+              You can report any user who seems to be a brand rep
+            </span>
+          </div> */}
+
+          <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
+            <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
+              {contents[0].title}
+            </span>
+            <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px]">
+              {contents[0].description}
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center mt-12">
+          <JoinButton>JOIN THE WISHLIST</JoinButton>
+          <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
+            993 spots left
+          </div>
+        </div>
+      </div>
+      <div className="h-[54px] md:h-[84px]" />
     </div>
   );
 }
@@ -401,6 +285,329 @@ export function Collage() {
         }}
       >
         <Image src={review4} alt="review4" quality={100} unoptimized />
+      </div>
+    </div>
+  );
+}
+
+export function ReviewSlideShow() {
+  return (
+    <div className="relative w-screen flex items-center overflow-x-hidden">
+      <div className="whitespace-nowrap flex flex-row items-center animate-reviewMarquee">
+        <div
+          className="relative flex justify-center  mx-2 items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={review2}
+            alt="review2"
+            quality={100}
+            width={295}
+            height={285}
+            unoptimized
+          />
+        </div>
+
+        <div
+          className="col-span-1 row-span-2 flex  mx-2 justify-center items-center bg-[#E9E5DE] my-[6px] min-w-[184px] min-h-[328px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif4}
+            alt="reviewGif4"
+            quality={100}
+            width={168}
+            height={309}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[205px] min-h-[322px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif7}
+            alt="reviewGif7"
+            quality={100}
+            width={189}
+            height={322}
+          />
+        </div>
+
+        <div className="flex min-w-[294px] min-h-[322px]  mx-2 flex-col gap-2 justify-center items-center ">
+          <Image
+            src={review1}
+            alt="review1"
+            quality={100}
+            width={286}
+            height={158}
+            unoptimized
+            // className="bg-[#E9E5DE]"
+            style={{
+              clipPath:
+                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+            }}
+          />
+          <Image
+            src={review3}
+            alt="review3"
+            quality={100}
+            width={294}
+            height={138}
+            unoptimized
+            style={{
+              clipPath:
+                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+            }}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 min-w-[178px] bg-[#E9E5DE] min-h-[301px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif5}
+            alt="reviewGif5"
+            quality={100}
+            width={160}
+            height={287}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE]  min-w-[185px] min-h-[318px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif6}
+            alt="reviewGif6"
+            quality={100}
+            width={169}
+            height={300}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[178px] min-h-[325px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif1}
+            alt="reviewGif1"
+            quality={100}
+            width={162}
+            height={309}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[193px] min-h-[330px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif3}
+            alt="reviewGif3"
+            quality={100}
+            width={177}
+            height={312}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[190px] min-h-[328px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif2}
+            alt="reviewGif2"
+            quality={100}
+            width={174}
+            height={309}
+          />
+        </div>
+      </div>
+      <div className="absolute whitespace-nowrap flex items-center flex-row animate-reviewMarquee2">
+        <div
+          className="relative flex justify-center  mx-2 items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={review2}
+            alt="review2"
+            quality={100}
+            width={295}
+            height={285}
+            unoptimized
+          />
+        </div>
+
+        <div
+          className="col-span-1 row-span-2 flex  mx-2 justify-center items-center bg-[#E9E5DE] my-[6px] min-w-[184px] min-h-[328px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif4}
+            alt="reviewGif4"
+            quality={100}
+            width={168}
+            height={309}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[205px] min-h-[322px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif7}
+            alt="reviewGif7"
+            quality={100}
+            width={189}
+            height={322}
+          />
+        </div>
+
+        <div className="flex min-w-[294px] min-h-[322px]  mx-2 flex-col gap-2 justify-center items-center ">
+          <Image
+            src={review1}
+            alt="review1"
+            quality={100}
+            width={286}
+            height={158}
+            unoptimized
+            // className="bg-[#E9E5DE]"
+            style={{
+              clipPath:
+                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+            }}
+          />
+          <Image
+            src={review3}
+            alt="review3"
+            quality={100}
+            width={294}
+            height={138}
+            unoptimized
+            style={{
+              clipPath:
+                "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+            }}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 min-w-[178px] bg-[#E9E5DE] min-h-[301px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif5}
+            alt="reviewGif5"
+            quality={100}
+            width={160}
+            height={287}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE]  min-w-[185px] min-h-[318px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif6}
+            alt="reviewGif6"
+            quality={100}
+            width={169}
+            height={300}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[178px] min-h-[325px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif1}
+            alt="reviewGif1"
+            quality={100}
+            width={162}
+            height={309}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[193px] min-h-[330px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif3}
+            alt="reviewGif3"
+            quality={100}
+            width={177}
+            height={312}
+          />
+        </div>
+
+        <div
+          className="flex justify-center items-center  mx-2 bg-[#E9E5DE] min-w-[190px] min-h-[328px]"
+          style={{
+            clipPath:
+              "polygon(7px 0%, calc(100% - 7px) 0%, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0% calc(100% - 7px), 0% 7px)",
+          }}
+        >
+          <Image
+            src={reviewGif2}
+            alt="reviewGif2"
+            quality={100}
+            width={174}
+            height={309}
+          />
+        </div>
       </div>
     </div>
   );

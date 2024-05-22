@@ -9,9 +9,13 @@ import Ticker from "@/components/ticker";
 import Navbar from "@/components/navbar";
 import ReviewSection from "@/components/section4-reviews";
 import { useEffect, useState } from "react";
+
+import Section6 from "@/components/section6";
+
 import Section5 from "@/components/section5";
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
+
 
 export default function Home() {
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);
@@ -42,23 +46,28 @@ export default function Home() {
               <Image
                 src={iceberg1Mobile}
                 alt="background-image-1"
-                className="bottom-0 left-1/2 absolute md:hidden transform -translate-x-1/2 translate-y-1/2"
+                className="bottom-0 left-1/2 absolute md:hidden transform -translate-x-1/2 translate-y-2/3 z-0"
                 aria-hidden
                 priority
               />
               <Image
                 src={iceberg1Web}
                 alt="background-image-1"
-                className="md:block bottom-0 left-1/2 absolute hidden transform -translate-x-1/2 translate-y-1/2"
+                className="md:block bottom-0 left-1/2 absolute hidden transform -translate-x-1/2 translate-y-2/3"
                 aria-hidden
               />
               <Section2 />
               <Section3 />
               <Ticker />
               <ReviewSection />
-              <Section5 />
+
+        <Section5 />
+              <Section6 />
+
+              
               <Faq />
               <Footer/>
+
             </>
           )}
         </main>
@@ -93,9 +102,13 @@ export default function Home() {
           <Section3 />
           <Ticker />
           <ReviewSection />
-          <Section5 />
+ <Section5 />
+          <Section6 />
+
+         
           <Faq />
           <Footer/>
+
         </main>
       </>
     );

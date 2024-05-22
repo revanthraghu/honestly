@@ -30,7 +30,6 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-
         filledEllipse : "#00A8FE",
         mutedEllipse : "#D9D9D9",
         topShade : "#AEDCEE",
@@ -72,12 +71,20 @@ const config = {
       },
       keyframes: {
         color: {
-          '50%': { backgroundImage: "url('/iceberg/fade.svg')", color: "#00A8FE", width:"330px" },
-          '100%': { backgroundImage: "url('/iceberg/dark.svg')", color: "#122B2E", width:"330px" },
+          "50%": {
+            backgroundImage: "url('/iceberg/fade.svg')",
+            color: "#00A8FE",
+            width: "330px",
+          },
+          "100%": {
+            backgroundImage: "url('/iceberg/dark.svg')",
+            color: "#122B2E",
+            width: "330px",
+          },
         },
         diamond: {
-          '50%': { backgroundColor: "#AEDCEE" },
-          '100%': { backgroundColor: "#FFFFFF" },
+          "50%": { backgroundColor: "#AEDCEE" },
+          "100%": { backgroundColor: "#FFFFFF" },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -99,10 +106,12 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        color: 'color 0.1s forwards',
-        diamond: 'diamond 0.1s forwards',
+        color: "color 0.1s forwards",
+        diamond: "diamond 0.1s forwards",
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
+        reviewMarquee: "marquee 80s linear infinite",
+        reviewMarquee2: "marquee2 80s linear infinite",
       },
       fontFamily: {
         ppmori: ["PPMori", "sans-serif"],
