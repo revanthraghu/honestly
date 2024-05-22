@@ -27,7 +27,7 @@ export default function Hero() {
             />
           </span>
         </div>
-        <div className="italic flex flex-col md:block">
+        <div className="flex flex-col md:block">
           <span className="italic md:hidden">
             <ReactRotatingText
               items={[
