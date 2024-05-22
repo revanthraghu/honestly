@@ -19,8 +19,10 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        darkEffect: "url('/iceberg/dark.svg')",
-        fadeEffect: "url('/iceberg/fade.svg')",
+        'darkEffect': "url('/iceberg/dark.svg')",
+        'fadeEffect': "url('/iceberg/fade.svg')",
+        'heroBg': "url('/background/heroBG.svg')",
+        'howItWorksBg': "url('/background/howItWorks.svg')"
       },
       colors: {
         border: "hsl(var(--border))",
@@ -28,11 +30,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-
-        filledEllipse: "#00A8FE",
-        mutedEllipse: "#D9D9D9",
-        topShade: "#AEDCEE",
-        bottomShade: "#F4F5F0",
+        filledEllipse : "#00A8FE",
+        mutedEllipse : "#D9D9D9",
+        topShade : "#AEDCEE",
+        bottomShade : "#F4F5F0",
+        videoBg : "#F4434D",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
