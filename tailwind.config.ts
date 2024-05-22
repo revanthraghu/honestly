@@ -21,6 +21,8 @@ const config = {
       backgroundImage: {
         'darkEffect': "url('/iceberg/dark.svg')",
         'fadeEffect': "url('/iceberg/fade.svg')",
+        'heroBg': "url('/background/heroBG.svg')",
+        'howItWorksBg': "url('/background/howItWorks.svg')"
       },
       colors: {
         border: "hsl(var(--border))",
@@ -33,6 +35,7 @@ const config = {
         mutedEllipse : "#D9D9D9",
         topShade : "#AEDCEE",
         bottomShade : "#F4F5F0",
+        videoBg : "#F4434D",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

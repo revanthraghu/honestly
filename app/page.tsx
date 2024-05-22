@@ -9,6 +9,9 @@ import Ticker from "@/components/ticker";
 import Navbar from "@/components/navbar";
 import ReviewSection from "@/components/section4-reviews";
 import { useEffect, useState } from "react";
+import Section5 from "@/components/section5";
+import Faq from "@/components/faq";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);
@@ -27,7 +30,7 @@ export default function Home() {
   if (isMobile) {
     return (
       <>
-        <main className="flex flex-col bg-[#AEDCEE]">
+        <main className="flex flex-col bg-heroBg">
           <Navbar
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
@@ -53,6 +56,9 @@ export default function Home() {
               <Section3 />
               <Ticker />
               <ReviewSection />
+              <Section5 />
+              <Faq />
+              <Footer/>
             </>
           )}
         </main>
@@ -63,7 +69,7 @@ export default function Home() {
   else {
     return (
       <>
-        <main className="flex flex-col bg-[#AEDCEE]">
+        <main className="flex flex-col bg-heroBg bg-cover">
           <Navbar
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
@@ -87,6 +93,9 @@ export default function Home() {
           <Section3 />
           <Ticker />
           <ReviewSection />
+          <Section5 />
+          <Faq />
+          <Footer/>
         </main>
       </>
     );
