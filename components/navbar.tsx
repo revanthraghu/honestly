@@ -29,7 +29,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
       {!isMessageBoxOpen ? (
         <>
           <nav
-            className="fixed top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-full  md:w-[520px]  md:m-[25px]"
+            className="fixed top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-full  md:w-[520px]  md:m-[25px] backdrop-blur-md"
             style={{
               background:
                 "radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.12) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)",
@@ -38,7 +38,8 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
               borderImageSource:
                 "radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98F9FF 0%, rgba(255, 255, 255, 0) 100%)",
               boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.07)",
-              backdropFilter: "blur(10px)"
+              // backdropFilter: "blur(10px) contrast(60%)"
+              
             }}
           >
             <div className="px-12 md:px-9">
