@@ -73,7 +73,7 @@ export default function Home() {
   else {
     return (
       <>
-        <main className="flex flex-col bg-heroBg bg-cover">
+        <main className="flex flex-col bg-heroBg bg-contain">
           <Navbar
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
@@ -98,9 +98,15 @@ export default function Home() {
           <Ticker />
           <ReviewSection />
           <Section5 />
-          <Section6 />
-          <Faq />
-          <Footer />
+          <div style = {{
+            background:
+            "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
+          }}>
+            <Section6 />
+            <Faq />
+            <Footer />
+          </div>
+
 
         </main>
       </>
