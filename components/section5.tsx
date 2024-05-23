@@ -3,15 +3,6 @@ import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
 
 export default function Section5() {
-
-    const text = [
-        "hi, how does this work?",
-        "Start by applying to be a member",
-        "so anyone who applies gets in?",
-        "No, we’re currently open only to folks who have spent ≥₹10K on beauty products in last 1 year",
-        "lmao i spent more than 10K in this last sale itself",
-        `You’re one of us🤭? Apply soon, there are perks for the first 1000 members too`
-    ]
     return (
         <div className="flex md:flex-row flex-col md:w-full h-[720px]">
             <div className="flex justify-center items-center bg-howItWorksBg bg-cover md:w-1/2 h-[720px] p-8">
@@ -120,7 +111,7 @@ export default function Section5() {
                                     </div>
                                     <div>
                                         <div>
-                                            You’re one of us🤭
+                                            You’re one of us <span className="">🤭</span>
                                         </div>
                                         <div>
                                             Apply soon, there are

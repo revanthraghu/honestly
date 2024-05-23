@@ -22,7 +22,8 @@ const config = {
         'darkEffect': "url('/iceberg/dark.svg')",
         'fadeEffect': "url('/iceberg/fade.svg')",
         'heroBg': "url('/background/heroBG.svg')",
-        'howItWorksBg': "url('/background/howItWorks.svg')"
+        'howItWorksBg': "url('/background/howItWorks.svg')",
+        'messageIcon': "url('/icons/message-icon.svg)"
       },
       colors: {
         border: "hsl(var(--border))",
