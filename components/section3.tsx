@@ -20,7 +20,7 @@ export default function Section3() {
       <div className="relative flex flex-1 justify-center items-center bg-[#F9F7EF]">
         <div className="absolute inset-4 border-2 border-black border-dashed">
           <div className="flex flex-col justify-center px-[40px] h-full">
-            <span className="font-ppeditorialnew text-[32px] leading-[36.8px]">
+            <span className="font-ppeditorialnew text-[32px] leading-[36.8px] font-normal">
               The problem?
             </span>
             <div className="h-[22px] md:h-[32px]" />
@@ -32,7 +32,7 @@ export default function Section3() {
                 really liked about the product
               </li>
               {/* <br /> */}
-              <div className="h-[16px]" />
+              <div className="h-[16px] mt-2 md:mt-0" />
               <span className="text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal">
                 Unless you&apos;re one of the 3 people who found “it&apos;s
                 nice”

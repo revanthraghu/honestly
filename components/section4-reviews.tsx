@@ -76,7 +76,7 @@ export default function ReviewSection() {
               </span>
             </div>
             <div className="flex flex-col mt-[44px]">
-              <JoinButton>JOIN THE WISHLIST</JoinButton>
+              <JoinButton>JOIN THE WAITLIST</JoinButton>
               <div className="text-[10px] max-w-[237px] leading-[10.5px] tracking-[5%] text-center font-semibold mt-[12px]">
                 993 spots left
               </div>
@@ -127,7 +127,7 @@ export default function ReviewSection() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-12">
-          <JoinButton>JOIN THE WISHLIST</JoinButton>
+          <JoinButton>JOIN THE WAITLIST</JoinButton>
           <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
             993 spots left
           </div>

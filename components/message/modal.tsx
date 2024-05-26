@@ -86,7 +86,7 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
-          <JoinButton>JOIN THE WISHLIST</JoinButton>
+          <JoinButton>JOIN THE WAITLIST</JoinButton>
           <div className="font-semibold text-[10px] mt-4">993 spots left</div>
         </div>
         {isMobile && (

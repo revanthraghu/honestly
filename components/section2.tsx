@@ -5,8 +5,9 @@ import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg
 
 export default function Section2() {
   return (
-    <div className="relative flex flex-col items-center mt-[200px] mb-[71px]">
-      <Image src={icebergUnion} alt="background-image-2" className="absolute md:w-[347.29px] md:h-[935px]" />
+    <div  data-aos="zoom-in-up" data-aos-easing="linear"
+    data-aos-duration="500" className="relative flex flex-col items-center mb-[71px] ">
+      <Image  src={icebergUnion} alt="background-image-2" className="absolute md:w-[347.29px] md:h-[935px]" />
       <Image
         src={dashedSeparatorWeb}
         alt="dashed-separator"

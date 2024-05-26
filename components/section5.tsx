@@ -1,14 +1,59 @@
 import Image from "next/image";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
+import { useState, useEffect, useRef, RefObject } from 'react';
 
 export default function Section5() {
+
+    const targetRef = useRef<HTMLDivElement>(null);
+    const [isCentered, setIsCentered] = useState<boolean>(false);
+    var xxx = false;
+    const checkIfCentered = () => {
+        if (targetRef.current) {
+            console.log("Hello : ", xxx)
+            const rect = targetRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = windowHeight / 2;
+
+            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+                setIsCentered(true);
+                
+                console.log(isCentered)
+                var i = 0;
+                if(xxx === false) {
+                    for (let i = 0; i <= 5; i++) {
+                        setTimeout(() => {
+                            setCounter(i)
+                            console.log(i);
+                        }, i * 700); // Schedule each log after (i * 2) seconds
+                    }
+                }
+                xxx = true;
+            }
+        }
+    };
+
+    const [count, setCounter] = useState<number>(0);
+
+    useEffect(() => {
+        
+        if(xxx === false) {
+            window.addEventListener('scroll', checkIfCentered);
+            checkIfCentered(); // Initial check
+        }
+
+        // return () => {
+        //     window.removeEventListener('scroll', checkIfCentered);
+        // };
+    }, []);
+
     return (
-        <div className="flex md:flex-row flex-col md:w-full h-[720px]">
+        <div className="scroll flex md:flex-row flex-col md:w-full h-[720px]">
             <div className="flex justify-center items-center bg-howItWorksBg bg-cover md:w-1/2 h-[720px] p-8">
                 <div className="flex md:flex-col flex-row bg-white w-[284px] h-[613px] rounded-[28px] p-4  ">
                     <div className="w-[242px] h-[82px] mt-4 ">
-                        <div className="text-center">
+                        <div ref={targetRef} className="text-center">
                             <span className="text-[#F4434D] font-ppeditorialnew leading-[41.4px] text-4xl italic font-extrabold text-center">
                                 Here’s how it works
                             </span>
@@ -16,21 +61,19 @@ export default function Section5() {
                         <div className="w-[250px] border-black border-[1px] mt-4"></div>
                         <div className="flex flex-col justify mt-4">
                             <div className="flex justify-end">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                <div className={`${count >= 0 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
                                     <div>
                                         hi, how does this work?
                                     </div>
                                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
-
                                         <Image className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={catSvg} alt="open" />
                                     </div>
                                 </div>
                             </div>
 
                             <div className="flex justify-start">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
+                                <div className={`${count >= 1 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
                                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
-
                                         <Image className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={logoMobileImg} alt="open" />
                                     </div>
                                     <div>
@@ -45,7 +88,7 @@ export default function Section5() {
                             </div>
 
                             <div className="flex justify-end mt-2">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                <div className={`${count >= 2 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
                                     <div>
                                         <div>
                                             so anyone who
@@ -61,7 +104,7 @@ export default function Section5() {
                                 </div>
                             </div>
                             <div className="flex justify-start">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
+                                <div className={`${count >= 3 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
                                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
 
                                         <Image className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={logoMobileImg} alt="open" />
@@ -87,7 +130,7 @@ export default function Section5() {
                             </div>
 
                             <div className="flex justify-end mt-2">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                <div className={`${count >= 4 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
                                     <div>
                                         <div>
                                             lmao i spent  sale itself
@@ -105,7 +148,7 @@ export default function Section5() {
                                 </div>
                             </div>
                             <div className="flex justify-start">
-                                <div className={`flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
+                                <div className={`${count >= 5 ? "block" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}  >
                                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                                         <Image className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={logoMobileImg} alt="open" />
                                     </div>
@@ -125,11 +168,7 @@ export default function Section5() {
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-
                     </div>
                 </div>
             </div>
