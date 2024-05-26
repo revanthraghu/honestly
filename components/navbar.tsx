@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import logoWebImg from "@/public/navbar/logo-web.svg";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
