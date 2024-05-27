@@ -138,23 +138,48 @@ const Section6 = () => {
             <div>
               <div className="flex items-center">
                 <div>
-                  <Image className="w-[15px] h-[29px] cursor-pointer ml-[1rem] mr-4 md:mr-8 mt-32 md:mt-44" src={arrowLeftSvg} alt="left" onClick={prevMobileButton} />
+                  <Image className="w-[15px] h-[29px] cursor-pointer  mr-[30px] md:mr-8 mt-32 md:mt-44" src={arrowLeftSvg} alt="left" onClick={prevMobileButton} />
                 </div>
               </div>
             </div>
-            <div className={`flex flex-col bg-white w-[284px] h-[265px] md:w-[350px] md:h-[350px] rounded-[28px] px-[24px] py-[30px] `}>
-              <div className="flex flex-col gap-[24px] overflow-auto no-scrollbar">
+            <div className={`flex flex-col bg-white w-[284px] h-[265px] md:w-[350px] md:h-[350px] rounded-[28px] px-[24px] py-[20px] `}>
+              <div className="flex flex-col items-center overflow-auto no-scrollbar">
                 <div className="w-[26px] h-[25px]">
                   <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                   <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
                     {current + 1}
                   </div>
                 </div>
-                <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                  {content[current].question}
+                <div className="w-[233px] h-[182px] overflow-y-auto mt-4">
+                  <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                    {content[current].question}
+                  </div>
+                  <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                    {content[current].answer}
+                  </div>
                 </div>
-                <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
-                  {content[current].answer}
+
+                <div className="flex flex-row gap-1 justify-center mt-6">
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"} `}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
+                  <div className={`w-[6px] h-[6px] rounded-full ${current == 9 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
+
                 </div>
               </div>
             </div>

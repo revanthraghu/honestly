@@ -20,6 +20,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
   };
 
   const handleMessageBox = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
   };
 

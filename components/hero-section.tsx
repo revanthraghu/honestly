@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="overflow-y-scroll h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
+      <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
 
         <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
           <div className="flex flex-row">
@@ -164,8 +164,11 @@ export default function Hero() {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center relative z-10 mt-[94px]">
-              <div className="w-[210px] md:w-[240px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center">
-                How we <span className="italic">actually</span> buy
+              <div className="w-[210px] md:w-[240px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center font-normal">
+                How we
+                <div>
+                  <span className="italic">actually</span> buy
+                </div>
               </div>
 
               <div className="mt-[42px] md:mt-[32px] flex flex-col items-center text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-[40%]">

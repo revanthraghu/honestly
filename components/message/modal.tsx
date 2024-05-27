@@ -14,7 +14,7 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
   };
 
   return (
-    <div className="top-0 z-50 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4">
+    <div className="top-0 z-50 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4 bg-transparent">
       <div
         className="h-[60px] mt-[8px] rounded-[100px]"
         style={{
