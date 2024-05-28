@@ -87,6 +87,18 @@ const config = {
           "50%": { backgroundColor: "#AEDCEE" },
           "100%": { backgroundColor: "#FFFFFF" },
         },
+        slideInFromLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInFromBottom: {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideInFromRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -105,6 +117,9 @@ const config = {
         },
       },
       animation: {
+        slideInFromLeft: 'slideInFromLeft 0.8s ease-out',
+        slideInFromBottom: 'slideInFromBottom 0.8s',
+        slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         color: "color 0.1s forwards",

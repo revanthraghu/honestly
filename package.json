@@ -22,6 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-rotating-text": "^1.4.1",
+    "react-spring": "^9.7.3",
+    "react-stay-scrolled": "^9.0.0",
     "react-use-measure": "^2.1.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
