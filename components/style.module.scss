@@ -1,0 +1,45 @@
+.paragraph{
+  display: flex;
+  font-size: 32px;
+  line-height: 36.8px;
+  color: white;
+  flex-wrap: wrap;
+  .word{
+    position: relative;
+    margin-right: 7px;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+}
+
+.paragraphRight{
+  display: flex;
+  font-size: 32px;
+  line-height: 36.8px;
+  color: rgb(0, 0, 0);
+  flex-wrap: wrap;
+  .word{
+    position: relative;
+    margin-right: 7px;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+}
+
+.paragraphD{
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-wrap: wrap;
+  .word{
+    position: relative;
+    margin-right: 7px;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+}

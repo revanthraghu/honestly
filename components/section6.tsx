@@ -20,40 +20,40 @@ const Section6 = () => {
 
   const content = [
     {
-      "question": "how will you make sure brands or influencers are not on this platform?",
-      "answer": "because one, promoting products to 5 people at a time in an honestly chat is low ROI work two, you can report any user who seems to be a brand rep"
+      "question": "Why do I have to share my order history to sign up?",
+      "answer": "We are currently only open to those who’ve bought ≥₹10K worth of products in the last 12 months to ensure we match people with those who have actually tried them."
     },
     {
-      "question": "wait, so how do you make money",
-      "answer": `there's literally no incentive for anyone to try to become an “influencer” on our platform.`
+      "question": "What kind of questions can I ask?",
+      "answer": `You can ask for product reviews, e.g., "Is Neutrogena Hydrating Facial Moisturiser good?" or product recommendations, e.g., "Any good sunscreen for oily skin in India?”`
     },
     {
-      "question": "what kind of questions can i ask?",
-      "answer": "ask for reviews of products. eg. how are Cetaphil and Cerave cleansers different or Korean sunscreen recommendations for oily skin in Bombay monsoon we don’t allow questions such as ‘shampoos to fix hairfall’ because hairfall could be for many reasons which we can’t diagnose at this time"
+      "question": "How will you ensure brands or influencers are not on this platform?",
+      "answer": "We rely on feedback from you as much as on pattern recognition models. If someone is aggressively or subtly promoting a brand please let us know."
     },
     {
-      "question": "pricing?",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
+      "question": "I am a beginner. When will you open up for me?",
+      "answer": "Follow us on Instagram to stay updated."
     },
     {
-      "question": "i already get my beauty advice from Reddit",
-      "answer": "then you know how cool this is better than anyone else! imagine the same candid reviews from real people, but with added filter of skin tone, skin type, age, gender and weather (and way lesser mod rules 🤫)"
+      "question": "I already get my beauty advice from Reddit",
+      "answer": "Then you know how cool this is! Imagine the same quality, but a. your question doesn’t get removed by automod, and b. it gets answers from people similar to you"
     },
     {
-      "question": "how will you make sure influencers are not on this platform?",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
+      "question": "I only buy from select brands. I don’t need this.",
+      "answer": "That’s great! You should stick to what works for you. But there’s no brand out there who makes the best of everything. Think of us when you’re exploring next."
     },
     {
-      "question": "i am a beginner. when will you open up for me?",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
+      "question": "Pricing?",
+      "answer": "Our platform is free to use for now."
     },
     {
-      "question": "how will you make sure influencers are not on this platform?",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
+      "question": "Wait, so how do you make money?",
+      "answer": "At the moment, we don’t. At scale, like Spotify."
     },
     {
-      "question": "i only buy from select brands. i don't need this.",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
+      "question": "I have reached the end of this landing page.",
+      "answer": "Wow! Hi! Join now and ask us for your free gift once you’re in. Valid only for the first 100 members."
     },
     {
       "question": "I'll wait till you guys become big. Not me, I am not the early adopter types",
@@ -63,8 +63,8 @@ const Section6 = () => {
   ]
 
   const [first, setFirst] = useState(0);
-  const [second, setSecond] = useState(1);
-  const [third, setThird] = useState(2);
+  const [second, setSecond] = useState(2);
+  const [third, setThird] = useState(4);
 
   const [current, setCurrent] = useState(0);
 
@@ -85,42 +85,42 @@ const Section6 = () => {
   }
 
   const nextButton = () => {
-    if (first == 4) {
+    if (first == 8) {
       setFirst(0);
-      setSecond(second + 1);
-      setThird(third + 1);
-    } else if (second == 4) {
+      setSecond(second + 2);
+      setThird(third + 2);
+    } else if (second == 8) {
       setSecond(0);
-      setFirst(first + 1);
-      setThird(third + 1);
-    } else if (third == 4) {
+      setFirst(first + 2);
+      setThird(third + 2);
+    } else if (third == 8) {
       setThird(0);
-      setFirst(first + 1);
-      setSecond(second + 1);
+      setFirst(first + 2);
+      setSecond(second + 2);
     } else {
-      setFirst(first + 1);
-      setSecond(second + 1);
-      setThird(third + 1);
+      setFirst(first + 2);
+      setSecond(second + 2);
+      setThird(third + 2);
     }
   }
 
   const prevButton = () => {
     if (first == 0) {
-      setFirst(4);
-      setSecond(second - 1);
-      setThird(third - 1);
+      setFirst(8);
+      setSecond(second - 2);
+      setThird(third - 2);
     } else if (second == 0) {
-      setSecond(4);
-      setFirst(first - 1);
-      setThird(third - 1);
+      setSecond(8);
+      setFirst(first - 2);
+      setThird(third - 2);
     } else if (third == 0) {
-      setThird(4);
-      setFirst(first - 1);
-      setSecond(second - 1);
+      setThird(8);
+      setFirst(first - 2);
+      setSecond(second - 2);
     } else {
-      setFirst(first - 1);
-      setSecond(second - 1);
-      setThird(third - 1);
+      setFirst(first - 2);
+      setSecond(second - 2);
+      setThird(third - 2);
     }
   }
 
@@ -219,112 +219,114 @@ const Section6 = () => {
           <div className="w-[918px] flex flex-row justify-between h-[554px] mt-10">
             {/* LEFT */}
             <div className="flex flex-col gap-8">
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
-                <div className="flex flex-col gap-[24px] h-[201px] overflow-auto no-scrollbar">
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
+
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
                       {first + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
                     {content[first].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
                     {content[first].answer}
                   </div>
                 </div>
+
               </div>
 
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col gap-[24px] w-[233px] h-[201px] overflow-auto no-scrollbar">
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
-                      {first + 6}
+                      {first + 2}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                    {content[first + 5].question}
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                    {content[first + 1].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
-                    {content[first + 5].answer}
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                    {content[first + 1].answer}
                   </div>
                 </div>
               </div>
             </div>
             {/* MIDDLE */}
             <div className="flex flex-col gap-8">
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col gap-[24px] w-[233px] h-[201px] overflow-auto no-scrollbar">
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
                       {second + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
                     {content[second].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
                     {content[second].answer}
                   </div>
                 </div>
 
               </div>
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col gap-[24px] w-[233px] h-[201px] overflow-auto no-scrollbar">
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
-                      {second + 6}
+                      {second + 2}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                    {content[second + 5].question}
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                    {content[second + 1].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
-                    {content[second + 5].answer}
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                    {content[second + 1].answer}
                   </div>
                 </div>
               </div>
             </div>
             {/* RIGHT */}
             <div className="flex flex-col gap-8">
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col gap-[24px] w-[233px] h-[201px] overflow-auto no-scrollbar">
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
                       {third + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
                     {content[third].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
                     {content[third].answer}
                   </div>
                 </div>
               </div>
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[30px]`}>
+              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col gap-[24px] w-[233px] h-[201px] overflow-auto no-scrollbar">
+                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
                   <div className="w-[26px] h-[25px]">
                     <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
                     <div className="text-white -mt-[18px] font-ppmori text-[10px] leading-[10.5px] flex justify-center items-center">
-                      {third + 6}
+                      {third + 2}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                    {content[third + 5].question}
+                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                    {content[third + 1].question}
                   </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px]">
-                    {content[third + 5].answer}
+                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                    {content[third + 1].answer}
                   </div>
                 </div>
               </div>

@@ -8,18 +8,16 @@ import JoinButton from "./ui/join-button";
 import icebergUnion from "@/public/background/icebergUnion.svg";
 import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
 import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg";
-import useScrollHighlight from './hooks/useScrollHighlight';
+import UpperIceberg from "./upperIceberg";
 
 export default function Hero() {
 
+  const iceberg = ["DELIVERY TIME", "FAT CLAIMS", "PHOTOS OF MODELS", "PRICE"]
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    console.log('scroll event', window.scrollY)
-    console.log(window.innerHeight)
     if (window.scrollY > 130) {
       setScrolled(true);
-      console.log(scrolled)
     } else {
       setScrolled(false);
     }
@@ -29,11 +27,6 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
-
-  const listRef = useRef<HTMLDivElement>(null);
-
-  useScrollHighlight(listRef);
-
   return (
     <>
       <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
@@ -41,9 +34,6 @@ export default function Hero() {
         <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
           <div className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>
-            {/* <span className="italic block" id="cycle"></span> Use this only when using CSS Transitions */}
-            {/* <span className="italic block" id="cycle"></span> Use this only when using CSS Transitions */}
-            {/* <span className="w-[210px] italic"> */}
             <span className="hidden italic md:block">
               <ReactRotatingText
                 items={[
@@ -78,7 +68,7 @@ export default function Hero() {
                 />
                 &nbsp;
               </span>
-              <span className="text-center">by asking</span>
+              <span className="text-center md:hidden">by asking</span>
             </span>
 
             <span className="text-center hidden md:block">
@@ -141,27 +131,8 @@ export default function Hero() {
               How <span className="italic">brands</span> think we buy products
             </div>
 
-            <div className="mt-[42px] md:mt-[32px] md:w-[330px] flex flex-col items-center text-[#00A8FE]  text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-[40%]">
-              <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                <span className="h-[36px] py-[12px]">DELIVERY TIME</span>
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-              </div>
-              <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                <span className="h-[36px] py-[12px]">FAT CLAIMS</span>
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-              </div>
-              <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                <span className="h-[36px] py-[12px]">EXACT COLOURS</span>
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-              </div>
-              <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                <span className="h-[36px] py-[12px]">PRICE</span>
-                <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-              </div>
+            <div className="mt-[42px] md:mt-[32px] md:w-[330px] flex flex-col items-center ">
+              <UpperIceberg />
             </div>
             <div className="flex flex-col justify-center items-center relative z-10 mt-[94px]">
               <div className="w-[210px] md:w-[240px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center font-normal">
@@ -174,79 +145,79 @@ export default function Hero() {
               <div className="mt-[42px] md:mt-[32px] flex flex-col items-center text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-[40%]">
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">INGREDIENTS</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">INGREDIENTS</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">FRAGRANCE</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">FRAGRANCE</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">COMEDOGENICITY</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">COMEDOGENICITY</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">PACKAGING</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">PACKAGING</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">COMFORT</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">COMFORT</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">TEXTURE</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">TEXTURE</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">FINISH</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">FINISH</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">COVERAGE</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">COVERAGE</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">QUANTITY</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">QUANTITY</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">BLENDABILITY</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">BLENDABILITY</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">EASE OF REMOVAL</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">EASE OF REMOVAL</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">SHELF LIFE</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">SHELF LIFE</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">PIGMENTATION</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">PIGMENTATION</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row justify-center items-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">
                     COLOURS ON MY SKIN-TONE
                   </span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
                 <div className="group flex flex-row w-full justify-center items-center align-center gap-8 hover:animate-color">
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
-                  <span className="h-[36px] py-[12px]">LASTING POWER</span>
+                  <span className="h-[36px] py-[12px] font-ppmori opacity-30 text-[#00A8FE] text-[11.5px] md:text-[12px] leading-[12px] md:leading-[12.59px] tracking-widest font-semibold">LASTING POWER</span>
                   <div className="w-[8px] h-[8px] rotate-45 group-hover:animate-diamond"></div>
                 </div>
               </div>

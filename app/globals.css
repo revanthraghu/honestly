@@ -16,43 +16,43 @@
 
 /* PPMori Fonts */
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-Extralight.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-Extralight.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-ExtralightItalic.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-ExtralightItalic.otf") format("opentype");
   font-weight: 100;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-Regular.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-RegularItalic.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-RegularItalic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-SemiBold.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPMori';
-  src: url('/fonts/PPMori/PPMori-SemiBoldItalic.otf') format('opentype');
+  font-family: "PPMori";
+  src: url("/fonts/PPMori/PPMori-SemiBoldItalic.otf") format("opentype");
   font-weight: 600;
   font-style: italic;
 }
@@ -60,43 +60,49 @@
 /* PPEditorialNew Fonts */
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-Italic.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-Regular.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-Regular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-Ultrabold.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-Ultrabold.otf")
+    format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-UltraboldItalic.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-UltraboldItalic.otf")
+    format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew';
-  src: url('/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf') format('opentype');
+  font-family: "PPEditorialNew";
+  src: url("/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf")
+    format("opentype");
   font-weight: 200;
   font-style: italic;
 }
+

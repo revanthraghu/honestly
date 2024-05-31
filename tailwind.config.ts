@@ -17,6 +17,15 @@ const config = {
         "2xl": "1400px",
       },
     },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '0.40em',
+    },
     extend: {
       backgroundImage: {
         'darkEffect': "url('/iceberg/dark.svg')",
@@ -92,7 +101,7 @@ const config = {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideInFromBottom: {
-          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '0%': { transform: 'translateY(20%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideInFromRight: {
@@ -122,8 +131,8 @@ const config = {
         slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        color: "color 0.1s forwards",
-        diamond: "diamond 0.1s forwards",
+        color: "color 0.3s forwards",
+        diamond: "diamond 0.3s forwards",
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
         reviewMarquee: "marquee 80s linear infinite",

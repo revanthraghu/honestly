@@ -109,48 +109,48 @@ export default function Faq() {
                         </div>
 
                         <div className="flex justify-center items-center w-full h-[73px] border-black border-[0.5px]">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[10px] px-auto py-[5px]">HONESTLY, NO RIGHTS RESERVED YET</div>
+                            <div className="font-ppmori font-semibold text-[10px] leading-[20px] px-auto py-[5px]">HONESTLY, NO RIGHTS RESERVED YET</div>
                         </div>
                     </div>
                 </div>
             </div>
         )
     } else {
-
-    }
-    return (
-        <div className="w-full h-full p-8 mt-[50px]">
-            <div className="flex flex-row  items-center ">
-                <div className="h-[179px] w-full border-black border-[0.5px]">
-                    <div className="flex flex-row w-full">
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Tell me more, I like to read long form</div>
+        return (
+            <div className="w-full h-full p-8 mt-[50px]">
+                <div className="flex flex-row  items-center ">
+                    <div className="h-[179px] w-full border-black border-[0.5px]">
+                        <div className="flex flex-row w-full">
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Tell me more, I like to read long form</div>
+                            </div>
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Questions? <span className="underline">k@honestly.club</span></div>
+                            </div>
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Follow us on Instagram</div>
+                            </div>
                         </div>
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Questions? <span className="underline">k@honestly.club</span></div>
+                        <div className="flex flex-row w-full">
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Join us to build India’s first skin-tone standard</div>
+                            </div>
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Work with us? <span className="underline">v@honestly.club</span></div>
+                            </div>
+                            <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+                                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Follow us on LinkedIn</div>
+                            </div>
                         </div>
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Follow us on Instagram</div>
+    
+                        <div className="flex justify-center items-center w-full h-[33px] border-black border-[0.5px]">
+                            <div className="font-ppmori font-semibold text-[10px] leading-[20px] px-8 ">HONESTLY, NO RIGHTS RESERVED YET</div>
                         </div>
-                    </div>
-                    <div className="flex flex-row w-full">
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Join us to build India’s first skin-tone standard</div>
-                        </div>
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Work with us? <span className="underline">v@honestly.club</span></div>
-                        </div>
-                        <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Follow us on LinkedIn</div>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-center items-center w-full h-[33px] border-black border-[0.5px]">
-                        <div className="font-ppmori font-semibold text-[10px] leading-[20px] px-8 ">HONESTLY, NO RIGHTS RESERVED YET</div>
                     </div>
                 </div>
             </div>
-        </div>
+    
+        )
+    }
 
-    )
 }

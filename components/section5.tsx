@@ -26,8 +26,6 @@ export default function Section5() {
 
             if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
                 setIsCentered(true);
-
-                console.log(isCentered)
                 var i = 0;
                 if (isInCenter === false) {
                     for (let i = 0; i <= 9; i++) {
@@ -87,7 +85,7 @@ export default function Section5() {
 
                             <div ref={scrollableDivRef} className="h-[420px] overflow-auto no-scrollbar scroll-smooth flex-grow">
                                 <div className='flex justify-end'>
-                                    <div className={`${count >= 0 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                    <div className={`${count >= 0 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row justify-end items-center text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[1px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
                                         <div>
                                             hi, how does this work?
                                         </div>
@@ -114,7 +112,7 @@ export default function Section5() {
                                 </div>
 
                                 <div className="flex justify-end mt-2">
-                                    <div className={`${count >= 2 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                    <div className={`${count >= 2 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row justify-end items-center text-xs leading-[14.4px] pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
                                         <div>
                                             <div>
                                                 so anyone who

@@ -1,6 +1,5 @@
 "use client";
 import Hero from "@/components/hero-section";
-import Section2 from "@/components/section2";
 import Section3 from "@/components/section3";
 import Ticker from "@/components/ticker";
 import Navbar from "@/components/navbar";
@@ -47,12 +46,12 @@ export default function Home() {
           {!isMessageBoxOpen && (
             <>
               <Hero />
-              {/* <Section2 /> */}
               <Section3 />
               <Ticker />
               <ReviewSection />
               <Section5 />
               <Section6 />
+       
               <Faq />
               <Footer />
             </>
@@ -72,8 +71,6 @@ export default function Home() {
             setIsMessageBoxOpen={setIsMessageBoxOpen}
           />
           <Hero />
-
-          {/* <Section2 /> */}
           <Section3 />
           <Ticker />
           <ReviewSection />
@@ -83,6 +80,7 @@ export default function Home() {
               "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
           }}>
             <Section6 />
+
             <Faq />
             <Footer />
           </div>

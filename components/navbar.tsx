@@ -15,14 +15,19 @@ interface Props {
 }
 
 const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleMessageBox = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
   };
+
+  const handleMobileMessageBox = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMessageBoxOpen(true);
+  }
 
   return (
     <>
@@ -74,7 +79,13 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
                   orientation="vertical"
                   className="bg-[#00A8FE80] h-[23px] hidden md:block"
                 />
-                <div className="relative cursor-pointer">
+                <div className="md:hidden block relative cursor-pointer">
+                  <Image src={chatIcon} alt="chat" onClick={handleMobileMessageBox} />
+                  <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
+                    1
+                  </Badge>
+                </div>
+                <div className="md:block hidden relative cursor-pointer">
                   <Image src={chatIcon} alt="chat" onClick={handleMessageBox} />
                   <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
                     1
