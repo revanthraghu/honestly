@@ -81,15 +81,36 @@ const config = {
       },
       keyframes: {
         color: {
-          "50%": {
+          "0%": {
             backgroundImage: "url('/iceberg/fade.svg')",
             color: "#00A8FE",
             width: "330px",
+            opacity: "100%"
+          },
+          "25%": {
+            backgroundImage: "url('/iceberg/fade.svg')",
+            color: "#122B2E",
+            width: "330px",
+            opacity: "40%"
+          },
+
+          "50%": {
+            backgroundImage: "url('/iceberg/fade.svg')",
+            color: "#122B2E",
+            width: "330px",
+            opacity: "80%"
+          },
+          "75%": {
+            backgroundImage: "url('/iceberg/dark.svg')",
+            color: "#122B2E",
+            width: "330px",
+            opacity: "100%"
           },
           "100%": {
             backgroundImage: "url('/iceberg/dark.svg')",
             color: "#122B2E",
             width: "330px",
+            opacity: "100%"
           },
         },
         diamond: {
@@ -131,8 +152,8 @@ const config = {
         slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        color: "color 0.3s forwards",
-        diamond: "diamond 0.3s forwards",
+        color: "color 0.2s forwards",
+        diamond: "diamond 0.2s forwards",
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
         reviewMarquee: "marquee 80s linear infinite",
