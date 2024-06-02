@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
+import JoinButton from './ui/join-button';
 
 export default function Section5() {
 
@@ -28,7 +29,7 @@ export default function Section5() {
                 setIsCentered(true);
                 var i = 0;
                 if (isInCenter === false) {
-                    for (let i = 0; i <= 9; i++) {
+                    for (let i = 0; i <= 10; i++) {
                         setTimeout(() => {
                             setCounter(i)
                             scrollByY(200)
@@ -181,29 +182,38 @@ export default function Section5() {
                                                 You’re one of us <span className="">🤭</span>
                                             </div>
                                             <div>
-                                                Apply soon, there are
+                                                As next steps:
                                             </div>
-                                            <div>
-                                                perks for the first
-                                            </div>
-                                            <div>
-                                                1000 members too
-                                            </div>
+                                            <ol className='px-[10px] list-decimal max-w-[133.41px]'>
+                                                <li>
+                                                    <>
+                                                        Sign up using
+                                                        ‘Join the waitlist button’
+                                                    </>
+                                                </li>
+                                                <li>
+                                                    <>
+                                                        Verify that you have spent ≥₹10
+                                                    </>
+                                                </li>
+                                                <li>
+                                                    <>
+                                                        Rate the products that you’ve bought. We use
+                                                        this to understand your skin type and preferences
+                                                        better
+                                                    </>
+                                                </li>
+                                            </ol>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex justify-end mt-2">
                                     <div className={`${count >= 6 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
-                                        <div>
+                                        <div className="ml-[90px] mt-[2px]">
                                             <div>
-                                                lmao i spent  sale itself
+                                                ok then?
                                             </div>
-                                            <div>
-                                                more than 10K in this last
-                                            </div>
-                                            <div>
-                                                sale itself
-                                            </div>
+
                                         </div>
                                         <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                                             <Image className=" w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={catSvg} alt="open" />
@@ -215,20 +225,41 @@ export default function Section5() {
                                         <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                                             <Image className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={logoMobileImg} alt="open" />
                                         </div>
-                                        <div>
+                                        <div className='max-w-[133.41px]'>
                                             <div>
-                                                You’re one of us <span className="">🤭</span>
+                                                For now, that’s it. Once matching begins (post 15 Jul):
                                             </div>
-                                            <div>
-                                                Apply soon, there are
-                                            </div>
-                                            <div>
-                                                perks for the first
-                                            </div>
-                                            <div>
-                                                1000 members too
-                                            </div>
+                                            <ol className="px-[10px] list-decimal max-w-[133.41px]">
+                                                <li>
+                                                    Ask a question
+                                                </li>
+                                                <li>
+                                                    Get matched
+                                                </li>
+                                                <li>
+                                                    Get answers
+                                                </li>
+                                            </ol>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-end mt-2">
+                                    <div className={`${count >= 8 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row text-xs pt-2 pb-2 bg-[#AEDCEE80] w-[190.41px] h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                        <div className="ml-12 mt-[2px]">
+                                            <div>
+                                                ooh, count me in
+                                            </div>
+
+                                        </div>
+                                        <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
+                                            <Image className=" w-[20.7px] h-[20.7px] px-[4px] py-[4px]" src={catSvg} alt="open" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-center mt-2">
+                                    <div className={`${count >= 9 ? "block animate-slideInFromBottom" : "hidden"} flex flex-row text-xs pt-2 pb-2 h-auto px-[10px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}  >
+                                        <JoinButton>JOIN THE WAITLIST</JoinButton>
                                     </div>
                                 </div>
                             </div>

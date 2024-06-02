@@ -147,6 +147,7 @@ const config = {
         },
       },
       animation: {
+        spin: 'spin 4s linear infinite',
         slideInFromLeft: 'slideInFromLeft 0.8s ease-out',
         slideInFromBottom: 'slideInFromBottom 0.8s',
         slideInFromRight: 'slideInFromRight 0.8s ease-out',

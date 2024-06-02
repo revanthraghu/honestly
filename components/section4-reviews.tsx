@@ -11,7 +11,8 @@ import reviewGif4 from "@/public/reviews/gifs/4.gif";
 import reviewGif5 from "@/public/reviews/gifs/5.gif";
 import reviewGif6 from "@/public/reviews/gifs/6.gif";
 import reviewGif7 from "@/public/reviews/gifs/7.gif";
-import leafImg from "@/public/reviews/leaf.svg";
+import logoMark from "@/public/reviews/logoMark.svg";
+import promise from "@/public/reviews/promise.svg";
 import invertedLeafImg from "@/public/reviews/inverted-leaf.svg";
 import leafMobileImg from "@/public/reviews/leaf-mobile.svg";
 import invertedLeafMobileImg from "@/public/reviews/inverted-leaf-mobile.svg";
@@ -47,15 +48,26 @@ export default function ReviewSection() {
       <div className="hidden flex-row min-[850px]:flex md:mt-[67px] lg:mt-[84px] px-8">
         <Collage />
         <div className="md:w-[19px] lg:w-[109px]" />
-        <div className="max-w-[386px] flex flex-col items-center justify-center">
+        <div className="max-w-[386px] flex flex-col">
           <div className="flex flex-row justify-between">
-            <Image src={leafImg} alt="leaf" />
+            {/* <Image src={leafImg} alt="leaf" />
             <div className="flex flex-col font-ppeditorialnew text-[20px] italic leading-[25.6px] text-center">
               <span className="font-extralight">honestly,</span>
               <span className="font-extrabold">never biased.</span>
               <span className="font-extrabold">always neutral.</span>
             </div>
-            <Image src={invertedLeafImg} alt="invertedLeaf" quality={100} />
+            <Image src={invertedLeafImg} alt="invertedLeaf" quality={100} /> */}
+
+            <div className="bg-[#AEDCEE] w-[120px] h-[120px] rounded-full flex justify-center items-center ml-[12px]">
+              <div className="absolute animate-spin ">
+                <Image src={promise} alt="promise" quality={100} width={90} height={90} />
+              </div>
+              <div className="bg-white w-[54px] h-[54px] rounded-full">
+              </div>
+              <div className="absolute ">
+                <Image src={logoMark} alt="logoMark" quality={100} width={28} height={28} />
+              </div>
+            </div>
           </div>
           <div className="ml-[14px] text-[14px] leading-[18.2px] tracking-[4%]">
             <div className="flex flex-col mt-[44px]">
@@ -88,25 +100,18 @@ export default function ReviewSection() {
         <ReviewSlideShow />
       </div>
       <div className="w-screen mt-8 min-[850px]:hidden">
-        <div className="justify-center flex flex-row px-4">
+        <div className="justify-center flex flex-row px-4 gap-6">
           <div className="flex-shrink-0 flex flex-row items-center h-min max-w-[200px]">
-            <Image
-              src={leafMobileImg}
-              alt="leafMobileImg"
-              width={49}
-              height={94}
-            />
-            <div className="flex flex-col font-ppeditorialnew text-[13px] italic leading-[16.64px] text-center">
-              <span className="font-extralight">honestly,</span>
-              <span className="font-extrabold">never biased.</span>
-              <span className="font-extrabold">always neutral.</span>
+            <div className="bg-[#AEDCEE] w-[120px] h-[120px] rounded-full flex justify-center items-center ml-[12px]">
+              <div className="absolute animate-spin ">
+                <Image src={promise} alt="promise" quality={100} width={90} height={90} />
+              </div>
+              <div className="bg-white w-[54px] h-[54px] rounded-full">
+              </div>
+              <div className="absolute ">
+                <Image src={logoMark} alt="logoMark" quality={100} width={28} height={28} />
+              </div>
             </div>
-            <Image
-              src={invertedLeafMobileImg}
-              alt="invertedLeafMobileImg"
-              width={49}
-              height={94}
-            />
           </div>
           {/* <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
             <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">

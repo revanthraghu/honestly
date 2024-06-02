@@ -54,12 +54,7 @@ const Section6 = () => {
     {
       "question": "I have reached the end of this landing page.",
       "answer": "Wow! Hi! Join now and ask us for your free gift once you’re in. Valid only for the first 100 members."
-    },
-    {
-      "question": "I'll wait till you guys become big. Not me, I am not the early adopter types",
-      "answer": "there's literally no incentive for anyone to try to become an “influencer” on our platform."
     }
-
   ]
 
   const [first, setFirst] = useState(0);
@@ -69,7 +64,7 @@ const Section6 = () => {
   const [current, setCurrent] = useState(0);
 
   const nextMobileButton = () => {
-    if (current == 9) {
+    if (current == 8) {
       setCurrent(0);
     } else {
       setCurrent(current + 1);
@@ -78,7 +73,7 @@ const Section6 = () => {
 
   const prevMobileButton = () => {
     if (current == 0) {
-      setCurrent(9);
+      setCurrent(8);
     } else {
       setCurrent(current - 1);
     }
@@ -238,23 +233,26 @@ const Section6 = () => {
 
               </div>
 
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
+              {first + 2 != 10 && <>
+                <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
-                    <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
-                    <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
-                      {first + 2}
+                  <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="w-[26px] h-[25px]">
+                      <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
+                      <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                        {first + 2}
+                      </div>
+                    </div>
+                    <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      {content[first + 1].question}
+                    </div>
+                    <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      {content[first + 1].answer}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[first + 1].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[first + 1].answer}
-                  </div>
                 </div>
-              </div>
+              </>}
+
             </div>
             {/* MIDDLE */}
             <div className="flex flex-col gap-8">
@@ -276,23 +274,26 @@ const Section6 = () => {
                 </div>
 
               </div>
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
+              {second + 2 != 10 && <>
+                <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
-                    <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
-                    <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
-                      {second + 2}
+                  <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="w-[26px] h-[25px]">
+                      <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
+                      <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                        {second + 2}
+                      </div>
+                    </div>
+                    <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      {content[second + 1].question}
+                    </div>
+                    <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      {content[second + 1].answer}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[second + 1].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[second + 1].answer}
-                  </div>
                 </div>
-              </div>
+              </>}
+
             </div>
             {/* RIGHT */}
             <div className="flex flex-col gap-8">
@@ -313,23 +314,26 @@ const Section6 = () => {
                   </div>
                 </div>
               </div>
-              <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
 
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
-                    <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
-                    <div className="text-white -mt-[18px] font-ppmori text-[10px] leading-[10.5px] flex justify-center items-center">
-                      {third + 2}
+              {third + 2 != 10 && <>
+                <div className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}>
+                  <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="w-[26px] h-[25px]">
+                      <Image className="w-[26px] h-[25px]" src={messageIcon} alt="messageicon" />
+                      <div className="text-white -mt-[18px] font-ppmori text-[10px] leading-[10.5px] flex justify-center items-center">
+                        {third + 2}
+                      </div>
+                    </div>
+                    <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      {content[third + 1].question}
+                    </div>
+                    <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      {content[third + 1].answer}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[third + 1].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[third + 1].answer}
-                  </div>
                 </div>
-              </div>
+              </>}
+
             </div>
           </div>
           <div className="flex items-center">
