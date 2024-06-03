@@ -19,22 +19,33 @@ export default function Paragraph({ paragraph }) {
         const end = start + 1 / words.length;
         if (i == words.length - 1) {
           return (
+            <>
             <WordSectionE
               key={i}
               progress={scrollYProgress}
               range={[start, end]}
             >
-              <a className="flex flex-row justify-start items-start">
+              
                 {word}
+            
+            </WordSectionE>
+            <WordSectionE
+              key={i}
+              progress={scrollYProgress}
+              range={[start, end]}
+            >
+           
                 <Image
                   src={helpfulImg}
                   width={91}
                   alt="helpful"
-                  style={{ "marginTop": "-4px" }}
+                  style={{ "marginTop": "-4px", marginLeft:"-8px"}}
                   className="inline-block"
                 />
-              </a>
+             
             </WordSectionE>
+            </>
+            
           );
         } else {
           return (
