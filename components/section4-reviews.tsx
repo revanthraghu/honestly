@@ -135,14 +135,6 @@ export default function ReviewSection() {
               </div>
             </div>
           </div>
-          {/* <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
-            <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
-              Real people only
-            </span>
-            <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px]">
-              You can report any user who seems to be a brand rep
-            </span>
-          </div> */}
 
           <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
             <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
@@ -326,7 +318,7 @@ export function Collage() {
 
 export function ReviewSlideShow() {
   return (
-    <div className="relative w-screen flex items-center overflow-x-hidden">
+    <div className="relative w-screen flex items-center overflow-x-scroll">
       <div className="whitespace-nowrap flex flex-row items-center animate-reviewMarquee">
         <div
           className="relative flex justify-center  mx-2 items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
