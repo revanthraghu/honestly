@@ -326,7 +326,7 @@ export function Collage() {
 
 export function ReviewSlideShow() {
   return (
-    <div className="relative w-screen flex items-center overflow-x-scroll">
+    <div className="relative w-screen flex items-center overflow-x-hidden">
       <div className="whitespace-nowrap flex flex-row items-center animate-reviewMarquee">
         <div
           className="relative flex justify-center  mx-2 items-center bg-[#E9E5DE] min-w-[295px] min-h-[285px]"
@@ -358,7 +358,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={168}
             height={309}
-            unoptimized
           />
         </div>
 
@@ -375,7 +374,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={189}
             height={322}
-            unoptimized
           />
         </div>
 
@@ -420,7 +418,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={160}
             height={287}
-            unoptimized
           />
         </div>
 
@@ -437,7 +434,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={169}
             height={300}
-            unoptimized
           />
         </div>
 
@@ -454,7 +450,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={162}
             height={309}
-            unoptimized
           />
         </div>
 
@@ -471,7 +466,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={177}
             height={312}
-            unoptimized
           />
         </div>
 
@@ -488,7 +482,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={174}
             height={309}
-            unoptimized
           />
         </div>
       </div>
@@ -523,7 +516,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={168}
             height={309}
-            unoptimized
           />
         </div>
 
@@ -540,7 +532,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={189}
             height={322}
-            unoptimized
           />
         </div>
 
@@ -585,7 +576,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={160}
             height={287}
-            unoptimized
           />
         </div>
 
@@ -602,7 +592,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={169}
             height={300}
-            unoptimized
           />
         </div>
 
@@ -619,7 +608,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={162}
             height={309}
-            unoptimized
           />
         </div>
 
@@ -636,7 +624,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={177}
             height={312}
-            unoptimized
           />
         </div>
 
@@ -653,7 +640,6 @@ export function ReviewSlideShow() {
             quality={100}
             width={174}
             height={309}
-            unoptimized
           />
         </div>
       </div>
