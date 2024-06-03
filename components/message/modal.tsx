@@ -91,13 +91,14 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
             993 spots left
           </div>
         </div>
-        {isMobile && (
+        {/* FUTURE FEATURE */}
+        {/* {isMobile && (
           <div className="flex flex-row gap-2 w-[34px] h-[6px] ml-[36px]">
             <div className="rounded-full w-[6px] h-[6px] bg-filledEllipse"></div>
             <div className="rounded-full w-[6px] h-[6px] bg-mutedEllipse"></div>
             <div className="rounded-full w-[6px] h-[6px] bg-mutedEllipse"></div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

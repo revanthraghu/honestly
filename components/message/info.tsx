@@ -1,22 +1,70 @@
 import Vector from "@/public/messageHeader/Vector.svg";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Info() {
+
+    const [clickedMobileOne, setClickedMobileOne] = useState<boolean>(false);
+    const [clickedMobileTwo, setClickedMobileTwo] = useState<boolean>(false);
+    const [clickedMobileThree, setClickedMobileThree] = useState<boolean>(false);
+    const [clickedMobileFour, setClickedMobileFour] = useState<boolean>(false);
+    const [clickedMobileFive, setClickedMobileFive] = useState<boolean>(false);
+    const [clickedMobileSix, setClickedMobileSix] = useState<boolean>(false);
+
+    const handleMobileClear = () => {
+        setClickedMobileOne(false);
+        setClickedMobileTwo(false);
+        setClickedMobileThree(false);
+        setClickedMobileFour(false);
+        setClickedMobileFive(false);
+        setClickedMobileSix(false);
+    }
+
+    const handleMobileFaqOne = () => {
+        handleMobileClear();
+        setClickedMobileOne(!clickedMobileOne);
+    }
+
+    const handleMobileFaqTwo = () => {
+        handleMobileClear();
+        setClickedMobileTwo(!clickedMobileTwo)
+    }
+
+    const handleMobileFaqThree = () => {
+        handleMobileClear();
+        setClickedMobileThree(!clickedMobileThree)
+    }
+
+    const handleMobileFaqFour = () => {
+        handleMobileClear();
+        setClickedMobileFour(!clickedMobileFour)
+    }
+
+    const handleMobileFaqFive = () => {
+        handleMobileClear();
+        setClickedMobileFive(!clickedMobileFive)
+    }
+
+    const handleMobileFaqSix = () => {
+        handleMobileClear();
+        setClickedMobileSix(!clickedMobileSix)
+    }
+
     return (
         <div
             className="block md:hidden top-0 z-50 h-full mx-[9px] w-[96%] pb-8 py-8">
             <div className="flex flex-row  items-center ">
                 <div className="h-[292px] w-full border-black border-[0.5px]">
                     <div className="flex flex-row w-full">
-                        <div className="w-1/2 h-[73px] border-black border-[0.5px]">
+                        <div onClick={handleMobileFaqOne} className={`${clickedMobileOne ? "bg-white" : ""} w-1/2 h-[73px] border-black border-[0.5px]`}>
                             <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">How it works</div>
                         </div>
-                        <div className="w-1/2 h-[73px] border-black border-[0.5px]">
+                        <div onClick={handleMobileFaqTwo} className={`${clickedMobileTwo ? "bg-white" : ""} w-1/2 h-[73px] border-black border-[0.5px]`}>
                             <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">FAQs</div>
                         </div>
                     </div>
                     <div className="flex flex-row">
-                        <div className="w-full h-[73px] border-black border-[0.5px]">
+                        <div onClick={handleMobileFaqThree} className={`${clickedMobileThree ? "bg-white" : ""} w-full h-[73px] border-black border-[0.5px]`}>
                             <div className="flex items-center gap-6">
                                 <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                                     Instagram
@@ -26,7 +74,7 @@ export default function Info() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full h-[73px] border-black border-[0.5px]">
+                        <div onClick={handleMobileFaqFour} className={`${clickedMobileFour ? "bg-white" : ""} w-full h-[73px] border-black border-[0.5px]`}>
                             <div className="flex items-center gap-6">
                                 <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                                     LinkedIn
@@ -37,10 +85,10 @@ export default function Info() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full h-[73px] border-black border-[0.5px]">
+                    <div onClick={handleMobileFaqFive} className={`${clickedMobileFive ? "bg-white" : ""} w-full h-[73px] border-black border-[0.5px]`}>
                         <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Join us to build India’s first skin-tone standard</div>
                     </div>
-                    <div className="w-full h-[73px] border-black border-[0.5px]">
+                    <div onClick={handleMobileFaqSix} className={`${clickedMobileSix ? "bg-white" : ""} w-full h-[73px] border-black border-[0.5px]`}>
                         <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">Tell me more, I like to read long form</div>
                     </div>
                 </div>
