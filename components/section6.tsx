@@ -1,4 +1,6 @@
 import Image from "next/image";
+import line from "@/public/icons/line.svg";
+import vector from "@/public/icons/vector.svg";
 import arrowLeftSvg from "@/public/icons/arrow-left.svg";
 import arrowRightSvg from "@/public/icons/arrow-right.svg";
 import messageIcon from "@/public/icons/message-icon.svg";
@@ -8,6 +10,46 @@ import JoinButton from "./ui/join-button";
 const Section6 = () => {
 
   const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] = useState<boolean>(false);
+  const [isModolOn, setIsModalOn] = useState<boolean>(false);
+  const [socialMediaIndex, setSocialMediaIndex] = useState<number>(0);
+
+  const SocialMediaNames = [
+    "Reddit",
+    "Instagram",
+    "Youtube",
+    "my dermat"
+  ]
+
+  const SocialAnswers = [
+    "Then you know how cool this is! Imagine the same quality, but a. your question doesn’t get removed by automod, and b. it gets answers from people similar to you",
+    "While Youtube is a great place to discover new products, you’d be better off getting reviews from 4-5 people who are not only similar to you but also use these products in daily life.",
+    "While Instagram is a great place to discover new products, you’d be better off getting reviews from 4-5 people who are not only similar to you but also use these products in daily life.",
+    "This is ideal, especially if you have any serious conditions. Join the community for complementary products or makeup recs."
+  ]
+
+  const handleModalOpen = () => {
+    setIsModalOn(!isModolOn)
+  }
+
+  const handleReddit = () => {
+    setIsModalOn(false)
+    setSocialMediaIndex(0)
+  }
+
+  const handleYoutube = () => {
+    setIsModalOn(false)
+    setSocialMediaIndex(1)
+  }
+
+  const handleInstagram = () => {
+    setIsModalOn(false)
+    setSocialMediaIndex(2)
+  }
+
+  const handleDermat = () => {
+    setIsModalOn(false)
+    setSocialMediaIndex(3)
+  }
 
   useEffect(() => {
     function handleResize() {
@@ -36,8 +78,8 @@ const Section6 = () => {
       "answer": "Follow us on Instagram to stay updated."
     },
     {
-      "question": "I already get my beauty advice from Reddit",
-      "answer": "Then you know how cool this is! Imagine the same quality, but a. your question doesn’t get removed by automod, and b. it gets answers from people similar to you"
+      "question": `I already get my beauty advice from ${SocialMediaNames[socialMediaIndex]}`,
+      "answer": `${SocialAnswers[socialMediaIndex]}`
     },
     {
       "question": "I only buy from select brands. I don’t need this.",
@@ -145,16 +187,58 @@ const Section6 = () => {
                     {current + 1}
                   </div>
                 </div>
-                <div className="w-[233px] h-[182px] overflow-y-auto mt-4">
-                  <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                    {content[current].question}
-                  </div>
-                  <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
-                    {content[current].answer}
-                  </div>
+                <div className="w-[233px] h-[182px] overflow-y-auto mt-4 px-2">
+                  {current + 1 == 5 ?
+                    <>
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer" onClick={handleModalOpen}>
+                        <span >
+                          {content[current].question}
+                          <Image className="w-[9px] h-[4.5px] inline-block ml-2" src={vector} alt="vector" />
+                        </span>
+                      </div>
+                      {
+                        isModolOn ?
+                          <>
+                            <div className="flex flex-col mt-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                              <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                <div className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleReddit}>
+                                  <span>Reddit</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleInstagram}>
+                                  <span>Instagram</span>
+                                </div>
+                              </div>
+                              <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                <div className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleYoutube}>
+                                  <span>Youtube</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleDermat}>
+                                  <span>my dermat</span>
+                                </div>
+                              </div>
+                            </div>
+                          </> :
+                          <>
+                            <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              {content[current].answer}
+                            </div>
+                          </>
+                      }
+
+
+                    </> : <>
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                        {content[current].question}
+                      </div>
+                      <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                        {content[current].answer}
+                      </div></>
+                  }
+
                 </div>
 
-                <div className="flex flex-row gap-1 justify-center mt-6">
+                {/*  Carousel Dots */}
+                <div className="flex flex-row gap-1 justify-center mt-2">
                   <div className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"} `}></div>
 
                   <div className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"}`}></div>
@@ -223,14 +307,50 @@ const Section6 = () => {
                       {first + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[first].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[first].answer}
-                  </div>
+                  {first + 1 == 5 ?
+                    <>
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer" onClick={handleModalOpen}>
+                        <span >
+                          {content[first].question}
+                          <Image className="w-[9px] h-[4.5px] inline-block ml-2" src={vector} alt="vector" />
+                        </span>
+                      </div>
+                      {
+                        isModolOn ?
+                          <>
+                            <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                              <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                <div className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleReddit}>
+                                  <span>Reddit</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleInstagram}>
+                                  <span>Instagram</span>
+                                </div>
+                              </div>
+                              <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                <div className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleYoutube}>
+                                  <span>Youtube</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleDermat}>
+                                  <span>my dermat</span>
+                                </div>
+                              </div>
+                            </div>
+                          </> :
+                          <>
+                            <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              {content[first].answer}
+                            </div>
+                          </>
+                      }
+                    </> : <>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[first].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[first].answer}
+                      </div></>}
                 </div>
-
               </div>
 
               {first + 2 != 10 && <>
@@ -265,12 +385,49 @@ const Section6 = () => {
                       {second + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[second].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[second].answer}
-                  </div>
+                  {second + 1 == 5 ?
+                    <>
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer" onClick={handleModalOpen}>
+                        <span >
+                          {content[second].question}
+                          <Image className="w-[9px] h-[4.5px] inline-block ml-2" src={vector} alt="vector" />
+                        </span>
+                      </div>
+                      {
+                        isModolOn ?
+                          <>
+                            <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                              <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                <div className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleReddit}>
+                                  <span>Reddit</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleInstagram}>
+                                  <span>Instagram</span>
+                                </div>
+                              </div>
+                              <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                <div className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleYoutube}>
+                                  <span>Youtube</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleDermat}>
+                                  <span>my dermat</span>
+                                </div>
+                              </div>
+                            </div>
+                          </> :
+                          <>
+                            <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              {content[second].answer}
+                            </div>
+                          </>
+                      }
+                    </> : <>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[second].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[second].answer}
+                      </div></>}
                 </div>
 
               </div>
@@ -306,12 +463,49 @@ const Section6 = () => {
                       {third + 1}
                     </div>
                   </div>
-                  <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                    {content[third].question}
-                  </div>
-                  <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                    {content[third].answer}
-                  </div>
+                  {third + 1 == 5 ?
+                    <>
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer" onClick={handleModalOpen}>
+                        <span >
+                          {content[third].question}
+                          <Image className="w-[9px] h-[4.5px] inline-block ml-2" src={vector} alt="vector" />
+                        </span>
+                      </div>
+                      {
+                        isModolOn ?
+                          <>
+                            <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                              <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                <div className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleReddit}>
+                                  <span>Reddit</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleInstagram}>
+                                  <span>Instagram</span>
+                                </div>
+                              </div>
+                              <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                <div className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleYoutube}>
+                                  <span>Youtube</span>
+                                </div>
+                                <div className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer" onClick={handleDermat}>
+                                  <span>my dermat</span>
+                                </div>
+                              </div>
+                            </div>
+                          </> :
+                          <>
+                            <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              {content[third].answer}
+                            </div>
+                          </>
+                      }
+                    </> : <>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[third].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[third].answer}
+                      </div></>}
                 </div>
               </div>
 
@@ -333,7 +527,6 @@ const Section6 = () => {
                   </div>
                 </div>
               </>}
-
             </div>
           </div>
           <div className="flex items-center">
