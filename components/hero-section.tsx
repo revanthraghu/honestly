@@ -29,10 +29,7 @@ export default function Hero() {
 
   return (
     <>
-      <div
-        className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10"
-        id=""
-      >
+      <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
         <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
           <div className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>

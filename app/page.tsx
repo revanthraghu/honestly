@@ -63,7 +63,7 @@ export default function Home() {
   else {
     return (
       <>
-        <main className="flex flex-col bg-heroBg bg-contain scroll-smooth">
+        <main className="flex flex-col bg-heroBg bg-contain">
           <Navbar
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}

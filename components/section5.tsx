@@ -75,7 +75,13 @@ export default function Section5() {
       id="howitworks"
     >
       <div className="flex justify-center items-center bg-howItWorksBg bg-cover md:w-1/2 p-8">
-        <div className="flex md:flex-col flex-row bg-white w-[284px] h-[613px]  rounded-[28px] p-4  ">
+        <div
+          className="flex md:flex-col flex-row w-[284px] h-[613px]  rounded-[28px] p-4 "
+          style={{
+            background: "rgba(255, 255, 255, 1)",
+            boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+          }}
+        >
           <div className="w-[242px] h-[82px] mt-4 ">
             <div ref={targetRef} className="text-center">
               <span className="text-[#F00832] font-ppeditorialnew leading-[41.4px] text-4xl italic font-extrabold text-center">

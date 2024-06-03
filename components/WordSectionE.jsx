@@ -17,40 +17,35 @@ export default function Paragraph({ paragraph }) {
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
-        if (i == words.length - 1) {
+        if (i === words.length - 1) {
           return (
-            <>
-            <WordSectionE
-              key={i}
-              progress={scrollYProgress}
-              range={[start, end]}
-            >
-              
+            <React.Fragment key={`fragment-${i}`}>
+              <WordSectionE
+                key={`word-${i}`}
+                progress={scrollYProgress}
+                range={[start, end]}
+              >
                 {word}
-            
-            </WordSectionE>
-            <WordSectionE
-              key={i}
-              progress={scrollYProgress}
-              range={[start, end]}
-            >
-           
+              </WordSectionE>
+              <WordSectionE
+                key={`image-${i}`}
+                progress={scrollYProgress}
+                range={[start, end]}
+              >
                 <Image
                   src={helpfulImg}
                   width={91}
                   alt="helpful"
-                  style={{ "marginTop": "-4px", marginLeft:"-8px"}}
+                  style={{ marginTop: "-4px", marginLeft: "-8px" }}
                   className="inline-block"
                 />
-             
-            </WordSectionE>
-            </>
-            
+              </WordSectionE>
+            </React.Fragment>
           );
         } else {
           return (
             <WordSectionE
-              key={i}
+              key={`word-${i}`}
               progress={scrollYProgress}
               range={[start, end]}
             >

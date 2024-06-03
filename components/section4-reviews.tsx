@@ -4,13 +4,13 @@ import review1 from "@/public/reviews/1.svg";
 import review2 from "@/public/reviews/2.svg";
 import review3 from "@/public/reviews/3.svg";
 import review4 from "@/public/reviews/4.svg";
-import reviewGif1 from "@/public/reviews/gifs/1.gif";
-import reviewGif2 from "@/public/reviews/gifs/2.gif";
-import reviewGif3 from "@/public/reviews/gifs/3.gif";
-import reviewGif4 from "@/public/reviews/gifs/4.gif";
-import reviewGif5 from "@/public/reviews/gifs/5.gif";
-import reviewGif6 from "@/public/reviews/gifs/6.gif";
-import reviewGif7 from "@/public/reviews/gifs/7.gif";
+import reviewGif1 from "@/public/reviews/gifs/1.webp";
+import reviewGif2 from "@/public/reviews/gifs/2.webp";
+import reviewGif3 from "@/public/reviews/gifs/3.webp";
+import reviewGif4 from "@/public/reviews/gifs/4.webp";
+import reviewGif5 from "@/public/reviews/gifs/5.webp";
+import reviewGif6 from "@/public/reviews/gifs/6.webp";
+import reviewGif7 from "@/public/reviews/gifs/7.webp";
 import logoMark from "@/public/reviews/logoMark.svg";
 import promise from "@/public/reviews/promise.svg";
 import invertedLeafImg from "@/public/reviews/inverted-leaf.svg";
@@ -190,6 +190,7 @@ export function Collage() {
           quality={100}
           width={79}
           height={153}
+          unoptimized
         />
       </div>
       <div
@@ -205,6 +206,7 @@ export function Collage() {
           quality={100}
           width={87}
           height={153}
+          unoptimized
         />
       </div>
       <div
@@ -220,6 +222,7 @@ export function Collage() {
           quality={100}
           width={88}
           height={154}
+          unoptimized
         />
       </div>
 
@@ -236,6 +239,7 @@ export function Collage() {
           quality={100}
           width={82}
           height={154}
+          unoptimized
         />
       </div>
       <div
@@ -251,6 +255,7 @@ export function Collage() {
           quality={100}
           width={79}
           height={142}
+          unoptimized
         />
       </div>
       <div
@@ -275,6 +280,7 @@ export function Collage() {
           quality={100}
           width={82}
           height={148}
+          unoptimized
         />
       </div>
 
@@ -291,6 +297,7 @@ export function Collage() {
           quality={100}
           width={93}
           height={158}
+          unoptimized
         />
       </div>
 
@@ -351,6 +358,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={168}
             height={309}
+            unoptimized
           />
         </div>
 
@@ -367,6 +375,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={189}
             height={322}
+            unoptimized
           />
         </div>
 
@@ -411,6 +420,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={160}
             height={287}
+            unoptimized
           />
         </div>
 
@@ -427,6 +437,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={169}
             height={300}
+            unoptimized
           />
         </div>
 
@@ -443,6 +454,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={162}
             height={309}
+            unoptimized
           />
         </div>
 
@@ -459,6 +471,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={177}
             height={312}
+            unoptimized
           />
         </div>
 
@@ -475,6 +488,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={174}
             height={309}
+            unoptimized
           />
         </div>
       </div>
@@ -509,6 +523,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={168}
             height={309}
+            unoptimized
           />
         </div>
 
@@ -525,6 +540,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={189}
             height={322}
+            unoptimized
           />
         </div>
 
@@ -569,6 +585,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={160}
             height={287}
+            unoptimized
           />
         </div>
 
@@ -585,6 +602,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={169}
             height={300}
+            unoptimized
           />
         </div>
 
@@ -601,6 +619,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={162}
             height={309}
+            unoptimized
           />
         </div>
 
@@ -617,6 +636,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={177}
             height={312}
+            unoptimized
           />
         </div>
 
@@ -633,6 +653,7 @@ export function ReviewSlideShow() {
             quality={100}
             width={174}
             height={309}
+            unoptimized
           />
         </div>
       </div>

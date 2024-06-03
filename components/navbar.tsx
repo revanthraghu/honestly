@@ -16,11 +16,11 @@ interface Props {
 }
 
 const storeBooleanInLocalStorage = (key: string, value: boolean) => {
-    localStorage.setItem(key, JSON.stringify(value));
+  localStorage.setItem(key, JSON.stringify(value));
 };
 
 const getBooleanFromLocalStorage = (key: string): boolean => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     const storedValue = localStorage.getItem(key);
     return storedValue !== null ? JSON.parse(storedValue) : false;
   }
@@ -28,26 +28,25 @@ const getBooleanFromLocalStorage = (key: string): boolean => {
 };
 
 const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
-
   const [viewed, setViewed] = useState<boolean>(true);
 
   useEffect(() => {
-    setViewed(getBooleanFromLocalStorage("viewed"))
+    setViewed(getBooleanFromLocalStorage("viewed"));
   }, []);
 
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  //   // window.location.href = "";
+  // };
 
   const handleMessageBox = () => {
-    storeBooleanInLocalStorage("viewed", true)
+    storeBooleanInLocalStorage("viewed", true);
     setIsMessageBoxOpen(true);
     setViewed(true);
   };
 
   const handleMobileMessageBox = () => {
-    storeBooleanInLocalStorage("viewed", true)
+    storeBooleanInLocalStorage("viewed", true);
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
     setViewed(true);
@@ -72,7 +71,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
           >
             <div className="px-12 md:px-9">
               <div className="flex items-center justify-between h-[60px] md:h-[63px]">
-                <Link href="" onClick={scrollToTop} className="cursor-pointer">
+                <Link href="#" className="cursor-pointer">
                   <Image
                     src={logoWebImg}
                     alt="logo"
@@ -108,15 +107,19 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
                     alt="chat"
                     onClick={handleMobileMessageBox}
                   />
-                  {!viewed && <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
-                    1
-                  </Badge>}
+                  {!viewed && (
+                    <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
+                      1
+                    </Badge>
+                  )}
                 </div>
                 <div className="md:block hidden relative cursor-pointer">
                   <Image src={chatIcon} alt="chat" onClick={handleMessageBox} />
-                  {!viewed && <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
-                    1
-                  </Badge>}
+                  {!viewed && (
+                    <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
+                      1
+                    </Badge>
+                  )}
                 </div>
               </div>
             </div>
