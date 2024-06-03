@@ -9,20 +9,19 @@ import Section6 from "@/components/section6";
 import Section5 from "@/components/section5";
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
-
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     AOS.init({
-         duration: 800,
-         once: false,
-       })
- }, [])
+      duration: 800,
+      once: false,
+    });
+  }, []);
 
   useEffect(() => {
     function handleResize() {
@@ -51,7 +50,7 @@ export default function Home() {
               <ReviewSection />
               <Section5 />
               <Section6 />
-       
+
               <Faq />
               <Footer />
             </>
@@ -64,7 +63,7 @@ export default function Home() {
   else {
     return (
       <>
-        <main className="flex flex-col bg-heroBg bg-contain">
+        <main className="flex flex-col bg-heroBg bg-contain scroll-smooth">
           <Navbar
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
@@ -75,17 +74,18 @@ export default function Home() {
           <Ticker />
           <ReviewSection />
           <Section5 />
-          <div style={{
-            background:
-              "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
-          }}>
+          <div
+            style={{
+              background:
+                "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
+            }}
+          >
+            {/* <section id="faqs"> */}
             <Section6 />
-
+            {/* </section> */}
             <Faq />
             <Footer />
           </div>
-
-
         </main>
       </>
     );

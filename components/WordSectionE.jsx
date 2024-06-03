@@ -30,7 +30,7 @@ export default function Paragraph({ paragraph }) {
                   src={helpfulImg}
                   width={91}
                   alt="helpful"
-                  style={{ "margin-top": "-4px" }}
+                  style={{ "marginTop": "-4px" }}
                   className="inline-block"
                 />
               </a>

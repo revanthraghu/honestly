@@ -12,8 +12,7 @@ import UpperIceberg from "./upperIceberg";
 import LowerIceberg from "./lowerIceberg";
 
 export default function Hero() {
-
-  const iceberg = ["DELIVERY TIME", "FAT CLAIMS", "PHOTOS OF MODELS", "PRICE"]
+  const iceberg = ["DELIVERY TIME", "FAT CLAIMS", "PHOTOS OF MODELS", "PRICE"];
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -22,16 +21,18 @@ export default function Hero() {
     } else {
       setScrolled(false);
     }
-  }
+  };
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
   return (
     <>
-      <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
-
+      <div
+        className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10"
+        id=""
+      >
         <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
           <div className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>
@@ -83,11 +84,11 @@ export default function Hero() {
           weather—you get the gist. A bit like Bumble, but for beauty
         </div>
         <JoinButton>JOIN THE WAITLIST</JoinButton>
-        <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
+        <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
           993 spots left
         </div>
-      </div >
-      {!scrolled &&
+      </div>
+      {!scrolled && (
         <div className="h-[230px] flex justify-center">
           <Image
             src={iceberg1Mobile}
@@ -103,20 +104,23 @@ export default function Hero() {
             className="animate-bounce md:block hidden relative -mt-[100px] h-[277px]"
             aria-hidden
           />
-
-
-        </div>}
-
-
-
+        </div>
+      )}
 
       {/* SECTION TWO */}
 
-
       <div>
-        <div data-aos="zoom-in" data-aos-easing="linear"
-          data-aos-duration="500" className="flex flex-col items-center mb-[71px] ">
-          <Image src={icebergUnion} alt="background-image-2" className=" absolute md:w-[347.29px] md:h-[935px]" />
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          className="flex flex-col items-center mb-[71px] "
+        >
+          <Image
+            src={icebergUnion}
+            alt="background-image-2"
+            className=" absolute md:w-[347.29px] md:h-[935px]"
+          />
           <Image
             src={dashedSeparatorWeb}
             alt="dashed-separator"
@@ -144,13 +148,12 @@ export default function Hero() {
               </div>
 
               <div className="w-full mt-[42px] md:mt-[32px] flex flex-col items-center ">
-                <LowerIceberg/>
+                <LowerIceberg />
               </div>
             </div>
           </div>
         </div>
       </div>
     </>
-
   );
 }

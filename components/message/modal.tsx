@@ -37,7 +37,7 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
       <div
         className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
         style={{
-          background: "rgba(255, 255, 255, 1)",
+          background: "rgba(255, 255, 255, 0.8)",
           boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
@@ -87,7 +87,9 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          <div className="font-semibold text-[10px] mt-4">993 spots left</div>
+          <div className="font-semibold text-[13px] leading-[13.65px] tracking-[5%] mt-4">
+            993 spots left
+          </div>
         </div>
         {isMobile && (
           <div className="flex flex-row gap-2 w-[34px] h-[6px] ml-[36px]">

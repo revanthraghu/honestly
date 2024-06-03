@@ -18,21 +18,21 @@ const config = {
       },
     },
     letterSpacing: {
-      tightest: '-.075em',
-      tighter: '-.05em',
-      tight: '-.025em',
-      normal: '0',
-      wide: '.025em',
-      wider: '.05em',
-      widest: '0.40em',
+      tightest: "-.075em",
+      tighter: "-.05em",
+      tight: "-.025em",
+      normal: "0",
+      wide: ".025em",
+      wider: ".05em",
+      widest: "0.40em",
     },
     extend: {
       backgroundImage: {
-        'darkEffect': "url('/iceberg/dark.svg')",
-        'fadeEffect': "url('/iceberg/fade.svg')",
-        'heroBg': "url('/background/heroBG.svg')",
-        'howItWorksBg': "url('/background/howItWorks.svg')",
-        'messageIcon': "url('/icons/message-icon.svg)"
+        darkEffect: "url('/iceberg/dark.svg')",
+        fadeEffect: "url('/iceberg/fade.svg')",
+        heroBg: "url('/background/heroBG.svg')",
+        howItWorksBg: "url('/background/howItWorks.svg')",
+        messageIcon: "url('/icons/message-icon.svg)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -40,11 +40,11 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        filledEllipse : "#00A8FE",
-        mutedEllipse : "#D9D9D9",
-        topShade : "#AEDCEE",
-        bottomShade : "#F4F5F0",
-        videoBg : "#F4434D",
+        filledEllipse: "#00A8FE",
+        mutedEllipse: "#D9D9D9",
+        topShade: "#AEDCEE",
+        bottomShade: "#F4F5F0",
+        videoBg: "#F00832",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -85,32 +85,32 @@ const config = {
             backgroundImage: "url('/iceberg/fade.svg')",
             color: "#00A8FE",
             width: "330px",
-            opacity: "100%"
+            opacity: "100%",
           },
           "25%": {
             backgroundImage: "url('/iceberg/fade.svg')",
             color: "#122B2E",
             width: "330px",
-            opacity: "40%"
+            opacity: "40%",
           },
 
           "50%": {
             backgroundImage: "url('/iceberg/fade.svg')",
             color: "#122B2E",
             width: "330px",
-            opacity: "80%"
+            opacity: "80%",
           },
           "75%": {
             backgroundImage: "url('/iceberg/dark.svg')",
             color: "#122B2E",
             width: "330px",
-            opacity: "100%"
+            opacity: "100%",
           },
           "100%": {
             backgroundImage: "url('/iceberg/dark.svg')",
             color: "#122B2E",
             width: "330px",
-            opacity: "100%"
+            opacity: "100%",
           },
         },
         diamond: {
@@ -118,16 +118,16 @@ const config = {
           "100%": { backgroundColor: "#FFFFFF" },
         },
         slideInFromLeft: {
-          '0%': { transform: 'translateX(-100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         slideInFromBottom: {
-          '0%': { transform: 'translateY(20%)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          "0%": { transform: "translateY(20%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
         slideInFromRight: {
-          '0%': { transform: 'translateX(100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -147,10 +147,10 @@ const config = {
         },
       },
       animation: {
-        spin: 'spin 4s linear infinite',
-        slideInFromLeft: 'slideInFromLeft 0.8s ease-out',
-        slideInFromBottom: 'slideInFromBottom 0.8s',
-        slideInFromRight: 'slideInFromRight 0.8s ease-out',
+        spin: "spin 4s linear infinite",
+        slideInFromLeft: "slideInFromLeft 0.8s ease-out",
+        slideInFromBottom: "slideInFromBottom 0.8s",
+        slideInFromRight: "slideInFromRight 0.8s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         color: "color 0.2s forwards",

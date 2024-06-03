@@ -60,12 +60,23 @@ export default function ReviewSection() {
 
             <div className="bg-[#AEDCEE] w-[120px] h-[120px] rounded-full flex justify-center items-center ml-[12px]">
               <div className="absolute animate-spin ">
-                <Image src={promise} alt="promise" quality={100} width={90} height={90} />
+                <Image
+                  src={promise}
+                  alt="promise"
+                  quality={100}
+                  width={90}
+                  height={90}
+                />
               </div>
-              <div className="bg-white w-[54px] h-[54px] rounded-full">
-              </div>
+              <div className="bg-white w-[54px] h-[54px] rounded-full"></div>
               <div className="absolute ">
-                <Image src={logoMark} alt="logoMark" quality={100} width={28} height={28} />
+                <Image
+                  src={logoMark}
+                  alt="logoMark"
+                  quality={100}
+                  width={28}
+                  height={28}
+                />
               </div>
             </div>
           </div>
@@ -89,7 +100,7 @@ export default function ReviewSection() {
             </div>
             <div className="flex flex-col mt-[44px]">
               <JoinButton>JOIN THE WAITLIST</JoinButton>
-              <div className="text-[10px] max-w-[237px] leading-[10.5px] tracking-[5%] text-center font-semibold mt-[12px]">
+              <div className="text-[13px] max-w-[237px] leading-[13.65px] tracking-[5%] text-center font-semibold mt-[12px]">
                 993 spots left
               </div>
             </div>
@@ -104,12 +115,23 @@ export default function ReviewSection() {
           <div className="flex-shrink-0 flex flex-row items-center h-min max-w-[200px]">
             <div className="bg-[#AEDCEE] w-[120px] h-[120px] rounded-full flex justify-center items-center ml-[12px]">
               <div className="absolute animate-spin ">
-                <Image src={promise} alt="promise" quality={100} width={90} height={90} />
+                <Image
+                  src={promise}
+                  alt="promise"
+                  quality={100}
+                  width={90}
+                  height={90}
+                />
               </div>
-              <div className="bg-white w-[54px] h-[54px] rounded-full">
-              </div>
+              <div className="bg-white w-[54px] h-[54px] rounded-full"></div>
               <div className="absolute ">
-                <Image src={logoMark} alt="logoMark" quality={100} width={28} height={28} />
+                <Image
+                  src={logoMark}
+                  alt="logoMark"
+                  quality={100}
+                  width={28}
+                  height={28}
+                />
               </div>
             </div>
           </div>
@@ -133,7 +155,7 @@ export default function ReviewSection() {
         </div>
         <div className="flex flex-col items-center justify-center mt-12">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
+          <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
             993 spots left
           </div>
         </div>

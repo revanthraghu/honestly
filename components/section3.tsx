@@ -8,17 +8,19 @@ import WordSectionE from "./WordSectionE";
 import WordSectionF from "./WordSectionF";
 
 export default function Section3() {
-
-  const paragraphOne = "So 97% of us go down a rabbit hole of reviews"
-  const paragraphTwo = "YET we end up with products that just don't work"
-  const paragraphThree = "The problem?"
-  const paragraphFour = "Most reviews skip the important stuff: who's using them, what's their skin tone, skin type, age, and what the really liked about the product"
-  const paragraphFive = "Unless you're one of the 3 people who found “it's nice”"
-  const paragraphSix = "We keep falling for brand claims or what brands paid our favourite influencers to say (it's ok, we've all been there)"
+  const paragraphOne = "So 97% of us go down a rabbit hole of reviews";
+  const paragraphTwo = "YET we end up with products that just don't work";
+  const paragraphThree = "The problem?";
+  const paragraphFour =
+    "Most reviews skip the important stuff: who's using them, what's their skin tone, skin type, age, and what the really liked about the product";
+  const paragraphFive =
+    "Unless you're one of the 3 people who found “it's nice”";
+  const paragraphSix =
+    "We keep falling for brand claims or what brands paid our favourite influencers to say (it's ok, we've all been there)";
 
   return (
     <div className="flex md:flex-row flex-col h-[780px] md:h-[384px]">
-      <div className="relative flex-1 bg-[#F4434D]">
+      <div className="relative flex-1 bg-[#F00832]">
         <div className="absolute inset-4 flex justify-center border-2 border-black border-dashed">
           <div className="flex flex-col justify-center px-2 w-[268px] md:w-[540px] h-full font-normal font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px]">
             <div className="md:w-1/2 lg:max-w-[268px]">
@@ -72,6 +74,5 @@ export default function Section3() {
         </div>
       </div>
     </div>
-
   );
 }
