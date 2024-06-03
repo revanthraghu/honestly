@@ -23,7 +23,7 @@ export default function Section3() {
       <div className="relative flex-1 bg-[#F00832]">
         <div className="absolute inset-4 flex justify-center border-2 border-black border-dashed">
           <div className="flex flex-col justify-center px-2 w-[268px] md:w-[540px] h-full font-normal font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px]">
-            <div className="md:w-1/2 lg:max-w-[268px]">
+            <div className="md:w-[51%] lg:max-w-[268px]">
               <WordSectionA paragraph={paragraphOne} />
             </div>
             <span className="md:hidden h-[42px]"></span>
@@ -41,7 +41,7 @@ export default function Section3() {
             </div>
             <div className="h-[22px] md:h-[32px]" />
             {/* <span> */}
-            <ol className="px-4 text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:w-[530px] w-[290px]">
+            <ol className="px-4 text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:max-w-[482px] max-w-[290px]">
               <li>
                 <WordSectionD paragraph={paragraphFour} />
               </li>
