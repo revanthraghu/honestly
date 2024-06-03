@@ -15,7 +15,6 @@ interface Props {
 }
 
 const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
-  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -27,7 +26,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
   const handleMobileMessageBox = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
-  }
+  };
 
   return (
     <>
@@ -44,12 +43,11 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
                 "radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98F9FF 0%, rgba(255, 255, 255, 0) 100%)",
               boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.07)",
               // backdropFilter: "blur(10px) contrast(60%)"
-              
             }}
           >
             <div className="px-12 md:px-9">
               <div className="flex items-center justify-between h-[60px] md:h-[63px]">
-                <div onClick={scrollToTop} className="cursor-pointer">
+                <Link href="" onClick={scrollToTop} className="cursor-pointer">
                   <Image
                     src={logoWebImg}
                     alt="logo"
@@ -62,15 +60,15 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
                     className="block md:hidden"
                     priority
                   />
-                </div>
+                </Link>
                 <Link
-                  href="/faqs"
-                  className="text-sm hidden font-semibold md:flex"
+                  href="#faqs"
+                  className="text-sm hidden font-semibold md:flex "
                 >
                   FAQS
                 </Link>
                 <Link
-                  href="/howitworks"
+                  href="#howitworks"
                   className="text-sm hidden font-semibold md:flex"
                 >
                   HOW IT WORKS
@@ -80,7 +78,11 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
                   className="bg-[#00A8FE80] h-[23px] hidden md:block"
                 />
                 <div className="md:hidden block relative cursor-pointer">
-                  <Image src={chatIcon} alt="chat" onClick={handleMobileMessageBox} />
+                  <Image
+                    src={chatIcon}
+                    alt="chat"
+                    onClick={handleMobileMessageBox}
+                  />
                   <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
                     1
                   </Badge>
