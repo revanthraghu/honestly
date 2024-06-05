@@ -81,9 +81,9 @@ export default function Hero() {
           weather—you get the gist. A bit like Bumble, but for beauty
         </div>
         <JoinButton>JOIN THE WAITLIST</JoinButton>
-        <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
+        {/* <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
           993 spots left
-        </div>
+        </div> */}
       </div>
       {!scrolled && (
         <div className="h-[230px] flex justify-center">

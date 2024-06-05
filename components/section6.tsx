@@ -17,8 +17,8 @@ const Section6 = () => {
 
   const SocialAnswers = [
     "Then you know how cool this is! Imagine the same quality, but a. your question doesn’t get removed by automod, and b. it gets answers from people similar to you",
-    "While Youtube is a great place to discover new products, you’d be better off getting reviews from 4-5 people who are not only similar to you but also use these products in daily life.",
     "While Instagram is a great place to discover new products, you’d be better off getting reviews from 4-5 people who are not only similar to you but also use these products in daily life.",
+    "While Youtube is a great place to discover new products, you’d be better off getting reviews from 4-5 people who are not only similar to you but also use these products in daily life.",
     "This is ideal, especially if you have any serious conditions. Join the community for complementary products or makeup recs.",
   ];
 
@@ -31,12 +31,12 @@ const Section6 = () => {
     setSocialMediaIndex(0);
   };
 
-  const handleYoutube = () => {
+  const handleInstagram = () => {
     setIsModalOn(false);
     setSocialMediaIndex(1);
   };
 
-  const handleInstagram = () => {
+  const handleYoutube = () => {
     setIsModalOn(false);
     setSocialMediaIndex(2);
   };
@@ -176,7 +176,7 @@ const Section6 = () => {
               <div className="flex items-center">
                 <div>
                   <Image
-                    className="w-[15px] h-[29px] cursor-pointer  mr-[30px] md:mr-8 mt-32 md:mt-44"
+                    className="w-[15px] h-[29px] cursor-pointer mr-[30px] md:mr-8 mt-32 md:mt-44"
                     src={arrowLeftSvg}
                     alt="left"
                     onClick={prevMobileButton}
@@ -202,7 +202,7 @@ const Section6 = () => {
                   {current + 1 == 5 ? (
                     <>
                       <div
-                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
                         onClick={handleModalOpen}
                       >
                         <span>
@@ -216,16 +216,21 @@ const Section6 = () => {
                       </div>
                       {isModolOn ? (
                         <>
-                          <div className="flex flex-col mt-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                          <div
+                            className="flex flex-col mt-2 w-[216px] h-[105px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px]"
+                            style={{
+                              background: "rgba(255, 255, 255, 0.6)",
+                            }}
+                          >
                             <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleReddit}
                               >
                                 <span>Reddit</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleInstagram}
                               >
                                 <span>Instagram</span>
@@ -233,13 +238,13 @@ const Section6 = () => {
                             </div>
                             <div className="flex flex-row h-1/2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleYoutube}
                               >
                                 <span>Youtube</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleDermat}
                               >
                                 <span>my dermat</span>
@@ -249,7 +254,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[current].answer}
                           </div>
                         </>
@@ -257,10 +262,10 @@ const Section6 = () => {
                     </>
                   ) : (
                     <>
-                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                      <div className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px]">
                         {content[current].question}
                       </div>
-                      <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                      <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
                         {content[current].answer}
                       </div>
                     </>
@@ -346,9 +351,9 @@ const Section6 = () => {
           </div>
           <div className="mt-24">
             <JoinButton>JOIN THE WAITLIST</JoinButton>
-            <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
+            {/* <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
               993 spots left
-            </div>
+            </div> */}
           </div>
         </div>
       </>
@@ -394,7 +399,7 @@ const Section6 = () => {
                   {first + 1 == 5 ? (
                     <>
                       <div
-                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
                         onClick={handleModalOpen}
                       >
                         <span>
@@ -408,16 +413,21 @@ const Section6 = () => {
                       </div>
                       {isModolOn ? (
                         <>
-                          <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
+                          <div
+                            className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
+                            style={{
+                              background: "rgba(255, 255, 255, 0.6)",
+                            }}
+                          >
                             <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleReddit}
                               >
                                 <span>Reddit</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleInstagram}
                               >
                                 <span>Instagram</span>
@@ -425,13 +435,13 @@ const Section6 = () => {
                             </div>
                             <div className="flex flex-row h-1/2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleYoutube}
                               >
                                 <span>Youtube</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleDermat}
                               >
                                 <span>my dermat</span>
@@ -441,7 +451,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[first].answer}
                           </div>
                         </>
@@ -449,10 +459,10 @@ const Section6 = () => {
                     </>
                   ) : (
                     <>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[first].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[first].answer}
                       </div>
                     </>
@@ -476,10 +486,10 @@ const Section6 = () => {
                           {first + 2}
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[first + 1].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[first + 1].answer}
                       </div>
                     </div>
@@ -506,7 +516,7 @@ const Section6 = () => {
                   {second + 1 == 5 ? (
                     <>
                       <div
-                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
                         onClick={handleModalOpen}
                       >
                         <span>
@@ -523,13 +533,13 @@ const Section6 = () => {
                           <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
                             <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleReddit}
                               >
                                 <span>Reddit</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleInstagram}
                               >
                                 <span>Instagram</span>
@@ -537,13 +547,13 @@ const Section6 = () => {
                             </div>
                             <div className="flex flex-row h-1/2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleYoutube}
                               >
                                 <span>Youtube</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleDermat}
                               >
                                 <span>my dermat</span>
@@ -553,7 +563,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[second].answer}
                           </div>
                         </>
@@ -561,10 +571,10 @@ const Section6 = () => {
                     </>
                   ) : (
                     <>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[second].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[second].answer}
                       </div>
                     </>
@@ -587,10 +597,10 @@ const Section6 = () => {
                           {second + 2}
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[second + 1].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[second + 1].answer}
                       </div>
                     </div>
@@ -617,7 +627,7 @@ const Section6 = () => {
                   {third + 1 == 5 ? (
                     <>
                       <div
-                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
                         onClick={handleModalOpen}
                       >
                         <span>
@@ -634,13 +644,13 @@ const Section6 = () => {
                           <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
                             <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleReddit}
                               >
                                 <span>Reddit</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleInstagram}
                               >
                                 <span>Instagram</span>
@@ -648,13 +658,13 @@ const Section6 = () => {
                             </div>
                             <div className="flex flex-row h-1/2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleYoutube}
                               >
                                 <span>Youtube</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleDermat}
                               >
                                 <span>my dermat</span>
@@ -664,7 +674,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[third].answer}
                           </div>
                         </>
@@ -672,10 +682,10 @@ const Section6 = () => {
                     </>
                   ) : (
                     <>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[third].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[third].answer}
                       </div>
                     </>
@@ -699,10 +709,10 @@ const Section6 = () => {
                           {third + 2}
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
                         {content[third + 1].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
                         {content[third + 1].answer}
                       </div>
                     </div>
@@ -724,9 +734,9 @@ const Section6 = () => {
         </div>
         <div className="mt-12">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
+          {/* <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
             993 spots left
-          </div>
+          </div> */}
         </div>
       </div>
     );

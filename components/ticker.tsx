@@ -8,7 +8,7 @@ function TickerItem() {
 
 export default function Ticker() {
   return (
-    <div className="relative flex justify-center items-center bg-black pt-2 font-extralight font-ppeditorialnew text-[28px] text-white leading-[32.px] -tracking-[5%] overflow-x-hidden">
+    <div className="relative flex items-center bg-black pt-2 font-extralight font-ppeditorialnew text-[28px] text-white leading-[32.px] -tracking-[5%] overflow-x-hidden">
       <div className="whitespace-nowrap animate-marquee">
         <TickerItem />
         <TickerItem />
