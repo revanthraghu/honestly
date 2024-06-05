@@ -1,11 +1,11 @@
 import helpfulImg from "@/public/background/helpful.svg";
 import Image from "next/image";
-import WordSectionA from "./WordSectionA";
-import WordSectionB from "./WordSectionB";
-import WordSectionC from "./WordSectionC";
-import WordSectionD from "./WordSectionD";
-import WordSectionE from "./WordSectionE";
-import WordSectionF from "./WordSectionF";
+import WordSectionA from "./opacity-controllers/WordSectionA";
+import WordSectionB from "./opacity-controllers/WordSectionB";
+import WordSectionC from "./opacity-controllers/WordSectionC";
+import WordSectionD from "./opacity-controllers/WordSectionD";
+import WordSectionE from "./opacity-controllers/WordSectionE";
+import WordSectionF from "./opacity-controllers/WordSectionF";
 
 export default function Section3() {
   const paragraphOne = "So 97% of us go down a rabbit hole of reviews";

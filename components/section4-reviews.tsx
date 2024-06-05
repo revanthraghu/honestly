@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import review1 from "@/public/reviews/1.svg";
 import review2 from "@/public/reviews/2.svg";
@@ -34,6 +35,25 @@ export default function ReviewSection() {
         "Too many cooks spoil the broth (aka no more being overwhelmed with too many reccos)",
     },
   ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeIn(false);
+      setTimeout(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % contents.length);
+        setFadeIn(true);
+      }, 1000); // Match with the animation duration
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [contents.length]);
+
+  const fadeStyle = {
+    transition: "opacity 1s ease-in-out",
+    opacity: fadeIn ? 1 : 0,
+  };
 
   return (
     // <div className="bg-white">
@@ -100,9 +120,9 @@ export default function ReviewSection() {
             </div>
             <div className="flex flex-col mt-[44px]">
               <JoinButton>JOIN THE WAITLIST</JoinButton>
-              <div className="text-[13px] max-w-[237px] leading-[13.65px] tracking-[5%] text-center font-semibold mt-[12px]">
+              {/* <div className="text-[13px] max-w-[237px] leading-[13.65px] tracking-[5%] text-center font-semibold mt-[12px]">
                 993 spots left
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -136,20 +156,26 @@ export default function ReviewSection() {
             </div>
           </div>
 
-          <div className="flex flex-col py-[13px] max-w-[172px] justify-center">
-            <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
-              {contents[0].title}
+          <div className="flex flex-col py-[13px] max-w-[172px] h-[128px] justify-center">
+            <span
+              className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]"
+              style={fadeStyle}
+            >
+              {contents[activeIndex].title}
             </span>
-            <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px]">
-              {contents[0].description}
+            <span
+              className="font-normal text-[13px] tracking-[4%] leading-[16.9px]"
+              style={fadeStyle}
+            >
+              {contents[activeIndex].description}
             </span>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-12">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
+          {/* <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
             993 spots left
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="h-[54px] md:h-[84px]" />
