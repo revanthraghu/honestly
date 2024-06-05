@@ -188,13 +188,13 @@ const Section6 = () => {
               className={`flex flex-col bg-white w-[284px] h-[265px] md:w-[350px] md:h-[350px] rounded-[28px] px-[24px] py-[20px] `}
             >
               <div className="flex flex-col items-center overflow-auto no-scrollbar">
-                <div className="w-[26px] h-[25px]">
+                <div className="relative w-[26px] h-[25px]">
                   <Image
                     className="w-[26px] h-[25px]"
                     src={messageIcon}
                     alt="messageicon"
                   />
-                  <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                     {current + 1}
                   </div>
                 </div>
@@ -254,7 +254,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[current].answer}
                           </div>
                         </>
@@ -265,7 +265,7 @@ const Section6 = () => {
                       <div className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px]">
                         {content[current].question}
                       </div>
-                      <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                      <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
                         {content[current].answer}
                       </div>
                     </>
@@ -328,11 +328,11 @@ const Section6 = () => {
                     }`}
                   ></div>
 
-                  <div
+                  {/* <div
                     className={`w-[6px] h-[6px] rounded-full ${
                       current == 9 ? "bg-black" : "bg-[#AEDCEE]"
                     }`}
-                  ></div>
+                  ></div> */}
                 </div>
               </div>
             </div>
@@ -386,13 +386,13 @@ const Section6 = () => {
                 className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
               >
                 <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
+                  <div className="relative w-[26px] h-[25px]">
                     <Image
                       className="w-[26px] h-[25px]"
                       src={messageIcon}
                       alt="messageicon"
                     />
-                    <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                       {first + 1}
                     </div>
                   </div>
@@ -451,7 +451,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[first].answer}
                           </div>
                         </>
@@ -476,13 +476,13 @@ const Section6 = () => {
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                      <div className="w-[26px] h-[25px]">
+                      <div className="relative w-[26px] h-[25px]">
                         <Image
                           className="w-[26px] h-[25px]"
                           src={messageIcon}
                           alt="messageicon"
                         />
-                        <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                           {first + 2}
                         </div>
                       </div>
@@ -503,13 +503,13 @@ const Section6 = () => {
                 className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
               >
                 <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
+                  <div className="relative w-[26px] h-[25px]">
                     <Image
                       className="w-[26px] h-[25px]"
                       src={messageIcon}
                       alt="messageicon"
                     />
-                    <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                       {second + 1}
                     </div>
                   </div>
@@ -563,7 +563,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[second].answer}
                           </div>
                         </>
@@ -587,13 +587,13 @@ const Section6 = () => {
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                      <div className="w-[26px] h-[25px]">
+                      <div className="relative w-[26px] h-[25px]">
                         <Image
                           className="w-[26px] h-[25px]"
                           src={messageIcon}
                           alt="messageicon"
                         />
-                        <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                           {second + 2}
                         </div>
                       </div>
@@ -614,13 +614,13 @@ const Section6 = () => {
                 className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
               >
                 <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="w-[26px] h-[25px]">
+                  <div className="relative w-[26px] h-[25px]">
                     <Image
                       className="w-[26px] h-[25px]"
                       src={messageIcon}
                       alt="messageicon"
                     />
-                    <div className="text-white -mt-[18px] flex justify-center items-center font-ppmori text-[10px] leading-[10.5px]">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                       {third + 1}
                     </div>
                   </div>
@@ -674,7 +674,7 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-2 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
                             {content[third].answer}
                           </div>
                         </>
@@ -699,13 +699,13 @@ const Section6 = () => {
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                      <div className="w-[26px] h-[25px]">
+                      <div className="relative w-[26px] h-[25px]">
                         <Image
-                          className="w-[26px] h-[25px]"
+                          className="w-full h-full"
                           src={messageIcon}
                           alt="messageicon"
                         />
-                        <div className="text-white -mt-[18px] font-ppmori text-[10px] leading-[10.5px] flex justify-center items-center">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                           {third + 2}
                         </div>
                       </div>
