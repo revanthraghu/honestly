@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useScroll } from "framer-motion";
 import Image from "next/image";
 import review1 from "@/public/reviews/1.svg";
 import review2 from "@/public/reviews/2.svg";
@@ -35,29 +36,32 @@ export default function ReviewSection() {
         "Too many cooks spoil the broth (aka no more being overwhelmed with too many reccos)",
     },
   ];
-
+  const container = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(true);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 1", "start 0"],
+  });
+
+  // scrollYProgress.on("change", (value) => console.log("ScrollY", value));
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeIn(false);
-      setTimeout(() => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % contents.length);
-        setFadeIn(true);
-      }, 1000); // Match with the animation duration
-    }, 5000); // Change every 5 seconds
+    const unsubscribe = scrollYProgress.on("change", (value) => {
+      if (value < 0.33) {
+        setActiveIndex(0);
+      } else if (value < 0.66) {
+        setActiveIndex(1);
+      } else {
+        setActiveIndex(2);
+      }
+    });
 
-    return () => clearInterval(interval);
-  }, [contents.length]);
-
-  const fadeStyle = {
-    transition: "opacity 1s ease-in-out",
-    opacity: fadeIn ? 1 : 0,
-  };
+    return () => unsubscribe();
+  }, [scrollYProgress]);
 
   return (
     // <div className="bg-white">
-    <div className="bg-white flex flex-col justify-center items-center h-full  ">
+    <div className="bg-white flex flex-col justify-center items-center h-full">
       <div className="h-[50px] md:h-[96px]" />
       <div className="flex flex-col font-normal text-[36px] leading-[41.4px] px-[34px] md:px-0 md:max-w-[793px] font-ppeditorialnew text-center md:text-[52px] md:leading-[59.8px]">
         <span>
@@ -129,9 +133,10 @@ export default function ReviewSection() {
       </div>
       <div className="h-[354px] mt-8 min-[850px]:hidden">
         <ReviewSlideShow />
+        {/* <Slideshow /> */}
       </div>
       <div className="w-screen mt-8 min-[850px]:hidden">
-        <div className="justify-center flex flex-row px-4 gap-6">
+        <div className="flex flex-row px-4 gap-6">
           <div className="flex-shrink-0 flex flex-row items-center h-min max-w-[200px]">
             <div className="bg-[#AEDCEE] w-[120px] h-[120px] rounded-full flex justify-center items-center ml-[12px]">
               <div className="absolute animate-spin ">
@@ -156,8 +161,11 @@ export default function ReviewSection() {
             </div>
           </div>
 
-          <div className="flex flex-col py-[13px] max-w-[172px] h-[128px] justify-center">
-            <span
+          <div
+            className="flex flex-col py-[13px] max-w-[172px] h-[128px] justify-center"
+            ref={container}
+          >
+            {/* <span
               className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]"
               style={fadeStyle}
             >
@@ -168,7 +176,25 @@ export default function ReviewSection() {
               style={fadeStyle}
             >
               {contents[activeIndex].description}
-            </span>
+            </span> */}
+            {contents.map((content, index) => (
+              <div
+                key={index}
+                // ref={container}
+                className="absolute flex flex-col py-[13px] max-w-[172px] h-[128px] justify-center"
+                style={{
+                  transition: "opacity 1s ease-in-out",
+                  opacity: activeIndex === index ? 1 : 0,
+                }}
+              >
+                <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px]">
+                  {content.title}
+                </span>
+                <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px]">
+                  {content.description}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-12">
