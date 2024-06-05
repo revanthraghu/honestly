@@ -99,10 +99,7 @@ const Section6 = () => {
     },
   ];
 
-  const [first, setFirst] = useState(0);
-  const [second, setSecond] = useState(2);
-  const [third, setThird] = useState(4);
-
+  const [page, setPage] = useState(1);
   const [current, setCurrent] = useState(0);
 
   const nextMobileButton = () => {
@@ -121,44 +118,13 @@ const Section6 = () => {
     }
   };
 
-  const nextButton = () => {
-    if (first == 8) {
-      setFirst(0);
-      setSecond(second + 2);
-      setThird(third + 2);
-    } else if (second == 8) {
-      setSecond(0);
-      setFirst(first + 2);
-      setThird(third + 2);
-    } else if (third == 8) {
-      setThird(0);
-      setFirst(first + 2);
-      setSecond(second + 2);
+  const swipeButton = () => {
+    if(page == 1) {
+      setPage(2);
     } else {
-      setFirst(first + 2);
-      setSecond(second + 2);
-      setThird(third + 2);
+      setPage(1);
     }
-  };
-
-  const prevButton = () => {
-    if (first == 0) {
-      setFirst(8);
-      setSecond(second - 2);
-      setThird(third - 2);
-    } else if (second == 0) {
-      setSecond(8);
-      setFirst(first - 2);
-      setThird(third - 2);
-    } else if (third == 0) {
-      setThird(8);
-      setFirst(first - 2);
-      setSecond(second - 2);
-    } else {
-      setFirst(first - 2);
-      setSecond(second - 2);
-      setThird(third - 2);
-    }
+    
   };
 
   if (isSmallTabletOrMobile) {
@@ -176,7 +142,7 @@ const Section6 = () => {
               <div className="flex items-center">
                 <div>
                   <Image
-                    className="w-[15px] h-[29px] cursor-pointer mr-[30px] md:mr-8 mt-32 md:mt-44"
+                    className="w-[15px] h-[29px] cursor-pointer mr-[30px] md:mr-8 mt-32 md:mt-32"
                     src={arrowLeftSvg}
                     alt="left"
                     onClick={prevMobileButton}
@@ -185,10 +151,10 @@ const Section6 = () => {
               </div>
             </div>
             <div
-              className={`flex flex-col bg-white w-[284px] h-[265px] md:w-[350px] md:h-[350px] rounded-[28px] px-[24px] py-[20px] `}
+              className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[20px] `}
             >
               <div className="flex flex-col items-center overflow-auto no-scrollbar">
-                <div className="relative w-[26px] h-[25px]">
+                <div className="relative w-[26px] h-[25px] mt-2">
                   <Image
                     className="w-[26px] h-[25px]"
                     src={messageIcon}
@@ -202,35 +168,37 @@ const Section6 = () => {
                   {current + 1 == 5 ? (
                     <>
                       <div
-                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
+                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
                         onClick={handleModalOpen}
                       >
                         <span>
                           {content[current].question}
                           <Image
-                            className="w-[9px] h-[4.5px] inline-block ml-2"
+                            className="inline-block ml-2"
+                            width={12}
+                            height={6}
                             src={vector}
                             alt="vector"
                           />
                         </span>
                       </div>
                       {isModolOn ? (
-                        <>
+                        <div className="-ml-[33px] mt-2">
                           <div
-                            className="flex flex-col mt-2 w-[216px] h-[105px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px]"
+                            className="flex absolute flex-col  w-[283px] h-[138px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
                             style={{
                               background: "rgba(255, 255, 255, 0.6)",
                             }}
                           >
                             <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleReddit}
                               >
                                 <span>Reddit</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleInstagram}
                               >
                                 <span>Instagram</span>
@@ -238,23 +206,23 @@ const Section6 = () => {
                             </div>
                             <div className="flex flex-row h-1/2 pl-2 pr-2">
                               <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleYoutube}
                               >
                                 <span>Youtube</span>
                               </div>
                               <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                 onClick={handleDermat}
                               >
                                 <span>my dermat</span>
                               </div>
                             </div>
                           </div>
-                        </>
+                        </div>
                       ) : (
                         <>
-                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                          <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
                             {content[current].answer}
                           </div>
                         </>
@@ -262,10 +230,10 @@ const Section6 = () => {
                     </>
                   ) : (
                     <>
-                      <div className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px]">
+                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
                         {content[current].question}
                       </div>
-                      <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
+                      <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
                         {content[current].answer}
                       </div>
                     </>
@@ -275,64 +243,49 @@ const Section6 = () => {
                 {/*  Carousel Dots */}
                 <div className="flex flex-row gap-1 justify-center mt-2">
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 0 ? "bg-black" : "bg-[#AEDCEE]"
-                    } `}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
+                      } `}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 1 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 2 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 3 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 4 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 5 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 6 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 7 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 8 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
+                    className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
+                      }`}
                   ></div>
-
-                  {/* <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 9 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div> */}
                 </div>
               </div>
             </div>
@@ -340,7 +293,7 @@ const Section6 = () => {
               <div className="flex items-center">
                 <div>
                   <Image
-                    className="w-[15px] h-[29px] cursor-pointer ml-4 md:ml-8 mr-[1rem] mt-32 md:mt-44"
+                    className="w-[15px] h-[29px] cursor-pointer ml-4 md:ml-8 mr-[1rem] mt-32 md:mt-32"
                     src={arrowRightSvg}
                     alt="right"
                     onClick={nextMobileButton}
@@ -351,9 +304,6 @@ const Section6 = () => {
           </div>
           <div className="mt-24">
             <JoinButton>JOIN THE WAITLIST</JoinButton>
-            {/* <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
-              993 spots left
-            </div> */}
           </div>
         </div>
       </>
@@ -375,107 +325,23 @@ const Section6 = () => {
                 className="w-[15px] h-[29px] cursor-pointer mr-12 mt-8"
                 src={arrowLeftSvg}
                 alt="left"
-                onClick={prevButton}
+                onClick={swipeButton}
               />
             </div>
           </div>
           <div className="w-[918px] flex flex-row justify-between h-[554px] mt-10">
-            {/* LEFT */}
-            <div className="flex flex-col gap-8">
-              <div
-                className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
-              >
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="relative w-[26px] h-[25px]">
-                    <Image
-                      className="w-[26px] h-[25px]"
-                      src={messageIcon}
-                      alt="messageicon"
-                    />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                      {first + 1}
-                    </div>
-                  </div>
-                  {first + 1 == 5 ? (
-                    <>
-                      <div
-                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
-                        onClick={handleModalOpen}
-                      >
-                        <span>
-                          {content[first].question}
-                          <Image
-                            className="w-[9px] h-[4.5px] inline-block ml-2"
-                            src={vector}
-                            alt="vector"
-                          />
-                        </span>
-                      </div>
-                      {isModolOn ? (
-                        <>
-                          <div
-                            className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
-                            style={{
-                              background: "rgba(255, 255, 255, 0.6)",
-                            }}
-                          >
-                            <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleReddit}
-                              >
-                                <span>Reddit</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleInstagram}
-                              >
-                                <span>Instagram</span>
-                              </div>
-                            </div>
-                            <div className="flex flex-row h-1/2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleYoutube}
-                              >
-                                <span>Youtube</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleDermat}
-                              >
-                                <span>my dermat</span>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
-                            {content[first].answer}
-                          </div>
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[first].question}
-                      </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[first].answer}
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
+            {/* PAGE 1 */}
 
-              {first + 2 != 10 && (
-                <>
+            {page == 1 &&
+
+              <>
+
+                {/* LEFT */}
+                <div className="flex flex-col gap-8">
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
                       <div className="relative w-[26px] h-[25px]">
                         <Image
                           className="w-[26px] h-[25px]"
@@ -483,110 +349,21 @@ const Section6 = () => {
                           alt="messageicon"
                         />
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          {first + 2}
+                          1
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[first + 1].question}
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[0].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[first + 1].answer}
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[0].answer}
                       </div>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
-            {/* MIDDLE */}
-            <div className="flex flex-col gap-8">
-              <div
-                className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
-              >
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="relative w-[26px] h-[25px]">
-                    <Image
-                      className="w-[26px] h-[25px]"
-                      src={messageIcon}
-                      alt="messageicon"
-                    />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                      {second + 1}
-                    </div>
-                  </div>
-                  {second + 1 == 5 ? (
-                    <>
-                      <div
-                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
-                        onClick={handleModalOpen}
-                      >
-                        <span>
-                          {content[second].question}
-                          <Image
-                            className="w-[9px] h-[4.5px] inline-block ml-2"
-                            src={vector}
-                            alt="vector"
-                          />
-                        </span>
-                      </div>
-                      {isModolOn ? (
-                        <>
-                          <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
-                            <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleReddit}
-                              >
-                                <span>Reddit</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleInstagram}
-                              >
-                                <span>Instagram</span>
-                              </div>
-                            </div>
-                            <div className="flex flex-row h-1/2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleYoutube}
-                              >
-                                <span>Youtube</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleDermat}
-                              >
-                                <span>my dermat</span>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
-                            {content[second].answer}
-                          </div>
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[second].question}
-                      </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[second].answer}
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-              {second + 2 != 10 && (
-                <>
                   <div
-                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
                       <div className="relative w-[26px] h-[25px]">
                         <Image
                           className="w-[26px] h-[25px]"
@@ -594,132 +371,258 @@ const Section6 = () => {
                           alt="messageicon"
                         />
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          {second + 2}
+                          2
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[second + 1].question}
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[1].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[second + 1].answer}
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[1].answer}
                       </div>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
-            {/* RIGHT */}
-            <div className="flex flex-col gap-8">
-              <div
-                className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
-              >
-                <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
-                  <div className="relative w-[26px] h-[25px]">
-                    <Image
-                      className="w-[26px] h-[25px]"
-                      src={messageIcon}
-                      alt="messageicon"
-                    />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                      {third + 1}
-                    </div>
-                  </div>
-                  {third + 1 == 5 ? (
-                    <>
-                      <div
-                        className="mt-4 font-ppmori font-semibold text-[14px] leading-[14.7px] cursor-pointer"
-                        onClick={handleModalOpen}
-                      >
-                        <span>
-                          {content[third].question}
-                          <Image
-                            className="w-[9px] h-[4.5px] inline-block ml-2"
-                            src={vector}
-                            alt="vector"
-                          />
-                        </span>
-                      </div>
-                      {isModolOn ? (
-                        <>
-                          <div className="flex flex-col mt-2 ml-2 w-[216px] h-[105px] rounded-[28px] opacity-60 drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] bg-[#FFFFFF99] border-[#AEDCEE] border-[0.5px] ">
-                            <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleReddit}
-                              >
-                                <span>Reddit</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleInstagram}
-                              >
-                                <span>Instagram</span>
-                              </div>
-                            </div>
-                            <div className="flex flex-row h-1/2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleYoutube}
-                              >
-                                <span>Youtube</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[103px] h-[45px] font-semibold font-ppmori text-[14px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleDermat}
-                              >
-                                <span>my dermat</span>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="mt-4 font-ppmori font-normal text-[14px] leading-[14.7px]">
-                            {content[third].answer}
-                          </div>
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[third].question}
-                      </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[third].answer}
-                      </div>
-                    </>
-                  )}
                 </div>
-              </div>
 
-              {third + 2 != 10 && (
-                <>
+                {/* MIDDLE */}
+                <div className="flex flex-col gap-8">
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-12">
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
                       <div className="relative w-[26px] h-[25px]">
                         <Image
-                          className="w-full h-full"
+                          className="w-[26px] h-[25px]"
                           src={messageIcon}
                           alt="messageicon"
                         />
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          {third + 2}
+                          3
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[14px] leading-[14.7px] mt-4">
-                        {content[third + 1].question}
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[2].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[14px] leading-[14.7px] mt-4">
-                        {content[third + 1].answer}
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[2].answer}
                       </div>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
+                  <div
+                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          4
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[3].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[3].answer}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+
+                <div className="flex flex-col gap-8">
+                  <div
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          5
+                        </div>
+                      </div>
+                      <>
+                        <div
+                          className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                          onClick={handleModalOpen}
+                        >
+                          <span>
+                            {content[4].question}
+                            <Image
+                              className="inline-block ml-2"
+                              width={12}
+                              height={6}
+                              src={vector}
+                              alt="vector"
+                            />
+                          </span>
+                        </div>
+                        {isModolOn ? (
+                          <>
+                            <div className="-ml-[281px] mt-6">
+                              <div
+                                className="flex absolute flex-col w-[284px] h-[139px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
+                                style={{
+                                  background: "rgba(255, 255, 255, 0.6)",
+                                }}
+                              >
+                                <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                  <div
+                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleReddit}
+                                  >
+                                    <span>Reddit</span>
+                                  </div>
+                                  <div
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleInstagram}
+                                  >
+                                    <span>Instagram</span>
+                                  </div>
+                                </div>
+                                <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                  <div
+                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleYoutube}
+                                  >
+                                    <span>Youtube</span>
+                                  </div>
+                                  <div
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleDermat}
+                                  >
+                                    <span>my dermat</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              {content[4].answer}
+                            </div>
+                          </>
+                        )}
+                      </>
+                    </div>
+                  </div>
+                  <div
+                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          6
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[5].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[5].answer}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+
+            }
+
+
+            {/* PAGE 2 */}
+
+            {page == 2 &&
+              <>
+                <div className="flex flex-col gap-8">
+                  <div
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          7
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[6].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[6].answer}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-8">
+                  <div
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          8
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[7].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[7].answer}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-8">
+                  <div
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          9
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[8].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[8].answer}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>}
+
           </div>
           <div className="flex items-center">
             <div>
@@ -727,16 +630,13 @@ const Section6 = () => {
                 className="w-[15px] h-[29px] cursor-pointer ml-12 mt-8"
                 src={arrowRightSvg}
                 alt="right"
-                onClick={nextButton}
+                onClick={swipeButton}
               />
             </div>
           </div>
         </div>
         <div className="mt-12">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          {/* <div className="text-[10px] leading-[10.5px] tracking-[5%] font-semibold text-center mt-[12px]">
-            993 spots left
-          </div> */}
         </div>
       </div>
     );

@@ -149,7 +149,7 @@ const config = {
       animation: {
         spin: 'spin 10s linear infinite',
         slideInFromLeft: 'slideInFromLeft 0.8s ease-out',
-        slideInFromBottom: 'slideInFromBottom 0.8s',
+        slideInFromBottom: 'slideInFromBottom 1s',
         slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

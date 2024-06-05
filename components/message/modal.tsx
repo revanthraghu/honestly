@@ -87,9 +87,6 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
         </div>
         <div className="flex flex-col items-center justify-center mt-4">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
-          {/* <div className="font-semibold text-[13px] leading-[13.65px] tracking-[5%] mt-4">
-            993 spots left
-          </div> */}
         </div>
         {/* FUTURE FEATURE */}
         {/* {isMobile && (

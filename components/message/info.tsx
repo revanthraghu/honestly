@@ -52,7 +52,7 @@ export default function Info() {
 
     return (
         <div
-            className="block md:hidden top-0 z-50 h-full mx-[9px] w-[96%] pb-8 py-8">
+            className="block md:hidden top-0 z-50 h-full mx-[9px] w-[96%] pb-8 py-8 bg-none">
             <div className="flex flex-row  items-center ">
                 <div className="h-[292px] w-full border-black border-[0.5px]">
                     <div className="flex flex-row w-full">

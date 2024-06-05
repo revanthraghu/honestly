@@ -38,9 +38,9 @@ export default function Section5() {
         if (isInCenter === false) {
           for (let i = 0; i <= 10; i++) {
             setTimeout(() => {
+              scrollByY(100);
               setCounter(i);
-              scrollByY(200);
-            }, i * 500); // Schedule each log after (i * 2) seconds
+            }, i * 800); 
           }
         }
         isInCenter = true;
