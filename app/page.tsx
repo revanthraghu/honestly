@@ -42,7 +42,7 @@ export default function Home() {
             isMessageBoxOpen={isMessageBoxOpen}
             setIsMessageBoxOpen={setIsMessageBoxOpen}
           />
-          {!isMessageBoxOpen && (
+          {/* {!isMessageBoxOpen && ( */}
             <>
               <Hero />
               <Section3 />
@@ -54,7 +54,7 @@ export default function Home() {
               <Faq />
               <Footer />
             </>
-          )}
+          {/* )} */}
         </main>
       </>
     );

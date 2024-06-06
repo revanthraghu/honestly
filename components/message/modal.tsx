@@ -14,15 +14,15 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
   };
 
   return (
-    <div className="top-0 z-50 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4">
+    <div className="top-0 z-50 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4 backdrop-blur-sm">
       <div
-        className="h-[60px] mt-[8px] rounded-[100px]"
+        className="h-[60px] mt-[2px] md:mt-[8px] rounded-[100px] "
         style={{
           background: "#00A8FE",
           boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
-        <div className="px-8">
+        <div className="px-12 md:px-9">
           <div className="flex items-center justify-between h-[60px]">
             <div className="font-ppeditorialnew font-extrabold text-white text-xl leading-[23px]">
               TL;DR
@@ -37,7 +37,7 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
       <div
         className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
         style={{
-          background: "rgba(255, 255, 255, 0.8)",
+          background: "rgba(255, 255, 255, 0.6)",
           boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
