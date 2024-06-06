@@ -37,11 +37,11 @@ const Modal = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
       <div
         className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
         style={{
-          background: "rgba(255, 255, 255, 0.6)",
+          background: "rgba(255, 255, 255, 0.9)",
           boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
-        <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider">
+        <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider ">
           <div>
             👋 Hey. We’re Vivek and Karishma We’re building Bumble for beauty &
             personal care needs ?

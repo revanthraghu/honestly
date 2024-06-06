@@ -13,9 +13,9 @@ const Message = ({
   setIsMessageBoxOpen,
 }: Props) => {
   return (
-    <main className="fixed top-0 flex flex-col h-full z-50">
+    <main className="fixed top-0 flex flex-col h-full z-50 ">
       {isMobile ?
-        <div className="flex flex-col overflow-auto backdrop-blur-lg">
+        <div className="flex flex-col overflow-auto backdrop-blur-lg overflow-x-hidden h-screen">
           <Modal
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
