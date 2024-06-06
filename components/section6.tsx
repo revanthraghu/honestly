@@ -6,6 +6,7 @@ import arrowRightSvg from "@/public/icons/arrow-right.svg";
 import messageIcon from "@/public/icons/message-icon.svg";
 import { useState, useEffect } from "react";
 import JoinButton from "./ui/join-button";
+import { useSwipeable } from "react-swipeable";
 
 const Section6 = () => {
   const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] =
@@ -119,13 +120,16 @@ const Section6 = () => {
   };
 
   const swipeButton = () => {
-    if(page == 1) {
+    if (page == 1) {
       setPage(2);
     } else {
       setPage(1);
     }
-    
   };
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: nextMobileButton,
+    onSwipedRight: prevMobileButton,
+  });
 
   if (isSmallTabletOrMobile) {
     return (
@@ -164,7 +168,7 @@ const Section6 = () => {
                     {current + 1}
                   </div>
                 </div>
-                <div className="w-[233px] h-[182px] overflow-y-auto mt-4 px-2">
+                <div className="w-[233px] h-[182px] overflow-y-auto no-scrollbar mt-4 px-2">
                   {current + 1 == 5 ? (
                     <>
                       <div
@@ -243,48 +247,57 @@ const Section6 = () => {
                 {/*  Carousel Dots */}
                 <div className="flex flex-row gap-1 justify-center mt-2">
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
-                      } `}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 0 ? "bg-black" : "bg-[#AEDCEE]"
+                    } `}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 1 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 2 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 3 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 4 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 5 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 6 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 7 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
 
                   <div
-                    className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
-                      }`}
+                    className={`w-[6px] h-[6px] rounded-full ${
+                      current == 8 ? "bg-black" : "bg-[#AEDCEE]"
+                    }`}
                   ></div>
                 </div>
               </div>
@@ -329,13 +342,14 @@ const Section6 = () => {
               />
             </div>
           </div>
-          <div className="w-[918px] flex flex-row justify-between h-[554px] mt-10">
+          <div
+            {...swipeHandlers}
+            className="w-[918px] flex flex-row justify-between h-[554px] mt-10"
+          >
             {/* PAGE 1 */}
 
-            {page == 1 &&
-
+            {page == 1 && (
               <>
-
                 {/* LEFT */}
                 <div className="flex flex-col gap-8">
                   <div
@@ -539,13 +553,11 @@ const Section6 = () => {
                   </div>
                 </div>
               </>
-
-            }
-
+            )}
 
             {/* PAGE 2 */}
 
-            {page == 2 &&
+            {page == 2 && (
               <>
                 <div className="flex flex-col gap-8">
                   <div
@@ -621,8 +633,8 @@ const Section6 = () => {
                     </div>
                   </div>
                 </div>
-              </>}
-
+              </>
+            )}
           </div>
           <div className="flex items-center">
             <div>
