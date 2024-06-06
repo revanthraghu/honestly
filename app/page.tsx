@@ -42,19 +42,16 @@ export default function Home() {
             isMessageBoxOpen={isMessageBoxOpen}
             setIsMessageBoxOpen={setIsMessageBoxOpen}
           />
-          {/* {!isMessageBoxOpen && ( */}
-            <>
-              <Hero />
-              <Section3 />
-              <Ticker />
-              <ReviewSection />
-              <Section5 />
-              <Section6 />
-
-              <Faq />
-              <Footer />
-            </>
-          {/* )} */}
+          <>
+            <Hero />
+            <Section3 />
+            <Ticker />
+            <ReviewSection />
+            <Section5 />
+            <Section6 />
+            <Faq />
+            <Footer />
+          </>
         </main>
       </>
     );
@@ -80,9 +77,7 @@ export default function Home() {
                 "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
             }}
           >
-            {/* <section id="faqs"> */}
             <Section6 />
-            {/* </section> */}
             <Faq />
             <Footer />
           </div>

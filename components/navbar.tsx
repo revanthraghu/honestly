@@ -47,7 +47,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
 
   const handleMobileMessageBox = () => {
     storeBooleanInLocalStorage("viewed", true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
     setViewed(true);
   };

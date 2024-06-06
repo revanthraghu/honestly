@@ -15,7 +15,7 @@ const Message = ({
   return (
     <main className="fixed top-0 flex flex-col h-full z-50 ">
       {isMobile ?
-        <div className="flex flex-col overflow-auto backdrop-blur-lg overflow-x-hidden h-screen">
+        <div className="flex flex-col backdrop-blur-lg overflow-x-hidden h-screen overflow-y-hidden">
           <Modal
             isMobile={isMobile}
             isMessageBoxOpen={isMessageBoxOpen}
