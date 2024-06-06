@@ -166,7 +166,7 @@ export default function ReviewSection() {
                   key={index}
                   className="absolute flex flex-col py-[13px] max-w-[172px] h-[128px] justify-center"
                   style={{
-                    transition: "opacity 1s ease-in-out",
+                    transition: "opacity 0.1s ease-in-out",
                     opacity: activeIndex === index ? 1 : 0,
                   }}
                 >
