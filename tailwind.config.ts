@@ -33,6 +33,7 @@ const config = {
         heroBg: "url('/background/heroBG.svg')",
         howItWorksBg: "url('/background/howItWorks.svg')",
         messageIcon: "url('/icons/message-icon.svg)",
+
       },
       colors: {
         border: "hsl(var(--border))",
@@ -82,27 +83,13 @@ const config = {
       keyframes: {
         color: {
           "0%": {
-            backgroundImage: "url('/iceberg/fade.svg')",
             color: "#00A8FE",
             width: "330px",
             opacity: "100%",
           },
-          "25%": {
-            backgroundImage: "url('/iceberg/fade.svg')",
-            color: "#122B2E",
-            width: "330px",
-            opacity: "40%",
-          },
-
           "50%": {
             backgroundImage: "url('/iceberg/fade.svg')",
-            color: "#122B2E",
-            width: "330px",
-            opacity: "80%",
-          },
-          "75%": {
-            backgroundImage: "url('/iceberg/dark.svg')",
-            color: "#122B2E",
+            color: "#00A8FE",
             width: "330px",
             opacity: "100%",
           },
@@ -111,10 +98,11 @@ const config = {
             color: "#122B2E",
             width: "330px",
             opacity: "100%",
-          },
+          }
+
         },
         diamond: {
-          "50%": { backgroundColor: "#AEDCEE" },
+          "0%": { backgroundColor: "#AEDCEE" },
           "100%": { backgroundColor: "#FFFFFF" },
         },
         slideInFromLeft: {
@@ -153,8 +141,8 @@ const config = {
         slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        color: "color 0.2s forwards",
-        diamond: "diamond 0.2s forwards",
+        color: "color 0.3s forwards",
+        diamond: "diamond 0.3s forwards",
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
         reviewMarquee: "marquee 80s linear infinite",

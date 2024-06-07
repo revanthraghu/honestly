@@ -16,7 +16,7 @@ export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 130) {
+    if (window.scrollY > 1) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -82,7 +82,7 @@ export default function Hero() {
         </div>
         <JoinButton>JOIN THE WAITLIST</JoinButton>
       </div>
-      {!scrolled && (
+      {/* {!scrolled && ( */}
         <div className="h-[230px] flex justify-center">
           <Image
             src={iceberg1Mobile}
@@ -90,6 +90,10 @@ export default function Hero() {
             className="animate-bounce md:hidden z-0 relative -mt-[100px] h-[277px]"
             aria-hidden
             priority
+            style={{
+              transition: "opacity 0.5s ease-in-out",
+              opacity: scrolled ? 0 : 1,
+            }}
           />
 
           <Image
@@ -97,17 +101,18 @@ export default function Hero() {
             alt="background-image-1"
             className="animate-bounce md:block hidden relative -mt-[100px] h-[277px]"
             aria-hidden
+            style={{
+              transition: "opacity 0.5s ease-in-out",
+              opacity: scrolled ? 0 : 1,
+            }}
           />
         </div>
-      )}
+      {/* )} */}
 
       {/* SECTION TWO */}
 
       <div>
         <div
-          data-aos="zoom-in"
-          data-aos-easing="linear"
-          data-aos-duration="500"
           className="flex flex-col items-center mb-[71px] "
         >
           <Image
@@ -118,12 +123,12 @@ export default function Hero() {
           <Image
             src={dashedSeparatorWeb}
             alt="dashed-separator"
-            className="absolute top-[277px] hidden md:block"
+            className="absolute mt-[277px] hidden md:block"
           />
           <Image
             src={dashedSeparatorMobile}
             alt="dashed-separator"
-            className="absolute top-[277px] md:hidden"
+            className="absolute mt-[277px] md:hidden"
           />
           <div className="flex flex-col justify-center items-center relative z-10">
             <div className="w-[210px] md:w-[240px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center">
