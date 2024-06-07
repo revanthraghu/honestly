@@ -160,7 +160,7 @@ export default function Section5() {
                 <div className="flex justify-start">
                   <div
                     className={`${count >= 3 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] h-[86px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[86px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -201,7 +201,7 @@ export default function Section5() {
                 <div className="flex justify-start">
                   <div
                     className={`${count >= 5 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] h-[204px] px-[15px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[198px] px-[15px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -249,7 +249,7 @@ export default function Section5() {
                 <div className="flex justify-start">
                   <div
                     className={`${count >= 7 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] h-[118px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[114px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image

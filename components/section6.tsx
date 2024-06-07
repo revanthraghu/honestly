@@ -246,7 +246,7 @@ const Section6 = () => {
 
                 {/*  Carousel Dots */}
                 {
-                  !isModolOn &&
+                  isModolOn &&
                   <>
                     <div className="flex flex-row gap-1 justify-center mt-2">
                       <div
@@ -382,54 +382,6 @@ const Section6 = () => {
                           alt="messageicon"
                         />
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          2
-                        </div>
-                      </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                        {content[1].question}
-                      </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                        {content[1].answer}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* MIDDLE */}
-                <div className="flex flex-col gap-8">
-                  <div
-                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
-                  >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          3
-                        </div>
-                      </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
-                        {content[2].question}
-                      </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
-                        {content[2].answer}
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
-                  >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
                           4
                         </div>
                       </div>
@@ -443,9 +395,30 @@ const Section6 = () => {
                   </div>
                 </div>
 
-                {/* RIGHT */}
-
+                {/* MIDDLE */}
                 <div className="flex flex-col gap-8">
+                <div
+                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          2
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[1].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[1].answer}
+                      </div>
+                    </div>
+                  </div>
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
@@ -524,6 +497,34 @@ const Section6 = () => {
                           </>
                         )}
                       </>
+                    </div>
+                  </div>
+    
+                </div>
+
+                {/* RIGHT */}
+
+                <div className="flex flex-col gap-8">
+                <div
+                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                  >
+                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="relative w-[26px] h-[25px]">
+                        <Image
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
+                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          3
+                        </div>
+                      </div>
+                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                        {content[2].question}
+                      </div>
+                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                        {content[2].answer}
+                      </div>
                     </div>
                   </div>
                   <div
