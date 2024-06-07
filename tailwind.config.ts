@@ -83,11 +83,18 @@ const config = {
       keyframes: {
         color: {
           "0%": {
+            backgroundImage: "url('/iceberg/fade.svg')",
+            color: "#00A8FE",
+            width: "330px",
+            opacity: "50%",
+          },
+          "30%": {
+            backgroundImage: "url('/iceberg/fade.svg')",
             color: "#00A8FE",
             width: "330px",
             opacity: "100%",
           },
-          "50%": {
+          "60%": {
             backgroundImage: "url('/iceberg/fade.svg')",
             color: "#00A8FE",
             width: "330px",
@@ -141,8 +148,8 @@ const config = {
         slideInFromRight: 'slideInFromRight 0.8s ease-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        color: "color 0.3s forwards",
-        diamond: "diamond 0.3s forwards",
+        color: "color 0.4s forwards ease-out",
+        diamond: "diamond 0.4s forwards ease-out",
         marquee: "marquee 50s linear infinite",
         marquee2: "marquee2 50s linear infinite",
         reviewMarquee: "marquee 80s linear infinite",
