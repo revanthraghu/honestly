@@ -1,8 +1,11 @@
 import Vector from "@/public/messageHeader/Vector.svg";
 import Image from "next/image";
 import { useState } from "react";
-
-export default function Info() {
+import Link from "next/link";
+interface Props {
+  setIsMessageBoxOpen: (arg0: boolean) => void;
+}
+export default function Info({ setIsMessageBoxOpen }: Props) {
   const [clickedMobileOne, setClickedMobileOne] = useState<boolean>(false);
   const [clickedMobileTwo, setClickedMobileTwo] = useState<boolean>(false);
   const [clickedMobileThree, setClickedMobileThree] = useState<boolean>(false);
@@ -21,11 +24,13 @@ export default function Info() {
 
   const handleMobileFaqOne = () => {
     handleMobileClear();
+    setIsMessageBoxOpen(false);
     setClickedMobileOne(!clickedMobileOne);
   };
 
   const handleMobileFaqTwo = () => {
     handleMobileClear();
+    setIsMessageBoxOpen(false);
     setClickedMobileTwo(!clickedMobileTwo);
   };
 
@@ -54,26 +59,28 @@ export default function Info() {
       <div className="flex flex-row  items-center ">
         <div className="h-[292px] w-full border-black border-[0.5px]">
           <div className="flex flex-row w-full">
-            <div
+            <Link
+              href={"#howitworks"}
               onClick={handleMobileFaqOne}
               className={`${
                 clickedMobileOne ? "bg-white" : ""
-              } w-1/2 h-[73px] border-black border-[0.5px]`}
+              } w-1/2 h-[73px] border-black border-[0.5px] font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
             >
-              <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
-                How it works
-              </div>
-            </div>
-            <div
+              {/* <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
+              How it works
+              {/* </div> */}
+            </Link>
+            <Link
+              href={"#faqs"}
               onClick={handleMobileFaqTwo}
               className={`${
                 clickedMobileTwo ? "bg-white" : ""
-              } w-1/2 h-[73px] border-black border-[0.5px]`}
+              } w-1/2 h-[73px] border-black border-[0.5px] font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
             >
-              <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
-                FAQs
-              </div>
-            </div>
+              {/* <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
+              FAQs
+              {/* </div> */}
+            </Link>
           </div>
           <div className="flex flex-row">
             <div

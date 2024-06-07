@@ -40,7 +40,7 @@ export default function Section5() {
             setTimeout(() => {
               scrollByY(100);
               setCounter(i);
-            }, i * 800); 
+            }, i * 800);
           }
         }
         isInCenter = true;
@@ -78,10 +78,10 @@ export default function Section5() {
 
   return (
     <div
-      className="scroll flex md:flex-row flex-col md:w-full h-[720px] md:h-screen"
+      className="scroll flex md:flex-row flex-col md:w-full h-[1440px] md:h-screen"
       id="howitworks"
     >
-      <div className="flex justify-center items-center bg-howItWorksBg bg-cover md:w-1/2 p-8">
+      <div className="flex justify-center items-center h-[720px] md:h-screen bg-howItWorksBg bg-cover md:w-1/2 p-8">
         <div
           className="flex md:flex-col flex-row w-[284px] h-[613px]  rounded-[28px] p-4 "
           style={{
@@ -106,8 +106,9 @@ export default function Section5() {
               >
                 <div className="flex justify-end">
                   <div
-                    className={`${count >= 0 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[40.7px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 0 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[40.7px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <div className="font-normal">how does this work?</div>
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
@@ -122,8 +123,9 @@ export default function Section5() {
 
                 <div className="flex justify-start">
                   <div
-                    className={`${count >= 1 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] h-[44px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+                    className={`${
+                      count >= 1 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] h-[44px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -141,8 +143,9 @@ export default function Section5() {
 
                 <div className="flex justify-end mt-2">
                   <div
-                    className={`${count >= 2 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[44px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 2 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[44px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <div className="font-normal">
                       <div>so anyone who</div>
@@ -159,8 +162,10 @@ export default function Section5() {
                 </div>
                 <div className="flex justify-start">
                   <div
+
                     className={`${count >= 3 ? "block animate-slideInFromBottom" : "hidden"
                       } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[86px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -181,8 +186,9 @@ export default function Section5() {
 
                 <div className="flex justify-end mt-2">
                   <div
-                    className={`${count >= 4 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[58px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 4 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[58px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <div className="font-normal">
                       <div>lmao i spent more</div>
@@ -200,8 +206,10 @@ export default function Section5() {
                 </div>
                 <div className="flex justify-start">
                   <div
+
                     className={`${count >= 5 ? "block animate-slideInFromBottom" : "hidden"
                       } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[198px] px-[15px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -231,8 +239,9 @@ export default function Section5() {
                 </div>
                 <div className="flex justify-end mt-2">
                   <div
-                    className={`${count >= 6 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[37px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 6 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[37px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <div className="w-[133.41px] mt-[2px] font-normal">
                       <div>ok then?</div>
@@ -248,8 +257,10 @@ export default function Section5() {
                 </div>
                 <div className="flex justify-start">
                   <div
+
                     className={`${count >= 7 ? "block animate-slideInFromBottom" : "hidden"
                       } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE] w-[190.41px] min-h-[114px] px-[16px] py-[8px] gap-2 rounded-tl-[12px] rounded-r-[12px] mt-2`}
+
                   >
                     <div className="w-[21px] h-[21px] bg-white rounded-full border-dashed border-[1px] border-black">
                       <Image
@@ -259,15 +270,9 @@ export default function Section5() {
                       />
                     </div>
                     <div className="w-[133.41px] font-normal">
-                      <div>
-                        For now, that&apos;s it.
-                      </div>
-                      <div>
-                        Once matching
-                      </div>
-                      <div>
-                        begins (post 15 Jul):
-                      </div>
+                      <div>For now, that&apos;s it.</div>
+                      <div>Once matching</div>
+                      <div>begins (post 15 Jul):</div>
                       <br />
                       <ol className="px-[10px] list-decimal max-w-[133.41px]">
                         <li>Ask a question</li>
@@ -279,8 +284,9 @@ export default function Section5() {
                 </div>
                 <div className="flex justify-end mt-2">
                   <div
-                    className={`${count >= 8 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[37px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 8 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row  text-right justify-end items-center text-[12px] leading-[14.4px] tracking-[4%] bg-[#AEDCEE80] w-[190.41px] h-[37px] px-[16px] py-[14px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <div className="mt-[2px] w-[133.41px] font-normal">
                       <div>ooh, count me in</div>
@@ -297,8 +303,9 @@ export default function Section5() {
 
                 <div className="flex justify-center mt-2">
                   <div
-                    className={`${count >= 9 ? "block animate-slideInFromBottom" : "hidden"
-                      } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] pt-2 pb-2 h-auto px-[16px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
+                    className={`${
+                      count >= 9 ? "block animate-slideInFromBottom" : "hidden"
+                    } flex flex-row text-[12px] leading-[14.4px] tracking-[4%] pt-2 pb-2 h-auto px-[16px] py-[5px] gap-2 rounded-l-[12px] rounded-tr-[12px]`}
                   >
                     <JoinButton showSpots={false}>JOIN THE WAITLIST</JoinButton>
                   </div>

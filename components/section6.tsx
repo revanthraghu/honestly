@@ -7,7 +7,6 @@ import messageIcon from "@/public/icons/message-icon.svg";
 import { useState, useEffect } from "react";
 import JoinButton from "./ui/join-button";
 import { useSwipeable } from "react-swipeable";
-
 const Section6 = () => {
   const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] =
     useState<boolean>(false);
@@ -131,100 +130,103 @@ const Section6 = () => {
     onSwipedRight: prevMobileButton,
   });
 
-  if (isSmallTabletOrMobile) {
-    return (
-      <>
-        <div className="flex flex-col items-center md:mt-[68px] mx-[20px] mt-[720px]">
-          <div className="font-normal font-ppeditorialnew text-[36px] leading-[41.4px]">
-            <span className="flex flex-col justify-center items-center">
-              <span>We&apos;re often</span>
-              <span>asked </span>
-            </span>
-          </div>
-          <div className="flex flex-row justify-between mt-8 md:mt-16">
-            <div>
-              <div className="flex items-center">
-                <div>
-                  <Image
-                    className="w-[15px] h-[29px] cursor-pointer mr-[30px] md:mr-8 mt-32 md:mt-32"
-                    src={arrowLeftSvg}
-                    alt="left"
-                    onClick={prevMobileButton}
-                  />
-                </div>
+  return (
+    <div id="faqs">
+      {/* THIS PART IS FOR MOBILE ONLY (<992px) */}
+      <div className="flex flex-col items-center pt-[75px] mx-[20px] lg:hidden">
+        <div className="font-normal font-ppeditorialnew text-[36px] leading-[41.4px]">
+          <span className="flex flex-col justify-center items-center">
+            <span>We&apos;re often</span>
+            <span>asked </span>
+          </span>
+        </div>
+        <div className="flex flex-row justify-between mt-8 md:mt-16">
+          <div>
+            <div className="flex items-center">
+              <div>
+                <Image
+                  className="w-[15px] h-[29px] cursor-pointer mr-[30px] md:mr-8 mt-32 md:mt-32"
+                  src={arrowLeftSvg}
+                  alt="left"
+                  onClick={prevMobileButton}
+                />
               </div>
             </div>
-            <div
-              className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[20px] `}
-            >
-              <div className="flex flex-col items-center overflow-auto no-scrollbar">
-                <div className="relative w-[26px] h-[25px] mt-2">
-                  <Image
-                    className="w-[26px] h-[25px]"
-                    src={messageIcon}
-                    alt="messageicon"
-                  />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                    {current + 1}
-                  </div>
+          </div>
+          <div
+            className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[20px] `}
+          >
+            <div className="flex flex-col items-center overflow-auto no-scrollbar">
+              <div className="relative w-[26px] h-[25px] mt-2">
+                <Image
+                  className="w-[26px] h-[25px]"
+                  src={messageIcon}
+                  alt="messageicon"
+                />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                  {current + 1}
                 </div>
-                <div className="w-[233px] h-[182px] overflow-y-auto no-scrollbar mt-4 px-2">
-                  {current + 1 == 5 ? (
-                    <>
-                      <div
-                        className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
-                        onClick={handleModalOpen}
-                      >
-                        <span>
-                          {content[current].question}
-                          <Image
-                            className="inline-block ml-2"
-                            width={12}
-                            height={6}
-                            src={vector}
-                            alt="vector"
-                          />
-                        </span>
-                      </div>
-                      {isModolOn ? (
-                        <div className="-ml-[33px] mt-2">
-                          <div
-                            className="flex absolute flex-col  w-[283px] h-[138px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
-                            style={{
-                              background: "rgba(255, 255, 255, 0.6)",
-                            }}
-                          >
-                            <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleReddit}
-                              >
-                                <span>Reddit</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleInstagram}
-                              >
-                                <span>Instagram</span>
-                              </div>
+              </div>
+              <div
+                {...swipeHandlers}
+                className="w-[233px] h-[182px] overflow-y-auto no-scrollbar mt-4 px-2"
+              >
+                {current + 1 == 5 ? (
+                  <>
+                    <div
+                      className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                      onClick={handleModalOpen}
+                    >
+                      <span>
+                        {content[current].question}
+                        <Image
+                          className="inline-block ml-2"
+                          width={12}
+                          height={6}
+                          src={vector}
+                          alt="vector"
+                        />
+                      </span>
+                    </div>
+                    {isModolOn ? (
+                      <div className="-ml-[33px] mt-2">
+                        <div
+                          className="flex absolute flex-col  w-[283px] h-[138px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
+                          style={{
+                            background: "rgba(255, 255, 255, 0.6)",
+                          }}
+                        >
+                          <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                            <div
+                              className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                              onClick={handleReddit}
+                            >
+                              <span>Reddit</span>
                             </div>
-                            <div className="flex flex-row h-1/2 pl-2 pr-2">
-                              <div
-                                className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleYoutube}
-                              >
-                                <span>Youtube</span>
-                              </div>
-                              <div
-                                className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                                onClick={handleDermat}
-                              >
-                                <span>my dermat</span>
-                              </div>
+                            <div
+                              className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                              onClick={handleInstagram}
+                            >
+                              <span>Instagram</span>
+                            </div>
+                          </div>
+                          <div className="flex flex-row h-1/2 pl-2 pr-2">
+                            <div
+                              className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                              onClick={handleYoutube}
+                            >
+                              <span>Youtube</span>
+                            </div>
+                            <div
+                              className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                              onClick={handleDermat}
+                            >
+                              <span>my dermat</span>
                             </div>
                           </div>
                         </div>
-                      ) : (
+                      </div>
+ ) : (
                         <>
                           <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
                             {content[current].answer}
@@ -316,11 +318,10 @@ const Section6 = () => {
             <JoinButton>JOIN THE WAITLIST</JoinButton>
           </div>
         </div>
-      </>
-    );
-  } else {
-    return (
-      <div className="flex flex-col items-center pt-[68px] mx-[20px]" id="faqs">
+
+      {/* THIS PART IS FOR DESKTOP ONLY (>992px) */}
+
+      <div className="flex-col items-center pt-[68px] px-[20px] hidden lg:flex">
         <div className="font-normal font-ppeditorialnew text-[36px] leading-[41.4px]">
           <span className="hidden md:block">We&apos;re often asked </span>
           <span className="flex flex-col justify-center items-center md:hidden">
@@ -332,17 +333,14 @@ const Section6 = () => {
           <div className="flex items-center">
             <div>
               <Image
-                className="w-[15px] h-[29px] cursor-pointer mr-12 mt-8"
+                className="w-[15px] h-[29px] cursor-pointer mt-8"
                 src={arrowLeftSvg}
                 alt="left"
                 onClick={swipeButton}
               />
             </div>
           </div>
-          <div
-            {...swipeHandlers}
-            className="w-[918px] flex flex-row justify-between h-[554px] mt-10"
-          >
+          <div className="w-[918px] mx-10 flex flex-row justify-between h-[554px] mt-10">
             {/* PAGE 1 */}
 
             {page == 1 && (
@@ -637,7 +635,7 @@ const Section6 = () => {
           <div className="flex items-center">
             <div>
               <Image
-                className="w-[15px] h-[29px] cursor-pointer ml-12 mt-8"
+                className="w-[15px] h-[29px] cursor-pointer  mt-8"
                 src={arrowRightSvg}
                 alt="right"
                 onClick={swipeButton}
@@ -649,8 +647,13 @@ const Section6 = () => {
           <JoinButton>JOIN THE WAITLIST</JoinButton>
         </div>
       </div>
-    );
-  }
+      {/* )} */}
+    </div>
+  );
+  // )
+  // );
+  // }
+  // )
 };
 
 export default Section6;
