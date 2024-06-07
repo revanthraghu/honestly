@@ -248,7 +248,7 @@ const Section6 = () => {
 
               {/*  Carousel Dots */}
               {
-                isModolOn &&
+                !isModolOn &&
                 <>
                   <div className="flex flex-row gap-1 justify-center mt-2">
                     <div
