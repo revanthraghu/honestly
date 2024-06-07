@@ -7,10 +7,9 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "./ui/badge";
 import Message from "@/components/message/message";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 
 interface Props {
-  isMobile: boolean;
   isMessageBoxOpen: boolean;
   setIsMessageBoxOpen: (arg0: boolean) => void;
 }
@@ -27,12 +26,20 @@ const getBooleanFromLocalStorage = (key: string): boolean => {
   return false;
 };
 
-const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
+const Navbar = ({ isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
   const [viewed, setViewed] = useState<boolean>(true);
 
   useEffect(() => {
     setViewed(getBooleanFromLocalStorage("viewed"));
   }, []);
+
+  useLayoutEffect(() => {
+    if (isMessageBoxOpen) {
+      document.body.classList.add("max-md:overflow-hidden");
+    } else {
+      document.body.classList.remove("max-md:overflow-hidden");
+    }
+  }, [isMessageBoxOpen]);
 
   // const scrollToTop = () => {
   //   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -57,7 +64,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
       {!isMessageBoxOpen ? (
         <>
           <nav
-            className="fixed top-0 z-50 rounded-[100px] mx-[5px] my-[10px] w-[97.5%] md:w-[520px]  md:m-[25px] backdrop-blur-md"
+            className="fixed top-0 z-20 rounded-[100px] mx-[5px] my-[10px] w-[97.5%] md:w-[520px] md:m-[25px] backdrop-blur-md"
             style={{
               background:
                 "radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.12) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)",
@@ -125,11 +132,7 @@ const Navbar = ({ isMobile, isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
           </nav>
         </>
       ) : (
-        <Message
-          isMobile={isMobile}
-          isMessageBoxOpen={isMessageBoxOpen}
-          setIsMessageBoxOpen={setIsMessageBoxOpen}
-        />
+        <Message setIsMessageBoxOpen={setIsMessageBoxOpen} />
       )}
     </>
   );
