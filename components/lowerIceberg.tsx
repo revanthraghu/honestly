@@ -86,7 +86,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsOneCentered(true);
                 setIsOneAnimated(1);
             } else {
@@ -103,7 +103,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsTwoCentered(true);
                 setIsTwoAnimated(1);
             } else {
@@ -120,7 +120,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsThreeCentered(true);
                 setIsThreeAnimated(1);
             } else {
@@ -137,7 +137,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsFourCentered(true);
                 setIsFourAnimated(1);
             } else {
@@ -154,7 +154,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsFiveCentered(true);
                 setIsFiveAnimated(1);
             } else {
@@ -171,7 +171,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsSixCentered(true);
                 setIsSixAnimated(1);
             } else {
@@ -188,7 +188,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsSevenCentered(true);
                 setIsSevenAnimated(1);
             } else {
@@ -205,7 +205,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsEightCentered(true);
                 setIsEightAnimated(1);
             } else {
@@ -222,7 +222,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsNineCentered(true);
                 setIsNineAnimated(1);
             } else {
@@ -239,7 +239,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsTenCentered(true);
                 setIsTenAnimated(1);
             } else {
@@ -256,7 +256,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsElevenCentered(true);
                 setIsElevenAnimated(1);
             } else {
@@ -273,7 +273,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsTwelveCentered(true);
                 setIsTwelveAnimated(1);
             } else {
@@ -290,7 +290,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsThirteenCentered(true);
                 setIsThirteenAnimated(1);
             } else {
@@ -307,7 +307,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsFourteenCentered(true);
                 setIsFourteenAnimated(1);
             } else {
@@ -324,7 +324,7 @@ export default function LowerIceberg() {
             const elementCenter = rect.top + rect.height / 2;
             const viewportCenter = windowHeight / 2;
 
-            if (Math.abs(viewportCenter - elementCenter) < rect.height / 2) {
+            if (Math.abs(viewportCenter - elementCenter) <= rect.height / 2) {
                 setIsFifteenCentered(true);
                 setIsFifteenAnimated(1);
             } else {

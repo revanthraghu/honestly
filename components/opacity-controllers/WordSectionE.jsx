@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import styles from "./style.module.scss";
-import helpfulImg from "@/public/background/helpful.svg";
+import helpfulImg from "@/public/background/helpful.png";
 import Image from "next/image";
 
 export default function Paragraph({ paragraph }) {
@@ -34,9 +34,9 @@ export default function Paragraph({ paragraph }) {
               >
                 <Image
                   src={helpfulImg}
-                  width={91}
+                  width={61}
                   alt="helpful"
-                  style={{ marginTop: "-4px", marginLeft: "-8px" }}
+                  style={{ marginTop: "-4px"}}
                   className="inline-block"
                 />
               </WordSectionE>
