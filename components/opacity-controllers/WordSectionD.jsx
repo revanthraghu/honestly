@@ -6,7 +6,7 @@ export default function Paragraph({ paragraph }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.55", "start 0.38"],
+    offset: ["start 0.51", "start 0.412"],
   });
 
   const words = paragraph.split(" ");
@@ -28,9 +28,11 @@ export default function Paragraph({ paragraph }) {
 const WordSectionD = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
+
     <span className={styles.word}>
       <span className={styles.shadow}>{children}</span>
       <motion.span style={{ opacity: opacity }}>{children}</motion.span>
     </span>
   );
 };
+

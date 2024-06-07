@@ -323,7 +323,7 @@ const hexagonStyle = {
 };
 
 export function Slideshow() {
-  const plugin = useRef(Autoplay({ delay: 2500, stopOnInteraction: false }));
+  const plugin = useRef(Autoplay({ delay: 2500, stopOnInteraction: true }));
 
   return (
     <Carousel
