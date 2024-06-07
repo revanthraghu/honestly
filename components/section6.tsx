@@ -245,61 +245,58 @@ const Section6 = () => {
                 </div>
 
                 {/*  Carousel Dots */}
-                <div className="flex flex-row gap-1 justify-center mt-2">
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 0 ? "bg-black" : "bg-[#AEDCEE]"
-                    } `}
-                  ></div>
+                {
+                  !isModolOn &&
+                  <>
+                    <div className="flex flex-row gap-1 justify-center mt-2">
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
+                          } `}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 1 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 2 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 3 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 4 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 5 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 6 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 7 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
 
-                  <div
-                    className={`w-[6px] h-[6px] rounded-full ${
-                      current == 8 ? "bg-black" : "bg-[#AEDCEE]"
-                    }`}
-                  ></div>
-                </div>
+                      <div
+                        className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
+                          }`}
+                      ></div>
+                    </div>
+                  </>
+                }
+
               </div>
             </div>
             <div>
