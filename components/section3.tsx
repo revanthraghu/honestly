@@ -6,6 +6,8 @@ import WordSectionC from "./opacity-controllers/WordSectionC";
 import WordSectionD from "./opacity-controllers/WordSectionD";
 import WordSectionE from "./opacity-controllers/WordSectionE";
 import WordSectionF from "./opacity-controllers/WordSectionF";
+import SectionDNumber from "./opacity-controllers/SectionDNumber";
+import SectionFNumber from "./opacity-controllers/SectionFNumber";
 
 export default function Section3() {
   const paragraphOne = "So 97% of us go down a rabbit hole of reviews";
@@ -41,13 +43,16 @@ export default function Section3() {
             </div>
             <div className="h-[22px] md:h-[32px]" />
             {/* <span> */}
-            <ol className="px-4 text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:max-w-[520px] max-w-[290px]">
-              <li>
+            <ol className="text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:max-w-[520px] max-w-[290px]">
+              {/* <li> */}
+              <div className="flex flex-row">
+                <SectionDNumber paragraph={`1. `} />
                 <WordSectionD paragraph={paragraphFour} />
-              </li>
+              </div>
+              {/* </li> */}
               {/* <br /> */}
               <div className="h-[16px] mt-2 md:mt-0" />
-              <span className="flex flex-row text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal">
+              <span className="pl-[15.36px] flex flex-row text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal">
                 <WordSectionE paragraph={paragraphFive} />
                 {/* <Image
                   src={helpfulImg}
@@ -65,9 +70,10 @@ export default function Section3() {
               </div> */}
               {/* <br /> */}
               <div className="h-[16px]" />
-              <li>
+              <div className="flex flex-row">
+                <SectionFNumber paragraph={`2. `} />
                 <WordSectionF paragraph={paragraphSix} />
-              </li>
+              </div>
             </ol>
           </div>
           {/* </span> */}
