@@ -41,11 +41,6 @@ const Navbar = ({ isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
     }
   }, [isMessageBoxOpen]);
 
-  // const scrollToTop = () => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  //   // window.location.href = "";
-  // };
-
   const handleMessageBox = () => {
     storeBooleanInLocalStorage("viewed", true);
     setIsMessageBoxOpen(true);
@@ -54,7 +49,6 @@ const Navbar = ({ isMessageBoxOpen, setIsMessageBoxOpen }: Props) => {
 
   const handleMobileMessageBox = () => {
     storeBooleanInLocalStorage("viewed", true);
-    // window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMessageBoxOpen(true);
     setViewed(true);
   };

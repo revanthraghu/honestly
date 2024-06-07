@@ -226,98 +226,98 @@ const Section6 = () => {
                           </div>
                         </div>
                       </div>
- ) : (
-                        <>
-                          <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
-                            {content[current].answer}
-                          </div>
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                        {content[current].question}
-                      </div>
-                      <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
-                        {content[current].answer}
-                      </div>
-                    </>
-                  )}
-                </div>
-
-                {/*  Carousel Dots */}
-                {
-                  isModolOn &&
+                    ) : (
+                      <>
+                        <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          {content[current].answer}
+                        </div>
+                      </>
+                    )}
+                  </>
+                ) : (
                   <>
-                    <div className="flex flex-row gap-1 justify-center mt-2">
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
-                          } `}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
-
-                      <div
-                        className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
-                          }`}
-                      ></div>
+                    <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                      {content[current].question}
+                    </div>
+                    <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                      {content[current].answer}
                     </div>
                   </>
-                }
+                )}
+              </div>
 
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center">
-                <div>
-                  <Image
-                    className="w-[15px] h-[29px] cursor-pointer ml-4 md:ml-8 mr-[1rem] mt-32 md:mt-32"
-                    src={arrowRightSvg}
-                    alt="right"
-                    onClick={nextMobileButton}
-                  />
-                </div>
-              </div>
+              {/*  Carousel Dots */}
+              {
+                isModolOn &&
+                <>
+                  <div className="flex flex-row gap-1 justify-center mt-2">
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
+                        } `}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+
+                    <div
+                      className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
+                        }`}
+                    ></div>
+                  </div>
+                </>
+              }
+
             </div>
           </div>
-          <div className="mt-24">
-            <JoinButton>JOIN THE WAITLIST</JoinButton>
+          <div>
+            <div className="flex items-center">
+              <div>
+                <Image
+                  className="w-[15px] h-[29px] cursor-pointer ml-4 md:ml-8 mr-[1rem] mt-32 md:mt-32"
+                  src={arrowRightSvg}
+                  alt="right"
+                  onClick={nextMobileButton}
+                />
+              </div>
+            </div>
           </div>
         </div>
+        <div className="mt-24">
+          <JoinButton>JOIN THE WAITLIST</JoinButton>
+        </div>
+      </div>
 
       {/* THIS PART IS FOR DESKTOP ONLY (>992px) */}
 
@@ -395,7 +395,7 @@ const Section6 = () => {
 
                 {/* MIDDLE */}
                 <div className="flex flex-col gap-8">
-                <div
+                  <div
                     className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
@@ -497,13 +497,13 @@ const Section6 = () => {
                       </>
                     </div>
                   </div>
-    
+
                 </div>
 
                 {/* RIGHT */}
 
                 <div className="flex flex-col gap-8">
-                <div
+                  <div
                     className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
@@ -647,13 +647,8 @@ const Section6 = () => {
           <JoinButton>JOIN THE WAITLIST</JoinButton>
         </div>
       </div>
-      {/* )} */}
     </div>
   );
-  // )
-  // );
-  // }
-  // )
 };
 
 export default Section6;

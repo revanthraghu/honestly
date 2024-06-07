@@ -60,7 +60,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
         <div className="h-[292px] w-full border-black border-[0.5px]">
           <div className="flex flex-row w-full">
             <Link
-              href={"#howitworks"}
+              href="#howitworks"
               onClick={handleMobileFaqOne}
               className={`${
                 clickedMobileOne ? "bg-white" : ""
@@ -71,7 +71,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               {/* </div> */}
             </Link>
             <Link
-              href={"#faqs"}
+              href="#faqs"
               onClick={handleMobileFaqTwo}
               className={`${
                 clickedMobileTwo ? "bg-white" : ""

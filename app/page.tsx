@@ -26,22 +26,13 @@ export default function Home() {
       <ReviewSection />
       <Section5 />
       <div
-        className="hidden md:block"
+        className=""
         style={{
           background:
             "linear-gradient(rgba(174, 220, 238, 1), rgba(244, 245, 240, 1))",
         }}
       >
-        {/* <section id="faqs" className="hidden md:block"> */}
         <Section6 />
-        {/* </section> */}
-        <Faq />
-        <Footer />
-      </div>
-      <div className="flex flex-col md:hidden">
-        {/* <section id="faqs" className="md:hidden"> */}
-        <Section6 />
-        {/* </section> */}
         <Faq />
         <Footer />
       </div>
