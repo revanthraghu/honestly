@@ -9,8 +9,6 @@ import Section6 from "@/components/section6";
 import Section5 from "@/components/section5";
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Home() {
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);

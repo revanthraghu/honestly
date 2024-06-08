@@ -1,12 +1,10 @@
 import Image from "next/image";
-import line from "@/public/icons/line.svg";
 import vector from "@/public/icons/vector.svg";
 import arrowLeftSvg from "@/public/icons/arrow-left.svg";
 import arrowRightSvg from "@/public/icons/arrow-right.svg";
 import messageIcon from "@/public/icons/message-icon.svg";
 import { useState, useEffect } from "react";
 import JoinButton from "./ui/join-button";
-import { useSwipeable } from "react-swipeable";
 import {
   Carousel,
   CarouselContent,
@@ -17,8 +15,8 @@ import {
 } from "@/components/ui/carousel";
 
 const Section6 = () => {
-  const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] =
-    useState<boolean>(false);
+  // const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] =
+  //   useState<boolean>(false);
   const [isModolOn, setIsModalOn] = useState<boolean>(false);
   const [socialMediaIndex, setSocialMediaIndex] = useState<number>(0);
 
@@ -55,14 +53,14 @@ const Section6 = () => {
     setSocialMediaIndex(3);
   };
 
-  useEffect(() => {
-    function handleResize() {
-      setIsSmallTabletOrMobile(window.innerWidth < 992);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [setIsSmallTabletOrMobile]);
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setIsSmallTabletOrMobile(window.innerWidth < 992);
+  //   }
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, [setIsSmallTabletOrMobile]);
 
   const content = [
     {
@@ -111,14 +109,14 @@ const Section6 = () => {
   const [page, setPage] = useState(1);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
+    // setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
@@ -126,21 +124,21 @@ const Section6 = () => {
     });
   }, [api]);
 
-  const nextMobileButton = () => {
-    if (current == 8) {
-      setCurrent(0);
-    } else {
-      setCurrent(current + 1);
-    }
-  };
+  // const nextMobileButton = () => {
+  //   if (current == 8) {
+  //     setCurrent(0);
+  //   } else {
+  //     setCurrent(current + 1);
+  //   }
+  // };
 
-  const prevMobileButton = () => {
-    if (current == 0) {
-      setCurrent(8);
-    } else {
-      setCurrent(current - 1);
-    }
-  };
+  // const prevMobileButton = () => {
+  //   if (current == 0) {
+  //     setCurrent(8);
+  //   } else {
+  //     setCurrent(current - 1);
+  //   }
+  // };
 
   const swipeButton = () => {
     if (page == 1) {
@@ -149,10 +147,10 @@ const Section6 = () => {
       setPage(1);
     }
   };
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: nextMobileButton,
-    onSwipedRight: prevMobileButton,
-  });
+  // const swipeHandlers = useSwipeable({
+  //   onSwipedLeft: nextMobileButton,
+  //   onSwipedRight: prevMobileButton,
+  // });
 
   return (
     <div id="faqs">
