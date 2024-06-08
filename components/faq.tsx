@@ -1,5 +1,6 @@
 import Vector from "@/public/messageHeader/Vector.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Faq() {
@@ -33,24 +34,32 @@ export default function Faq() {
     setClickedMobileOne(!clickedMobileOne);
   };
 
+  const mailToLinkV = `mailto:v@honestly.club?subject=${encodeURIComponent(
+    "I want to work at Honestly"
+  )}`;
+
+  const mailToLinkK = `mailto:k@honestly.club?subject=${encodeURIComponent(
+    "Quick Question"
+  )}`;
+
   const handleMobileFaqTwo = () => {
     handleMobileClear();
     setClickedMobileTwo(!clickedMobileTwo);
-    window.location.href = `mailto:v@honestly.club`;
+    window.location.href = mailToLinkV;
   };
 
   const handleDestopFaqTwo = () => {
-    window.location.href = `mailto:v@honestly.club`;
+    window.location.href = mailToLinkV;
   };
 
   const handleMobileFaqThree = () => {
     handleMobileClear();
     setClickedMobileThree(!clickedMobileThree);
-    window.location.href = `mailto:k@honestly.club`;
+    window.location.href = mailToLinkK;
   };
 
   const handleDestopFaqThree = () => {
-    window.location.href = `mailto:k@honestly.club`;
+    window.location.href = mailToLinkK;
   };
 
   const handleMobileFaqFour = () => {
@@ -77,7 +86,7 @@ export default function Faq() {
               } flex flex-row w-full`}
             >
               <div className="w-full h-[73px] border-black border-[0.5px]">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]">
+                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-6 h-full">
                   Tell me more, I like to read long form
                 </div>
               </div>
@@ -116,9 +125,13 @@ export default function Faq() {
                 }  w-full h-[73px] border-black border-[0.5px]`}
               >
                 <div className="flex items-center gap-2">
-                  <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]">
+                  <Link
+                    href={`https://www.instagram.com/honestly.club/`}
+                    target="_blank"
+                    className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
+                  >
                     Instagram
-                  </div>
+                  </Link>
                   <div className="relative cursor-pointer">
                     <Image src={Vector} alt="open" />
                   </div>
@@ -131,9 +144,13 @@ export default function Faq() {
                     clickedMobileFive ? "bg-white" : ""
                   } h-[73px] border-black border-[0.5px] flex items-center gap-2`}
                 >
-                  <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]">
+                  <Link
+                    href={`https://www.linkedin.com/company/whathonestly/`}
+                    target="_blank"
+                    className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
+                  >
                     LinkedIn
-                  </div>
+                  </Link>
                   <div className="relative cursor-pointer">
                     <Image src={Vector} alt="open" />
                   </div>
@@ -157,7 +174,7 @@ export default function Faq() {
           <div className="h-[179px] w-full border-black border-[0.5px]">
             <div className="flex flex-row w-full">
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer">
+                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
                   Tell me more, I like to read long form
                 </div>
               </div>
@@ -165,25 +182,30 @@ export default function Faq() {
                 className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white"
                 onClick={handleDestopFaqThree}
               >
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer">
+                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
                   Questions? <span className="underline">k@honestly.club</span>
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer">
+                <Link
+                  href={`https://www.instagram.com/honestly.club/`}
+                  target="_blank"
+                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
+                >
                   Follow us on Instagram
-                </div>
+                </Link>
               </div>
             </div>
             <div className="flex flex-row w-full">
-              <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer">
-                  Join us to build India’s first skin-tone standard
+              <div className="w-1/3 h-[73px] border-black border-[0.5px] ">
+                <div className="font-ppmori font-semibold flex items-center px-8 text-[13px] leading-[26px] h-full cursor-default">
+                  Join us to build India’s first skin-tone standard (Coming
+                  Soon)
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
                 <div
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer"
+                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                   onClick={handleDestopFaqTwo}
                 >
                   Work with us?{" "}
@@ -191,9 +213,13 @@ export default function Faq() {
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px] cursor-pointer">
+                <Link
+                  href={`https://www.linkedin.com/company/whathonestly/`}
+                  target="_blank"
+                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
+                >
                   Follow us on LinkedIn
-                </div>
+                </Link>
               </div>
             </div>
 
