@@ -7,6 +7,15 @@ import messageIcon from "@/public/icons/message-icon.svg";
 import { useState, useEffect } from "react";
 import JoinButton from "./ui/join-button";
 import { useSwipeable } from "react-swipeable";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
 const Section6 = () => {
   const [isSmallTabletOrMobile, setIsSmallTabletOrMobile] =
     useState<boolean>(false);
@@ -100,7 +109,22 @@ const Section6 = () => {
   ];
 
   const [page, setPage] = useState(1);
+  const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   const nextMobileButton = () => {
     if (current == 8) {
@@ -141,7 +165,7 @@ const Section6 = () => {
           </span>
         </div>
         <div className="flex flex-row justify-between mt-8 md:mt-16">
-          <div>
+          {/* <div>
             <div className="flex items-center">
               <div>
                 <Image
@@ -152,156 +176,179 @@ const Section6 = () => {
                 />
               </div>
             </div>
-          </div>
-          <div
-            className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[20px] `}
+          </div> */}
+
+          <Carousel
+            setApi={setApi}
+            className="w-full max-w-[290px]"
+            opts={{ loop: true }}
           >
-            <div className="flex flex-col items-center overflow-auto no-scrollbar">
-              <div className="relative w-[26px] h-[25px] mt-2">
-                <Image
-                  className="w-[26px] h-[25px]"
-                  src={messageIcon}
-                  alt="messageicon"
-                />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                  {current + 1}
-                </div>
-              </div>
-              <div
-                {...swipeHandlers}
-                className="w-[233px] h-[182px] overflow-y-auto no-scrollbar mt-4 px-2"
-              >
-                {current + 1 == 5 ? (
-                  <>
-                    <div
-                      className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
-                      onClick={handleModalOpen}
-                    >
-                      <span>
-                        {content[current].question}
+            <CarouselContent>
+              {content.map((_, index) => (
+                <CarouselItem key={index} className="flex flex-col">
+                  <div
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px] py-[20px] `}
+                  >
+                    <div className="flex justify-center">
+                      <div className="relative w-[26px] h-[25px] mt-2">
                         <Image
-                          className="inline-block ml-2"
-                          width={12}
-                          height={6}
-                          src={vector}
-                          alt="vector"
+                          className="w-[26px] h-[25px]"
+                          src={messageIcon}
+                          alt="messageicon"
                         />
-                      </span>
-                    </div>
-                    {isModolOn ? (
-                      <div className="-ml-[33px] mt-2">
-                        <div
-                          className="flex absolute flex-col  w-[283px] h-[138px] rounded-[28px] drop-shadow-[0_0px_6px_rgba(0,0,0,0.25)] border-[#AEDCEE] border-[0.5px] "
-                          style={{
-                            background: "rgba(255, 255, 255, 0.6)",
-                          }}
-                        >
-                          <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
-                            <div
-                              className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                              onClick={handleReddit}
-                            >
-                              <span>Reddit</span>
-                            </div>
-                            <div
-                              className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                              onClick={handleInstagram}
-                            >
-                              <span>Instagram</span>
-                            </div>
-                          </div>
-                          <div className="flex flex-row h-1/2 pl-2 pr-2">
-                            <div
-                              className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                              onClick={handleYoutube}
-                            >
-                              <span>Youtube</span>
-                            </div>
-                            <div
-                              className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
-                              onClick={handleDermat}
-                            >
-                              <span>my dermat</span>
-                            </div>
-                          </div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                          {index + 1}
                         </div>
                       </div>
-                    ) : (
-                      <>
-                        <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
-                          {content[current].answer}
+                    </div>
+                    <div className="w-[233px] h-[182px] overflow-y-auto no-scrollbar mt-4 px-2">
+                      {index == 4 ? (
+                        <>
+                          <div
+                            className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                            onClick={handleModalOpen}
+                          >
+                            <span>
+                              {content[index].question}
+                              <Image
+                                className="inline-block ml-2"
+                                width={12}
+                                height={6}
+                                src={vector}
+                                alt="vector"
+                              />
+                            </span>
+                          </div>
+                          {isModolOn ? (
+                            <div className="-ml-[32px] mt-2">
+                              <div
+                                className="flex absolute flex-col  w-[284px] h-[138px] rounded-[28px]  border-[#AEDCEE] border-[0.5px] "
+                                style={{
+                                  background: "rgba(255, 255, 255, 0.6)",
+                                  boxShadow:
+                                    "0px 0px 6px 0px rgba(0, 0, 0, 0.25)",
+                                }}
+                              >
+                                <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
+                                  <div
+                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleReddit}
+                                  >
+                                    <span>Reddit</span>
+                                  </div>
+                                  <div
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleInstagram}
+                                  >
+                                    <span>Instagram</span>
+                                  </div>
+                                </div>
+                                <div className="flex flex-row h-1/2 pl-2 pr-2">
+                                  <div
+                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleYoutube}
+                                  >
+                                    <span>Youtube</span>
+                                  </div>
+                                  <div
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    onClick={handleDermat}
+                                  >
+                                    <span>my dermat</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                                {content[index].answer}
+                              </div>
+                            </>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                            {content[index].question}
+                          </div>
+                          <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                            {content[index].answer}
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {/*  Carousel Dots */}
+                    {!isModolOn && (
+                      <div>
+                        <div className="flex flex-row gap-1 justify-center mt-2">
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 1 ? "bg-black" : "bg-[#AEDCEE]"
+                            } `}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 2 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 3 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 4 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 5 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 6 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 7 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 8 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
+
+                          <div
+                            className={`w-[6px] h-[6px] rounded-full ${
+                              current == 9 ? "bg-black" : "bg-[#AEDCEE]"
+                            }`}
+                          ></div>
                         </div>
-                      </>
+                      </div>
                     )}
-                  </>
-                ) : (
-                  <>
-                    <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
-                      {content[current].question}
-                    </div>
-                    <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
-                      {content[current].answer}
-                    </div>
-                  </>
-                )}
-              </div>
-
-              {/*  Carousel Dots */}
-              {
-                isModolOn &&
-                <>
-                  <div className="flex flex-row gap-1 justify-center mt-2">
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 0 ? "bg-black" : "bg-[#AEDCEE]"
-                        } `}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 1 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 2 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 3 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 4 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 5 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 6 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 7 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
-
-                    <div
-                      className={`w-[6px] h-[6px] rounded-full ${current == 8 ? "bg-black" : "bg-[#AEDCEE]"
-                        }`}
-                    ></div>
                   </div>
-                </>
-              }
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
 
-            </div>
-          </div>
-          <div>
+          {/* </div> */}
+          {/* <div>
             <div className="flex items-center">
               <div>
                 <Image
@@ -312,7 +359,7 @@ const Section6 = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-24">
           <JoinButton>JOIN THE WAITLIST</JoinButton>
@@ -497,7 +544,6 @@ const Section6 = () => {
                       </>
                     </div>
                   </div>
-
                 </div>
 
                 {/* RIGHT */}
