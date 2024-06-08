@@ -90,9 +90,13 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+                <Link
+                  href={`https://www.instagram.com/honestly.club/`}
+                  target="_blank"
+                  className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"
+                >
                   Instagram
-                </div>
+                </Link>
                 <div className="relative cursor-pointer">
                   <Image src={Vector} alt="open" />
                 </div>
@@ -105,9 +109,13 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+                <Link
+                  href={`https://www.linkedin.com/company/whathonestly/`}
+                  target="_blank"
+                  className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"
+                >
                   LinkedIn
-                </div>
+                </Link>
                 <div className="relative cursor-pointer">
                   <Image src={Vector} alt="open" />
                 </div>
@@ -116,12 +124,13 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
           </div>
           <div
             onClick={handleMobileFaqFive}
-            className={`${
-              clickedMobileFive ? "bg-white" : ""
-            } w-full h-[73px] border-black border-[0.5px]`}
+            className={
+              // ${clickedMobileFive ? "bg-white" : ""}
+              `w-full h-[73px] border-black border-[0.5px]`
+            }
           >
-            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
-              Join us to build India’s first skin-tone standard
+            <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full">
+              Join us to build India’s first skin-tone standard (Coming Soon)
             </div>
           </div>
           <div
