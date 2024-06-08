@@ -5,7 +5,9 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
+import arrowLeftSvg from "@/public/icons/arrow-left.svg";
+import arrowRightSvg from "@/public/icons/arrow-right.svg";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -203,20 +205,25 @@ const CarouselPrevious = React.forwardRef<
   return (
     <Button
       ref={ref}
-      variant={variant}
+      // variant={variant}
       size={size}
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
+        "absolute overflow-hidden",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-left-9 sm:-left-12 top-1/2 -translate-y-1/2"
+          : "-top-9 sm:-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-4 w-4" />
+      <Image
+        className="w-[15px] h-[29px] cursor-pointer"
+        src={arrowLeftSvg}
+        alt="Arrow Left"
+        // onClick={prevMobileButton}
+      />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -232,20 +239,25 @@ const CarouselNext = React.forwardRef<
   return (
     <Button
       ref={ref}
-      variant={variant}
+      // variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 rounded-full",
+        "absolute overflow-hidden",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-right-9 sm:-right-12 top-1/2 -translate-y-1/2"
+          : "-bottom-9 sm:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-4 w-4" />
+      <Image
+        className="w-[15px] h-[29px] cursor-pointer"
+        src={arrowRightSvg}
+        alt="Arrow Right"
+        // onClick={prevMobileButton}
+      />
       <span className="sr-only">Next slide</span>
     </Button>
   );
