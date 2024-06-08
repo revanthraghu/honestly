@@ -83,44 +83,40 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
             </Link>
           </div>
           <div className="flex flex-row">
-            <div
+            <Link
+              href={`https://www.instagram.com/honestly.club/`}
+              target="_blank"
               onClick={handleMobileFaqThree}
               className={`${
                 clickedMobileThree ? "bg-white" : ""
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <Link
-                  href={`https://www.instagram.com/honestly.club/`}
-                  target="_blank"
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"
-                >
+                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                   Instagram
-                </Link>
+                </div>
                 <div className="relative cursor-pointer">
                   <Image src={Vector} alt="open" />
                 </div>
               </div>
-            </div>
-            <div
+            </Link>
+            <Link
+              href={`https://www.linkedin.com/company/whathonestly/`}
+              target="_blank"
               onClick={handleMobileFaqFour}
               className={`${
                 clickedMobileFour ? "bg-white" : ""
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <Link
-                  href={`https://www.linkedin.com/company/whathonestly/`}
-                  target="_blank"
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"
-                >
+                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                   LinkedIn
-                </Link>
+                </div>
                 <div className="relative cursor-pointer">
                   <Image src={Vector} alt="open" />
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div
             onClick={handleMobileFaqFive}
