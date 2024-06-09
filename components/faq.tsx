@@ -119,43 +119,39 @@ export default function Faq() {
               </div>
             </div>
             <div className="flex flex-row">
-              <div
+              <Link
+                href={`https://www.instagram.com/honestly.club/`}
+                target="_blank"
                 onClick={handleMobileFaqFour}
                 className={`${
                   clickedMobileFour ? "bg-white" : ""
                 }  w-full h-[73px] border-black border-[0.5px]`}
               >
                 <div className="flex items-center gap-2">
-                  <Link
-                    href={`https://www.instagram.com/honestly.club/`}
-                    target="_blank"
-                    className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
-                  >
+                  <div className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]">
                     Instagram
-                  </Link>
+                  </div>
                   <div className="relative cursor-pointer">
                     <Image src={Vector} alt="open" />
                   </div>
                 </div>
-              </div>
+              </Link>
               <div className="w-full h-[73px]">
-                <div
+                <Link
+                  href={`https://www.linkedin.com/company/whathonestly/`}
+                  target="_blank"
                   onClick={handleMobileFaqFive}
                   className={`${
                     clickedMobileFive ? "bg-white" : ""
                   } h-[73px] border-black border-[0.5px] flex items-center gap-2`}
                 >
-                  <Link
-                    href={`https://www.linkedin.com/company/whathonestly/`}
-                    target="_blank"
-                    className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
-                  >
+                  <div className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]">
                     LinkedIn
-                  </Link>
+                  </div>
                   <div className="relative cursor-pointer">
                     <Image src={Vector} alt="open" />
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 

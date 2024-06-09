@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useRef, useEffect, useState, useCallback } from "react";
 import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
 import iceberg1Web from "@/public/background/iceberg1-web.svg";
-import ReactRotatingText from "react-rotating-text";
 import JoinButton from "./ui/join-button";
 import icebergUnion from "@/public/background/icebergUnion.svg";
 import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
@@ -26,6 +25,51 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const toRotate = [
+    "sunscreen",
+    "lipstick",
+    "lip balm",
+    "cleanser",
+    "concealer",
+    "foundation",
+    "retinol",
+    "moisturizer",
+  ];
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(150);
+  const period = 300;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setDelta(150);
+    }
+  };
+
   return (
     <>
       <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
@@ -33,37 +77,13 @@ export default function Hero() {
           <div className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>
             <span className="hidden italic md:block">
-              <ReactRotatingText
-                items={[
-                  "sunscreen",
-                  "lipstick",
-                  "lip balm",
-                  "cleanser",
-                  "concealer",
-                  "foundation",
-                  "retinol",
-                  "moisturizer",
-                ]}
-                cursor={false}
-              />
+              <span className="flex-wrap">{text}</span>
             </span>
           </div>
           <div className="flex flex-col md:block">
             <span>
               <span className="italic md:hidden">
-                <ReactRotatingText
-                  items={[
-                    "sunscreen",
-                    "lipstick",
-                    "lip balm",
-                    "cleanser",
-                    "concealer",
-                    "foundation",
-                    "retinol",
-                    "moisturizer",
-                  ]}
-                  cursor={false}
-                />
+                <span className="flex-wrap">{text}</span>
                 &nbsp;
               </span>
               <span className="text-center md:hidden">by asking</span>

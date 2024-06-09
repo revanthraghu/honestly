@@ -58,7 +58,7 @@ export default function Section5() {
       window.addEventListener("scroll", checkIfCentered);
       checkIfCentered(); // Initial check
     }
-  }, [isInCenter]);
+  }, [isInCenter]); //eslint-disable-line
 
   const messageEl = useRef<HTMLDivElement>(null);
 
