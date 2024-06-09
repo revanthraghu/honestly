@@ -210,7 +210,7 @@ const Section6 = () => {
                               {content[index].question}
                               <Image
                                 className="inline-block ml-2"
-                                width={12}
+                                // width={12}
                                 height={6}
                                 src={vector}
                                 alt="vector"
@@ -485,7 +485,7 @@ const Section6 = () => {
                             {content[4].question}
                             <Image
                               className="inline-block ml-2"
-                              width={12}
+                              // width={12}
                               height={6}
                               src={vector}
                               alt="vector"

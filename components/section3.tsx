@@ -43,7 +43,7 @@ export default function Section3() {
             </div>
             <div className="h-[22px] md:h-[32px]" />
             {/* <span> */}
-            <ol className="text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:max-w-[520px] max-w-[290px]">
+            <div className="text-[13px] md:text-[14px] leading-[16.9px] md:leading-[18.2px] tracking-[4%] list-decimal md:max-w-[520px] max-w-[290px]">
               {/* <li> */}
               <div className="flex flex-row">
                 <SectionDNumber paragraph={`1. `} />
@@ -74,7 +74,7 @@ export default function Section3() {
                 <SectionFNumber paragraph={`2. `} />
                 <WordSectionF paragraph={paragraphSix} />
               </div>
-            </ol>
+            </div>
           </div>
           {/* </span> */}
         </div>

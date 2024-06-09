@@ -15,9 +15,6 @@ import reviewGif6 from "@/public/reviews/gifs/6.webp";
 import reviewGif7 from "@/public/reviews/gifs/7.webp";
 import logoMark from "@/public/reviews/logoMark.svg";
 import promise from "@/public/reviews/promise.svg";
-import invertedLeafImg from "@/public/reviews/inverted-leaf.svg";
-import leafMobileImg from "@/public/reviews/leaf-mobile.svg";
-import invertedLeafMobileImg from "@/public/reviews/inverted-leaf-mobile.svg";
 import JoinButton from "./ui/join-button";
 
 import {
@@ -87,7 +84,7 @@ export default function ReviewSection() {
                   alt="promise"
                   quality={100}
                   width={90}
-                  height={90}
+                  // height={90}
                 />
               </div>
               <div className="bg-white w-[54px] h-[54px] rounded-full"></div>
@@ -97,7 +94,7 @@ export default function ReviewSection() {
                   alt="logoMark"
                   quality={100}
                   width={28}
-                  height={28}
+                  // height={28}
                 />
               </div>
             </div>
@@ -141,7 +138,7 @@ export default function ReviewSection() {
                     alt="promise"
                     quality={100}
                     width={90}
-                    height={90}
+                    // height={90}
                   />
                 </div>
                 <div className="bg-white w-[54px] h-[54px] rounded-full"></div>
@@ -151,7 +148,7 @@ export default function ReviewSection() {
                     alt="logoMark"
                     quality={100}
                     width={28}
-                    height={28}
+                    // height={28}
                   />
                 </div>
               </div>
@@ -193,7 +190,7 @@ export default function ReviewSection() {
 
 export function Collage() {
   return (
-    <div className="grid grid-cols-5 min-w-[489px] h-auto ">
+    <div className="grid grid-cols-5 h-[445px] min-w-[489px]">
       <div
         className="flex justify-center items-center col-span-2 row-span-1 bg-[#E9E5DE] w-[171px] h-[100px]"
         style={hexagonStyle}
@@ -208,7 +205,7 @@ export function Collage() {
           src={reviewGif1}
           alt="reviewGif1"
           quality={100}
-          width={79}
+          // width={79}
           height={153}
           unoptimized
         />
@@ -221,7 +218,7 @@ export function Collage() {
           src={reviewGif2}
           alt="reviewGif2"
           quality={100}
-          width={87}
+          // width={87}
           height={153}
           unoptimized
         />
@@ -235,26 +232,26 @@ export function Collage() {
           alt="reviewGif3"
           quality={100}
           width={88}
-          height={154}
+          // height={154}
           unoptimized
         />
       </div>
 
       <div
-        className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] my-[6px] w-[94px] h-[166px]"
+        className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] mt-[6px] w-[94px] h-[166px]"
         style={hexagonStyle}
       >
         <Image
           src={reviewGif4}
           alt="reviewGif4"
           quality={100}
-          width={82}
+          // width={82}
           height={154}
           unoptimized
         />
       </div>
       <div
-        className="col-start-2 col-end-3 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[2px] ml-[14px] w-[91px] h-[154px]"
+        className="col-start-2 col-end-3 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[6px] ml-[14px] w-[91px] h-[154px]"
         style={hexagonStyle}
       >
         <Image
@@ -262,32 +259,32 @@ export function Collage() {
           alt="reviewGif5"
           quality={100}
           width={79}
-          height={142}
+          // height={142}
           unoptimized
         />
       </div>
       <div
-        className="col-start-3 col-end-5 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[12px] ml-[14px] w-[175px] h-[170px]"
+        className="col-start-3 col-end-5 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[14px] ml-[14px] w-[175px] h-[170px]"
         style={hexagonStyle}
       >
         <Image src={review2} alt="review2" quality={100} unoptimized />
       </div>
       <div
-        className="col-start-5 col-end-6 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[2px] ml-1 w-[94px] h-[160px]"
+        className="col-start-5 col-end-6 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE]  ml-1 w-[94px] h-[160px]"
         style={hexagonStyle}
       >
         <Image
           src={reviewGif6}
           alt="reviewGif6"
           quality={100}
-          width={82}
+          // width={82}
           height={148}
           unoptimized
         />
       </div>
 
       <div
-        className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] w-[105px] h-[170px]"
+        className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] mt-[2px] w-[105px] h-[166px]"
         style={hexagonStyle}
       >
         <Image
@@ -295,20 +292,20 @@ export function Collage() {
           alt="reviewGif7"
           quality={100}
           width={93}
-          height={158}
+          // height={158}
           unoptimized
         />
       </div>
 
       <div
-        className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] ml-[28px] w-[174px] h-[88px]"
+        className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] -mt-[72px] ml-[28px] w-[174px] h-[88px]"
         style={hexagonStyle}
       >
         <Image src={review3} alt="review3" quality={100} unoptimized />
       </div>
 
       <div
-        className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] mt-3 ml-6 w-[173px] h-[77px]"
+        className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] -mt-[60px] ml-6 w-[173px] h-[77px]"
         style={hexagonStyle}
       >
         <Image src={review4} alt="review4" quality={100} unoptimized />
@@ -343,7 +340,7 @@ export function Slideshow() {
               alt="review2"
               quality={100}
               width={295}
-              height={285}
+              // height={285}
               unoptimized
             />
           </div>
@@ -359,7 +356,8 @@ export function Slideshow() {
               alt="reviewGif4"
               quality={100}
               width={168}
-              height={309}
+              // height={309}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -374,7 +372,8 @@ export function Slideshow() {
               alt="reviewGif7"
               quality={100}
               width={189}
-              height={322}
+              // height={322}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -386,7 +385,7 @@ export function Slideshow() {
               alt="review1"
               quality={100}
               width={286}
-              height={158}
+              // height={158}
               unoptimized
               // className="bg-[#E9E5DE]"
               style={hexagonStyle}
@@ -396,7 +395,7 @@ export function Slideshow() {
               alt="review3"
               quality={100}
               width={294}
-              height={138}
+              // height={138}
               unoptimized
               style={hexagonStyle}
             />
@@ -413,7 +412,8 @@ export function Slideshow() {
               alt="reviewGif5"
               quality={100}
               width={160}
-              height={287}
+              // height={287}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -429,6 +429,7 @@ export function Slideshow() {
               quality={100}
               width={169}
               height={300}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -444,6 +445,7 @@ export function Slideshow() {
               quality={100}
               width={162}
               height={309}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -458,7 +460,8 @@ export function Slideshow() {
               alt="reviewGif3"
               quality={100}
               width={177}
-              height={312}
+              // height={312}
+              unoptimized
             />
           </div>
         </CarouselItem>
@@ -474,6 +477,7 @@ export function Slideshow() {
               quality={100}
               width={174}
               height={309}
+              unoptimized
             />
           </div>
         </CarouselItem>

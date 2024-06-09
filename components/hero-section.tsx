@@ -83,42 +83,41 @@ export default function Hero() {
         <JoinButton>JOIN THE WAITLIST</JoinButton>
       </div>
       {/* {!scrolled && ( */}
-        <div className="h-[230px] flex justify-center">
-          <Image
-            src={iceberg1Mobile}
-            alt="background-image-1"
-            className="animate-bounce md:hidden z-0 relative -mt-[100px] h-[277px]"
-            aria-hidden
-            priority
-            style={{
-              transition: "opacity 0.5s ease-in-out",
-              opacity: scrolled ? 0 : 1,
-            }}
-          />
+      <div className="h-[230px] flex justify-center">
+        <Image
+          src={iceberg1Mobile}
+          alt="background-image-1"
+          className="animate-bounce md:hidden z-0 relative -mt-[100px] w-auto h-[277px]"
+          aria-hidden
+          priority
+          style={{
+            transition: "opacity 0.5s ease-in-out",
+            opacity: scrolled ? 0 : 1,
+          }}
+        />
 
-          <Image
-            src={iceberg1Web}
-            alt="background-image-1"
-            className="animate-bounce md:block hidden relative -mt-[100px] h-[277px]"
-            aria-hidden
-            style={{
-              transition: "opacity 0.5s ease-in-out",
-              opacity: scrolled ? 0 : 1,
-            }}
-          />
-        </div>
+        <Image
+          src={iceberg1Web}
+          alt="background-image-1"
+          className="animate-bounce md:block hidden relative -mt-[100px] w-auto h-[143px]"
+          priority
+          aria-hidden
+          style={{
+            transition: "opacity 0.5s ease-in-out",
+            opacity: scrolled ? 0 : 1,
+          }}
+        />
+      </div>
       {/* )} */}
 
       {/* SECTION TWO */}
 
       <div>
-        <div
-          className="flex flex-col items-center mb-[71px] "
-        >
+        <div className="flex flex-col items-center mb-[71px] ">
           <Image
             src={icebergUnion}
             alt="background-image-2"
-            className=" absolute md:w-[347.29px] md:h-[935px]"
+            className=" absolute md:w-auto md:h-[935px]"
           />
           <Image
             src={dashedSeparatorWeb}

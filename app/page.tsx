@@ -13,7 +13,7 @@ import Footer from "@/components/footer";
 export default function Home() {
   const [isMessageBoxOpen, setIsMessageBoxOpen] = useState<boolean>(false);
   return (
-    <main className="flex flex-col bg-heroBg md:bg-contain ">
+    <main className="flex flex-col bg-heroBg md:bg-cover ">
       <Navbar
         isMessageBoxOpen={isMessageBoxOpen}
         setIsMessageBoxOpen={setIsMessageBoxOpen}
