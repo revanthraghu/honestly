@@ -4,10 +4,12 @@ import Image from "next/image";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
 import JoinButton from "./ui/join-button";
+import playing from "@/public/video/playing.svg"
+import paused from "@/public/video/paused.svg"
 
 export default function Section5() {
   const targetRef = useRef<HTMLDivElement>(null);
-  // const [isCentered, setIsCentered] = useState<boolean>(false);
+  const [playbutton, setIsPlayButton] = useState<boolean>(false);
   var isInCenter = false;
   var isInView = false;
 
@@ -79,6 +81,22 @@ export default function Section5() {
     };
   }, [messageEl]);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        setIsPlayButton(true)
+        videoRef.current.pause();
+      } else {
+        setIsPlayButton(true)
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div
       className="scroll flex md:flex-row flex-col md:w-full h-[1440px] md:h-screen"
@@ -86,23 +104,23 @@ export default function Section5() {
     >
       <div className="flex justify-center items-center h-[720px] md:h-screen bg-howItWorksBg bg-cover md:w-1/2 p-8">
         <div
-          className="flex md:flex-col flex-row w-[284px] h-[613px]  rounded-[28px] p-4 "
+          className="flex md:flex-col flex-row w-[344.81px] h-[613px]  rounded-[28px] p-4 "
           style={{
             background: "rgba(255, 255, 255, 1)",
             boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
           }}
         >
-          <div className="w-[248px] mt-4 ">
+          <div className="w-[308px] mt-4 ">
             {/*  HEADING SECTION */}
-            <div ref={targetRef} className="w-[242px] h-[82px] text-center">
+            <div ref={targetRef} className="w-[300px] h-[82px] text-center">
               <span className="text-[#F00832] font-ppeditorialnew leading-[41.4px] text-4xl italic font-extrabold text-center">
                 Here’s how it works
               </span>
             </div>
             {/* DIVIDER LINE */}
-            <div className="w-[250px] border-black border-[1px] mt-4"></div>
+            <div className="w-[310px] border-black border-[1px] mt-4"></div>
             {/* CHAT SECTION */}
-            <div className="flex flex-col justify w-[251px] h-[410px] mt-6 flex-grow scoll-smooth no-scrollbar overflow-scroll">
+            <div className="flex flex-col justify w-[310px] h-[410px] mt-6 flex-grow scoll-smooth no-scrollbar overflow-scroll">
               <div
                 ref={scrollableDivRef}
                 className="h-[410px] overflow-auto overflow-x-hidden no-scrollbar scroll-smooth flex-grow"
@@ -320,8 +338,42 @@ export default function Section5() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen p-8">
-        <div className="flex flex-col bg-white w-[284px] h-[613px] rounded-[28px]"></div>
+      <div className="flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen">
+        <div>
+          <video
+            onClick={handlePlayPause}
+            ref={videoRef}
+            className="h-[613px] rounded-[28px]"
+            controls={false}
+            poster="/video/poster.svg"
+          >
+            <source src="https://drive.google.com/file/d/1qWCng6SM0yL6mSj7IkXihnhLMd89hlwL/view?usp=drive_link" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        {playbutton && <>
+          {isPlaying ?
+            <div
+              onClick={handlePlayPause}
+              className="mt-[500px] absolute">
+              <Image
+                className=" w-[42.25px] h-[42.25px]"
+                src={playing}
+                alt="open"
+              />
+            </div> :
+            <div
+              onClick={handlePlayPause}
+              className="mt-[500px] absolute">
+              <Image
+                className=" w-[42.25px] h-[42.25px]"
+                src={paused}
+                alt="open"
+              />
+            </div>}
+        </>}
+
+
       </div>
     </div>
   );
