@@ -6,7 +6,7 @@ import JoinButton from "./ui/join-button";
 
 export default function Section5() {
   const targetRef = useRef<HTMLDivElement>(null);
-  const [isCentered, setIsCentered] = useState<boolean>(false);
+  // const [isCentered, setIsCentered] = useState<boolean>(false);
   var isInCenter = false;
   var isInView = false;
 
@@ -33,7 +33,7 @@ export default function Section5() {
         Math.abs(viewportCenter - elementCenter) < rect.height / 2 ||
         isInView
       ) {
-        setIsCentered(true);
+        // setIsCentered(true);
         var i = 0;
         if (isInCenter === false) {
           for (let i = 0; i <= 10; i++) {
@@ -55,26 +55,28 @@ export default function Section5() {
       window.addEventListener("scroll", checkIfCentered);
       checkIfCentered(); // Initial check
     }
-  }, []);
+  }, [isInCenter]);
 
   const messageEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentMessageEl = messageEl.current;
+
     const handleScroll = (event: Event) => {
       const target = event.currentTarget as HTMLDivElement;
       target.scroll({ top: target.scrollHeight, behavior: "smooth" });
     };
 
-    if (messageEl.current) {
-      messageEl.current.addEventListener("DOMNodeInserted", handleScroll);
+    if (currentMessageEl) {
+      currentMessageEl.addEventListener("DOMNodeInserted", handleScroll);
     }
 
     return () => {
-      if (messageEl.current) {
-        messageEl.current.removeEventListener("DOMNodeInserted", handleScroll);
+      if (currentMessageEl) {
+        currentMessageEl.removeEventListener("DOMNodeInserted", handleScroll);
       }
     };
-  }, []);
+  }, [messageEl]);
 
   return (
     <div
@@ -157,6 +159,7 @@ export default function Section5() {
                         className="w-[20.7px] h-[20.7px] px-[4px] py-[4px]"
                         src={catSvg}
                         alt="open"
+                        unoptimized
                       />
                     </div>
                   </div>
@@ -200,6 +203,7 @@ export default function Section5() {
                         className=" w-[20.7px] h-[20.7px] px-[4px] py-[4px]"
                         src={catSvg}
                         alt="open"
+                        unoptimized
                       />
                     </div>
                   </div>
@@ -250,6 +254,7 @@ export default function Section5() {
                         className=" w-[20.7px] h-[20.7px] px-[4px] py-[4px]"
                         src={catSvg}
                         alt="open"
+                        unoptimized
                       />
                     </div>
                   </div>
@@ -294,6 +299,7 @@ export default function Section5() {
                         className=" w-[20.7px] h-[20.7px] px-[4px] py-[4px]"
                         src={catSvg}
                         alt="open"
+                        unoptimized
                       />
                     </div>
                   </div>

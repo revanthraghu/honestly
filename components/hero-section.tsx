@@ -12,7 +12,6 @@ import UpperIceberg from "./upperIceberg";
 import LowerIceberg from "./lowerIceberg";
 
 export default function Hero() {
-  const iceberg = ["DELIVERY TIME", "FAT CLAIMS", "PHOTOS OF MODELS", "PRICE"];
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -76,13 +75,12 @@ export default function Hero() {
             <span className="text-center md:hidden">real people</span>
           </div>
         </div>
-        <div className="my-7 mx-8 text-center text-[13px] leading-[16.9px] tracking-[4%] md:text-[16px] md:leading-[20.8px]  md:max-w-[520px] md:mx-auto">
+        <div className="my-[28px] mx-[32px] text-center text-[13px] leading-[16.9px] tracking-[4%] md:text-[16px] md:leading-[20.8px] md:max-w-[520px] md:mx-auto">
           We match people who have the same skin tone, skin type, age, gender,
           weather—you get the gist. A bit like Bumble, but for beauty
         </div>
         <JoinButton>JOIN THE WAITLIST</JoinButton>
       </div>
-      {/* {!scrolled && ( */}
       <div className="h-[230px] flex justify-center">
         <Image
           src={iceberg1Mobile}
@@ -90,6 +88,7 @@ export default function Hero() {
           className="animate-bounce md:hidden z-0 relative -mt-[100px] w-auto h-[277px]"
           aria-hidden
           priority
+          unoptimized
           style={{
             transition: "opacity 0.5s ease-in-out",
             opacity: scrolled ? 0 : 1,
@@ -99,7 +98,7 @@ export default function Hero() {
         <Image
           src={iceberg1Web}
           alt="background-image-1"
-          className="animate-bounce md:block hidden relative -mt-[100px] w-auto h-[143px]"
+          className="animate-bounce hidden md:block -mt-[100px] w-auto h-[143px]"
           priority
           aria-hidden
           style={{
