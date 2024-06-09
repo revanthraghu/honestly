@@ -194,7 +194,7 @@ const Section6 = () => {
                           src={messageIcon}
                           alt="messageicon"
                         />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
                           {index + 1}
                         </div>
                       </div>
@@ -203,7 +203,7 @@ const Section6 = () => {
                       {index == 4 ? (
                         <>
                           <div
-                            className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                            className="mt-4  font-semibold text-[13px] leading-[16.9px] cursor-pointer"
                             onClick={handleModalOpen}
                           >
                             <span>
@@ -229,13 +229,13 @@ const Section6 = () => {
                               >
                                 <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                                   <div
-                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleReddit}
                                   >
                                     <span>Reddit</span>
                                   </div>
                                   <div
-                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleInstagram}
                                   >
                                     <span>Instagram</span>
@@ -243,13 +243,13 @@ const Section6 = () => {
                                 </div>
                                 <div className="flex flex-row h-1/2 pl-2 pr-2">
                                   <div
-                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleYoutube}
                                   >
                                     <span>Youtube</span>
                                   </div>
                                   <div
-                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleDermat}
                                   >
                                     <span>my dermat</span>
@@ -259,7 +259,7 @@ const Section6 = () => {
                             </div>
                           ) : (
                             <>
-                              <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                              <div className="mt-4  font-normal text-[13px] leading-[16.9px]">
                                 {content[index].answer}
                               </div>
                             </>
@@ -267,10 +267,10 @@ const Section6 = () => {
                         </>
                       ) : (
                         <>
-                          <div className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px]">
+                          <div className="mt-4  font-semibold text-[13px] leading-[16.9px]">
                             {content[index].question}
                           </div>
-                          <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                          <div className="mt-4  font-normal text-[13px] leading-[16.9px]">
                             {content[index].answer}
                           </div>
                         </>
@@ -395,21 +395,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          1
+                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            1
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[0].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[0].answer}
                       </div>
                     </div>
@@ -417,21 +419,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          4
+                    <div className="flex flex-col  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            4
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[3].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[3].answer}
                       </div>
                     </div>
@@ -443,21 +447,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          2
+                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            2
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[1].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[1].answer}
                       </div>
                     </div>
@@ -465,20 +471,22 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          5
+                    <div className="flex flex-col items-center w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            5
+                          </div>
                         </div>
                       </div>
                       <>
                         <div
-                          className="mt-4 font-ppmori font-semibold text-[13px] leading-[16.9px] cursor-pointer"
+                          className="mt-4  font-semibold text-[13px] leading-[16.9px] cursor-pointer"
                           onClick={handleModalOpen}
                         >
                           <span>
@@ -503,13 +511,13 @@ const Section6 = () => {
                               >
                                 <div className="flex flex-row h-1/2 pt-2 pl-2 pr-2">
                                   <div
-                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleReddit}
                                   >
                                     <span>Reddit</span>
                                   </div>
                                   <div
-                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-t-0 border-b-0 w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleInstagram}
                                   >
                                     <span>Instagram</span>
@@ -517,13 +525,13 @@ const Section6 = () => {
                                 </div>
                                 <div className="flex flex-row h-1/2 pl-2 pr-2">
                                   <div
-                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  border-l-0 w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleYoutube}
                                   >
                                     <span>Youtube</span>
                                   </div>
                                   <div
-                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold font-ppmori text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
+                                    className="flex justify-center items-center  border-[#AEDCEE] border-[0.5px] border-r-0 border-b-0  w-[135px] h-[60px] font-semibold  text-[13px] leading-[13.65px] tracking-[4%] text-[#000000] cursor-pointer"
                                     onClick={handleDermat}
                                   >
                                     <span>my dermat</span>
@@ -534,7 +542,7 @@ const Section6 = () => {
                           </>
                         ) : (
                           <>
-                            <div className="mt-4 font-ppmori font-normal text-[13px] leading-[16.9px]">
+                            <div className="mt-4  font-normal text-[13px] leading-[16.9px]">
                               {content[4].answer}
                             </div>
                           </>
@@ -548,45 +556,49 @@ const Section6 = () => {
 
                 <div className="flex flex-col gap-8">
                   <div
-                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
                     <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          3
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            3
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[2].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[2].answer}
                       </div>
                     </div>
                   </div>
                   <div
-                    className={`flex flex-col  bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
+                    className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          6
+                    <div className="flex flex-col  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            6
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[5].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[5].answer}
                       </div>
                     </div>
@@ -603,21 +615,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          7
+                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            7
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[6].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[6].answer}
                       </div>
                     </div>
@@ -628,21 +642,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          8
+                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            8
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[7].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[7].answer}
                       </div>
                     </div>
@@ -653,21 +669,23 @@ const Section6 = () => {
                   <div
                     className={`flex flex-col bg-white w-[284px] h-[265px] rounded-[28px] px-[24px]`}
                   >
-                    <div className="flex flex-col items-center  w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
-                      <div className="relative w-[26px] h-[25px]">
-                        <Image
-                          className="w-[26px] h-[25px]"
-                          src={messageIcon}
-                          alt="messageicon"
-                        />
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-ppmori text-[10px] leading-[10.5px]">
-                          9
+                    <div className="flex flex-col w-[233px] h-[201px] overflow-auto no-scrollbar mt-6">
+                      <div className="w-full flex justify-center">
+                        <div className="relative w-[26px] h-[25px]">
+                          <Image
+                            className="w-[26px] h-[25px]"
+                            src={messageIcon}
+                            alt="messageicon"
+                          />
+                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white  text-[10px] leading-[10.5px]">
+                            9
+                          </div>
                         </div>
                       </div>
-                      <div className="font-ppmori font-semibold text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-semibold text-[13px] leading-[16.9px] mt-4">
                         {content[8].question}
                       </div>
-                      <div className="font-ppmori font-normal text-[13px] leading-[16.9px] mt-4">
+                      <div className=" font-normal text-[13px] leading-[16.9px] mt-4">
                         {content[8].answer}
                       </div>
                     </div>

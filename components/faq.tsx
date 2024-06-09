@@ -86,7 +86,7 @@ export default function Faq() {
               } flex flex-row w-full`}
             >
               <div className="w-full h-[73px] border-black border-[0.5px]">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-6 h-full">
+                <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-6 h-full">
                   Tell me more, I like to read long form
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Faq() {
                   clickedMobileTwo ? "bg-white" : ""
                 }  flex flex-col gap-2  w-1/2 h-[83px] border-black border-[0.5px]`}
               >
-                <div className=" font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[14px]">
+                <div className="  font-semibold text-[13px] leading-[26px] px-6 py-[14px]">
                   <div className="font-thin">Work with us</div>
                   <div className="underline font-bold">v@honestly.club</div>
                 </div>
@@ -110,7 +110,7 @@ export default function Faq() {
               >
                 <div
                   onClick={handleMobileFaqThree}
-                  className={`font-ppmori font-semibold text-[13px]  leading-[26px] px-6 py-[14px]`}
+                  className={` font-semibold text-[13px]  leading-[26px] px-6 py-[14px]`}
                 >
                   <div className="font-thin">Questions?</div>
                   <div className="underline font-bold">k@honestly.club</div>
@@ -128,7 +128,7 @@ export default function Faq() {
                   <Link
                     href={`https://www.instagram.com/honestly.club/`}
                     target="_blank"
-                    className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
+                    className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
                   >
                     Instagram
                   </Link>
@@ -147,7 +147,7 @@ export default function Faq() {
                   <Link
                     href={`https://www.linkedin.com/company/whathonestly/`}
                     target="_blank"
-                    className="font-ppmori font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
+                    className=" font-semibold text-[13px] leading-[26px] px-6 py-[24px]"
                   >
                     LinkedIn
                   </Link>
@@ -159,7 +159,7 @@ export default function Faq() {
             </div>
 
             <div className="flex justify-center items-center w-full h-[73px] border-black border-[0.5px]">
-              <div className="font-ppmori font-semibold text-[10px] leading-[20px] px-auto py-[5px]">
+              <div className=" font-semibold text-[10px] leading-[20px] px-auto py-[5px]">
                 HONESTLY, NO RIGHTS RESERVED YET
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Faq() {
           <div className="h-[179px] w-full border-black border-[0.5px]">
             <div className="flex flex-row w-full">
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
+                <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
                   Tell me more, I like to read long form
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function Faq() {
                 className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white"
                 onClick={handleDestopFaqThree}
               >
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
+                <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
                   Questions? <span className="underline">k@honestly.club</span>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function Faq() {
                 <Link
                   href={`https://www.instagram.com/honestly.club/`}
                   target="_blank"
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
+                  className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                 >
                   Follow us on Instagram
                 </Link>
@@ -198,14 +198,14 @@ export default function Faq() {
             </div>
             <div className="flex flex-row w-full">
               <div className="w-1/3 h-[73px] border-black border-[0.5px] ">
-                <div className="font-ppmori font-semibold flex items-center px-8 text-[13px] leading-[26px] h-full cursor-default">
+                <div className=" font-semibold flex items-center px-8 text-[13px] leading-[26px] h-full cursor-default">
                   Join us to build India’s first skin-tone standard (Coming
                   Soon)
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
                 <div
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
+                  className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                   onClick={handleDestopFaqTwo}
                 >
                   Work with us?{" "}
@@ -216,7 +216,7 @@ export default function Faq() {
                 <Link
                   href={`https://www.linkedin.com/company/whathonestly/`}
                   target="_blank"
-                  className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
+                  className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                 >
                   Follow us on LinkedIn
                 </Link>
@@ -224,7 +224,7 @@ export default function Faq() {
             </div>
 
             <div className="flex justify-center items-center w-full h-[33px] border-black border-[0.5px]">
-              <div className="font-ppmori font-semibold text-[10px] leading-[20px] px-8 cursor-default">
+              <div className=" font-semibold text-[10px] leading-[20px] px-8 cursor-default">
                 HONESTLY, NO RIGHTS RESERVED YET
               </div>
             </div>

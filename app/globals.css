@@ -15,7 +15,7 @@
 }
 
 /* PPMori Fonts */
-@font-face {
+/* @font-face {
   font-family: "PPMori";
   src: url("/fonts/PPMori/PPMori-Extralight.otf") format("opentype");
   font-weight: 100;
@@ -55,7 +55,7 @@
   src: url("/fonts/PPMori/PPMori-SemiBoldItalic.otf") format("opentype");
   font-weight: 600;
   font-style: italic;
-}
+} */
 
 /* PPEditorialNew Fonts */
 

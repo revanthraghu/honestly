@@ -33,7 +33,6 @@ const config = {
         heroBg: "url('/background/heroBG.svg')",
         howItWorksBg: "url('/background/howItWorks.svg')",
         messageIcon: "url('/icons/message-icon.svg)",
-
       },
       colors: {
         border: "hsl(var(--border))",
@@ -105,8 +104,7 @@ const config = {
             color: "#122B2E",
             width: "330px",
             opacity: "100%",
-          }
-
+          },
         },
         diamond: {
           "0%": { backgroundColor: "#AEDCEE" },
@@ -142,10 +140,10 @@ const config = {
         },
       },
       animation: {
-        spin: 'spin 10s linear infinite',
-        slideInFromLeft: 'slideInFromLeft 0.8s ease-out',
-        slideInFromBottom: 'slideInFromBottom 1s',
-        slideInFromRight: 'slideInFromRight 0.8s ease-out',
+        spin: "spin 10s linear infinite",
+        slideInFromLeft: "slideInFromLeft 0.8s ease-out",
+        slideInFromBottom: "slideInFromBottom 1s",
+        slideInFromRight: "slideInFromRight 0.8s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         color: "color 0.4s forwards ease-out",
@@ -156,7 +154,7 @@ const config = {
         reviewMarquee2: "marquee2 80s linear infinite",
       },
       fontFamily: {
-        ppmori: ["PPMori", "sans-serif"],
+        // ppmori: ["PPMori", "sans-serif"],
         ppeditorialnew: ["PPEditorialNew", "serif"],
       },
       boxShadow: {

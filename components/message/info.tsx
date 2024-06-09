@@ -64,9 +64,9 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               onClick={handleMobileFaqOne}
               className={`${
                 clickedMobileOne ? "bg-white" : ""
-              } w-1/2 h-[73px] border-black border-[0.5px] font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
+              } w-1/2 h-[73px] border-black border-[0.5px]  font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
             >
-              {/* <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
+              {/* <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
               How it works
               {/* </div> */}
             </Link>
@@ -75,9 +75,9 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               onClick={handleMobileFaqTwo}
               className={`${
                 clickedMobileTwo ? "bg-white" : ""
-              } w-1/2 h-[73px] border-black border-[0.5px] font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
+              } w-1/2 h-[73px] border-black border-[0.5px]  font-semibold text-[13px] leading-[26px] px-8 py-[24px]`}
             >
-              {/* <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
+              {/* <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]"> */}
               FAQs
               {/* </div> */}
             </Link>
@@ -92,7 +92,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+                <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                   Instagram
                 </div>
                 <div className="relative cursor-pointer">
@@ -109,7 +109,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               } w-full h-[73px] border-black border-[0.5px]`}
             >
               <div className="flex items-center gap-6">
-                <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+                <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
                   LinkedIn
                 </div>
                 <div className="relative cursor-pointer">
@@ -125,7 +125,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               `w-full h-[73px] border-black border-[0.5px]`
             }
           >
-            <div className="font-ppmori font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full">
+            <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full">
               Join us to build India’s first skin-tone standard (Coming Soon)
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               clickedMobileSix ? "bg-white" : ""
             } w-full h-[73px] border-black border-[0.5px]`}
           >
-            <div className="font-ppmori font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+            <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
               Tell me more, I like to read long form
             </div>
           </div>

@@ -1,6 +1,43 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const ppmori = localFont({
+  src: [
+    {
+      path: "../public/fonts/PPMori/PPMori-Extralight.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPMori/PPMori-ExtralightItalic.otf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/PPMori/PPMori-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPMori/PPMori-RegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/PPMori/PPMori-SemiBold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPMori/PPMori-SemiBoldItalic.otf",
+      weight: "600",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+  variable: "--font-ppmori",
+});
 
 export const metadata: Metadata = {
   title: "Honestly - Authentic Beauty Reviews",
@@ -15,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-ppmori ">{children}</body>
+      <body className={ppmori.className}>{children}</body>
     </html>
   );
 }

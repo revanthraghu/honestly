@@ -39,7 +39,7 @@ const Modal = ({ setIsMessageBoxOpen }: Props) => {
           boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
-        <div className="mt-[42px] mx-9 font-ppmori font-normal text-[13px] leading-[19.5px] tracking-wider ">
+        <div className="mt-[42px] mx-9  font-normal text-[13px] leading-[19.5px] tracking-wider ">
           <div>
             👋 Hey. We’re Vivek and Karishma We’re building Bumble for beauty &
             personal care needs ?
