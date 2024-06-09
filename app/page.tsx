@@ -10,7 +10,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-heroBg md:bg-cover ">
+    <main className="flex flex-col bg-[url('../public/background/bg.png')] md:bg-cover ">
       <Navbar />
       <Hero />
       <Section3 />

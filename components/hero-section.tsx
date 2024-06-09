@@ -12,6 +12,7 @@ import LowerIceberg from "./lowerIceberg";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
+  const [text, setText] = useState(0);
 
   const handleScroll = () => {
     if (window.scrollY > 1) {
@@ -25,8 +26,6 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = [
     "sunscreen",
     "lipstick",
@@ -37,38 +36,18 @@ export default function Hero() {
     "retinol",
     "moisturizer",
   ];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(150);
-  const period = 300;
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
+    setTimeout(() => {
+      if(text != 7) {
+        setText(text + 1)
+      } else {
+        setText(0)
+      }
+    }, 1000);
+  });
 
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(150);
-    }
-  };
 
   return (
     <>
@@ -77,13 +56,13 @@ export default function Hero() {
           <div className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>
             <span className="hidden italic md:block">
-              <span className="flex-wrap">{text}</span>
+              <span className="-webkit-flex-wrap">{toRotate[text]}</span>
             </span>
           </div>
           <div className="flex flex-col md:block">
             <span>
               <span className="italic md:hidden">
-                <span className="flex-wrap">{text}</span>
+                <span className="-webkit-flex-wrap">{toRotate[text]}</span>
                 &nbsp;
               </span>
               <span className="text-center md:hidden">by asking</span>
