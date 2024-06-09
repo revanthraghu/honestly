@@ -1,3 +1,4 @@
+"use client";
 import Vector from "@/public/messageHeader/Vector.svg";
 import Image from "next/image";
 import Link from "next/link";

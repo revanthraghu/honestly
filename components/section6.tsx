@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import vector from "@/public/icons/vector.svg";
 import arrowLeftSvg from "@/public/icons/arrow-left.svg";

@@ -12,9 +12,12 @@ const Modal = ({ setIsMessageBoxOpen }: Props) => {
   };
 
   return (
-    <div className="top-0 z-20 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4 backdrop-blur-sm">
+    <div
+      // className="top-0 z-20 rounded-[100px] mx-[4px] my-[8px] w-[96%] md:w-[520px] ml-2 md:ml-[24px] md:mt-4 backdrop-blur-sm"
+      className="top-0 z-20 rounded-[100px] mx-[5px] my-[10px] w-[97.5%] md:w-[520px] md:m-[25px]"
+    >
       <div
-        className="h-[60px] mt-[2px] md:mt-[8px] rounded-[100px] "
+        className="h-[60px] mt-[2px] md:mt-[8px] rounded-[100px]"
         style={{
           background: "#00A8FE",
           boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.15)",
@@ -33,7 +36,7 @@ const Modal = ({ setIsMessageBoxOpen }: Props) => {
       </div>
 
       <div
-        className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8"
+        className="mx-[1px] w-full flex flex-col md:h-[544px] rounded-[32px] h-auto mt-[7px] pb-8  backdrop-blur-md"
         style={{
           background: "rgba(255, 255, 255, 0.9)",
           boxShadow: "2px 2px 2px 0px rgba(0, 0, 0, 0.15)",

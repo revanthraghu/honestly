@@ -1,3 +1,4 @@
+"use client"
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import styles from "./style.module.scss";
@@ -36,7 +37,7 @@ export default function Paragraph({ paragraph }) {
                   src={helpfulImg}
                   width={61}
                   alt="helpful"
-                  style={{ marginTop: "-4px"}}
+                  style={{ marginTop: "-4px" }}
                   className="inline-block"
                 />
               </WordSectionE>
