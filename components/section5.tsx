@@ -348,7 +348,7 @@ export default function Section5() {
             poster="/video/poster.svg"
           >
             <source
-              src="https://drive.google.com/uc?id=1qWCng6SM0yL6mSj7IkXihnhLMd89hlwL"
+              src="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/intro-TTaNWNqmUITXfzxkju3Tlr4suOwUrp.MP4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

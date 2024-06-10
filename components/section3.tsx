@@ -1,5 +1,3 @@
-import helpfulImg from "@/public/background/helpful.svg";
-import Image from "next/image";
 import WordSectionA from "./opacity-controllers/WordSectionA";
 import WordSectionB from "./opacity-controllers/WordSectionB";
 import WordSectionC from "./opacity-controllers/WordSectionC";

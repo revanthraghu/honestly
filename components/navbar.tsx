@@ -103,24 +103,22 @@ const Navbar = () =>
                     orientation="vertical"
                     className="bg-[#00A8FE80] h-[23px] hidden md:block"
                   />
-                  <div className="md:hidden block relative cursor-pointer">
-                    <Image
-                      src={chatIcon}
-                      alt="chat"
-                      onClick={handleMobileMessageBox}
-                    />
+                  <div
+                    onClick={handleMobileMessageBox}
+                    className="md:hidden block relative cursor-pointer"
+                  >
+                    <Image src={chatIcon} alt="chat" />
                     {!viewed && (
                       <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
                         1
                       </Badge>
                     )}
                   </div>
-                  <div className="md:block hidden relative cursor-pointer">
-                    <Image
-                      src={chatIcon}
-                      alt="chat"
-                      onClick={handleMessageBox}
-                    />
+                  <div
+                    onClick={handleMessageBox}
+                    className="md:block hidden relative cursor-pointer"
+                  >
+                    <Image src={chatIcon} alt="chat" />
                     {!viewed && (
                       <Badge className="absolute -top-1 -right-1 p-0 pt-[1px] bg-red-600 text-white rounded-full w-[14px] h-[14px] flex justify-center items-center text-[8px] hover:bg-red-600">
                         1
