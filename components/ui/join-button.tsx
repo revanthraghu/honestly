@@ -17,7 +17,7 @@ export default function JoinButton({
       </Button>
       {showSpots && (
         <div className="text-[13px] leading-[13.65px] tracking-[5%] font-semibold text-center mt-[12px]">
-          993 spots left
+          983 spots left
         </div>
       )}
     </div>

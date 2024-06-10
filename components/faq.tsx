@@ -82,6 +82,7 @@ export default function Faq() {
           <div className="h-[302px] w-full border-black border-[0.5px]">
             <Link
               href="https://docsend.com/view/r6rvyffhbfnsghjn"
+              target="_blank"
               onClick={handleMobileFaqOne}
               className={`${
                 clickedMobileOne ? "bg-white" : ""
@@ -173,6 +174,7 @@ export default function Faq() {
             <div className="flex flex-row w-full">
               <Link
                 href="https://docsend.com/view/r6rvyffhbfnsghjn"
+                target="_blank"
                 className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white"
               >
                 <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">

@@ -131,6 +131,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
           </div>
           <Link
             href="https://docsend.com/view/r6rvyffhbfnsghjn"
+            target="_blank"
             onClick={handleMobileFaqSix}
             className={`${
               clickedMobileSix ? "bg-white" : ""
