@@ -9,7 +9,6 @@ import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
 import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg";
 import UpperIceberg from "./upperIceberg";
 import LowerIceberg from "./lowerIceberg";
-import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);

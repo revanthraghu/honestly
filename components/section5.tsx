@@ -4,8 +4,8 @@ import Image from "next/image";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
 import JoinButton from "./ui/join-button";
-import playing from "@/public/video/playing.svg"
-import paused from "@/public/video/paused.svg"
+import playing from "@/public/video/playing.svg";
+import paused from "@/public/video/paused.svg";
 
 export default function Section5() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -87,10 +87,10 @@ export default function Section5() {
   const handlePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
-        setIsPlayButton(true)
+        setIsPlayButton(true);
         videoRef.current.pause();
       } else {
-        setIsPlayButton(true)
+        setIsPlayButton(true);
         videoRef.current.play();
       }
       setIsPlaying(!isPlaying);
@@ -347,33 +347,34 @@ export default function Section5() {
             controls={false}
             poster="/video/poster.svg"
           >
-            <source src="https://drive.google.com/file/d/1qWCng6SM0yL6mSj7IkXihnhLMd89hlwL/view?usp=drive_link" type="video/mp4" />
+            <source
+              src="https://drive.google.com/uc?id=1qWCng6SM0yL6mSj7IkXihnhLMd89hlwL"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
-        {playbutton && <>
-          {isPlaying ?
-            <div
-              onClick={handlePlayPause}
-              className="mt-[500px] absolute">
-              <Image
-                className=" w-[42.25px] h-[42.25px]"
-                src={playing}
-                alt="open"
-              />
-            </div> :
-            <div
-              onClick={handlePlayPause}
-              className="mt-[500px] absolute">
-              <Image
-                className=" w-[42.25px] h-[42.25px]"
-                src={paused}
-                alt="open"
-              />
-            </div>}
-        </>}
-
-
+        {playbutton && (
+          <>
+            {isPlaying ? (
+              <div onClick={handlePlayPause} className="mt-[500px] absolute">
+                <Image
+                  className=" w-[42.25px] h-[42.25px]"
+                  src={playing}
+                  alt="open"
+                />
+              </div>
+            ) : (
+              <div onClick={handlePlayPause} className="mt-[500px] absolute">
+                <Image
+                  className=" w-[42.25px] h-[42.25px]"
+                  src={paused}
+                  alt="open"
+                />
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

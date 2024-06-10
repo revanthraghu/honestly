@@ -154,8 +154,8 @@ const config = {
         reviewMarquee2: "marquee2 80s linear infinite",
       },
       fontFamily: {
-        // ppmori: ["PPMori", "sans-serif"],
-        ppeditorialnew: ["PPEditorialNew", "serif"],
+        ppmori: ["var(--font-ppmori)"],
+        ppeditorialnew: ["var(--font-ppeditorialnew)"],
       },
       boxShadow: {
         custom: "1px 1px 2px 0px #00000099",

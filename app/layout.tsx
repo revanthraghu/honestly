@@ -39,6 +39,43 @@ const ppmori = localFont({
   variable: "--font-ppmori",
 });
 
+const ppeditorialnew = localFont({
+  src: [
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-Ultralight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-UltralightItalic.otf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-Ultrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/PPEditorialNew/PPEditorialNew-UltraboldItalic.otf",
+      weight: "800",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+  variable: "--font-ppeditorialnew",
+});
+
 export const metadata: Metadata = {
   title: "Find Best Skincare & Makeup by Asking Real People | Honestly",
   description:
@@ -52,7 +89,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ppmori.className}>{children}</body>
+      <body className={`${ppmori.className} ${ppeditorialnew.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
