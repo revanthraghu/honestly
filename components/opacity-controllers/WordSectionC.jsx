@@ -12,7 +12,7 @@ export default function Paragraph({ paragraph }) {
 
   const words = paragraph.split(" ");
   return (
-    <p ref={container} className={styles.paragraphRight}>
+    <h3 ref={container} className={styles.paragraphRight}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
@@ -22,7 +22,7 @@ export default function Paragraph({ paragraph }) {
           </WordSectionC>
         );
       })}
-    </p>
+    </h3>
   );
 }
 

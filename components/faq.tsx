@@ -80,7 +80,8 @@ export default function Faq() {
       <div className="w-full h-full p-8 mt-6 lg:hidden">
         <div className="flex flex-row">
           <div className="h-[302px] w-full border-black border-[0.5px]">
-            <div
+            <Link
+              href="https://docsend.com/view/r6rvyffhbfnsghjn"
               onClick={handleMobileFaqOne}
               className={`${
                 clickedMobileOne ? "bg-white" : ""
@@ -91,13 +92,13 @@ export default function Faq() {
                   Tell me more, I like to read long form
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="flex flex-row w-full">
               <div
                 onClick={handleMobileFaqTwo}
                 className={`${
                   clickedMobileTwo ? "bg-white" : ""
-                }  flex flex-col gap-2  w-1/2 h-[83px] border-black border-[0.5px]`}
+                }  flex flex-col gap-2  w-1/2 h-[83px] border-black border-[0.5px] cursor-pointer`}
               >
                 <div className="  font-semibold text-[13px] leading-[26px] px-6 py-[14px]">
                   <div className="font-thin">Work with us</div>
@@ -105,13 +106,13 @@ export default function Faq() {
                 </div>
               </div>
               <div
-                className={`flex flex-col gap-2 w-1/2 h-[83px] border-black border-[0.5px] ${
+                className={`flex flex-col gap-2 w-1/2 h-[83px] cursor-pointer border-black border-[0.5px] ${
                   clickedMobileThree ? "bg-white" : ""
                 }`}
               >
                 <div
                   onClick={handleMobileFaqThree}
-                  className={` font-semibold text-[13px]  leading-[26px] px-6 py-[14px]`}
+                  className={` font-semibold text-[13px]  leading-[26px] px-6 py-[14px] `}
                 >
                   <div className="font-thin">Questions?</div>
                   <div className="underline font-bold">k@honestly.club</div>
@@ -138,7 +139,7 @@ export default function Faq() {
               </Link>
               <div className="w-full h-[73px]">
                 <Link
-                  href={`https://www.linkedin.com/company/whathonestly/`}
+                  href={`https://www.linkedin.com/company/honestlyclub`}
                   target="_blank"
                   onClick={handleMobileFaqFive}
                   className={`${
@@ -170,17 +171,21 @@ export default function Faq() {
         <div className="flex flex-row  items-center ">
           <div className="h-[179px] w-full border-black border-[0.5px]">
             <div className="flex flex-row w-full">
-              <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
+              <Link
+                href="https://docsend.com/view/r6rvyffhbfnsghjn"
+                className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white"
+              >
                 <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
                   Tell me more, I like to read long form
                 </div>
-              </div>
+              </Link>
               <div
                 className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white"
                 onClick={handleDestopFaqThree}
               >
                 <div className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer">
-                  Questions? <span className="underline">k@honestly.club</span>
+                  Questions?&nbsp;
+                  <span className="underline">k@honestly.club</span>
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
@@ -205,13 +210,13 @@ export default function Faq() {
                   className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                   onClick={handleDestopFaqTwo}
                 >
-                  Work with us?{" "}
+                  Work with us?&nbsp;
                   <span className="underline">v@honestly.club</span>
                 </div>
               </div>
               <div className="w-1/3 h-[73px] border-black border-[0.5px] hover:bg-white">
                 <Link
-                  href={`https://www.linkedin.com/company/whathonestly/`}
+                  href={`https://www.linkedin.com/company/honestlyclub`}
                   target="_blank"
                   className=" font-semibold text-[13px] leading-[26px] flex items-center px-8 h-full cursor-pointer"
                 >

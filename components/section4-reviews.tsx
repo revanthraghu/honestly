@@ -66,12 +66,12 @@ export default function ReviewSection() {
   return (
     <div className="bg-white flex flex-col justify-center items-center h-full">
       <div className="h-[50px] md:h-[96px]" />
-      <div className="flex flex-col font-normal text-[36px] leading-[41.4px] px-[34px] md:px-0 md:max-w-[793px] font-ppeditorialnew text-center md:text-[52px] md:leading-[59.8px]">
+      <h2 className="flex flex-col font-normal text-[36px] leading-[41.4px] px-[34px] md:px-0 md:max-w-[793px] font-ppeditorialnew text-center md:text-[52px] md:leading-[59.8px]">
         <span>
           Get reviews from people <span className="italic">like you</span>,{" "}
         </span>
         <span>who have actually used these products</span>
-      </div>
+      </h2>
       <div className="hidden flex-row min-[850px]:flex md:mt-[67px] lg:mt-[84px] px-8">
         <Collage />
         <div className="md:w-[19px] lg:w-[109px]" />
@@ -101,17 +101,15 @@ export default function ReviewSection() {
           </div>
           <div className="ml-[14px] text-[14px] leading-[18.2px] tracking-[4%]">
             <div className="flex flex-col mt-[44px]">
-              <span className="font-semibold">Real people only</span>
+              <h2 className="font-semibold">Real people only</h2>
               <span>You can report any user who seems to be a brand rep</span>
             </div>
             <div className="flex flex-col mt-[44px] ">
-              <span className="font-semibold">AI powered matching engine</span>
+              <h2 className="font-semibold">AI powered matching engine</h2>
               <span>We’ll find you the best match</span>
             </div>
             <div className="flex flex-col mt-[44px] ">
-              <span className="font-semibold">
-                Match with 5-6 folks at a time
-              </span>
+              <h2 className="font-semibold">Match with 5-6 folks at a time</h2>
               <span>
                 Too many cooks spoil the broth (aka no more being overwhelmed
                 with too many reccos)
@@ -167,9 +165,9 @@ export default function ReviewSection() {
                     opacity: activeIndex === index ? 1 : 0,
                   }}
                 >
-                  <span className="font-semibold text-[13px] tracking-[4%] leading-[16.9px] whitespace-pre-wrap">
+                  <h2 className="font-semibold text-[13px] tracking-[4%] leading-[16.9px] whitespace-pre-wrap">
                     {content.title}
-                  </span>
+                  </h2>
                   <span className="font-normal text-[13px] tracking-[4%] leading-[16.9px] whitespace-pre-wrap">
                     {content.description}
                   </span>

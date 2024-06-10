@@ -40,9 +40,9 @@ const ppmori = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Honestly - Authentic Beauty Reviews",
+  title: "Find Best Skincare & Makeup by Asking Real People | Honestly",
   description:
-    "Honestly is the go-to platform for real, trustworthy beauty product reviews tailored to your unique skin tone, type, age, gender, and hair. No more wasting money on disappointing products - connect with people just like you who've actually tried them. Our community shares honest, nuanced feedback to help you make informed decisions. Skip the influencer hype and generic reviews with Honestly.",
+    "We match people who have the same skin tone, skin type, age, gender, weather—you get the gist. A bit like Bumble, but for beauty",
 };
 
 export default function RootLayout({

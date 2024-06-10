@@ -14,7 +14,7 @@ export default function Paragraph({ paragraph }) {
 
   const words = paragraph.split(" ");
   return (
-    <p ref={container} className={styles.paragraphD}>
+    <h4 ref={container} className={styles.paragraphD}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
@@ -55,7 +55,7 @@ export default function Paragraph({ paragraph }) {
           );
         }
       })}
-    </p>
+    </h4>
   );
 }
 

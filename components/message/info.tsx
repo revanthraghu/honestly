@@ -101,7 +101,7 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               </div>
             </Link>
             <Link
-              href={`https://www.linkedin.com/company/whathonestly/`}
+              href={`https://www.linkedin.com/company/honestlyclub`}
               target="_blank"
               onClick={handleMobileFaqFour}
               className={`${
@@ -129,16 +129,17 @@ export default function Info({ setIsMessageBoxOpen }: Props) {
               Join us to build India’s first skin-tone standard (Coming Soon)
             </div>
           </div>
-          <div
+          <Link
+            href="https://docsend.com/view/r6rvyffhbfnsghjn"
             onClick={handleMobileFaqSix}
             className={`${
               clickedMobileSix ? "bg-white" : ""
-            } w-full h-[73px] border-black border-[0.5px]`}
+            } w-full h-[73px] border-black border-[0.5px] flex items-center`}
           >
-            <div className=" font-semibold text-[13px] leading-[26px] px-8 py-[24px]">
+            <div className=" font-semibold text-[13px] leading-[26px] px-8">
               Tell me more, I like to read long form
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

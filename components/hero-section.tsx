@@ -9,6 +9,7 @@ import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
 import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg";
 import UpperIceberg from "./upperIceberg";
 import LowerIceberg from "./lowerIceberg";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,27 +40,25 @@ export default function Hero() {
 
   useEffect(() => {
     setTimeout(() => {
-      if(text != 7) {
-        setText(text + 1)
+      if (text != 7) {
+        setText(text + 1);
       } else {
-        setText(0)
+        setText(0);
       }
-    }, 1000);
+    }, 2000);
   });
-
-
 
   return (
     <>
       <div className="overflow-y-scroll no-scrollbar h-screen flex flex-col items-center justify-center mx-4 md:mx-auto z-10">
-        <div className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
-          <div className="flex flex-row">
+        <h1 className="flex flex-col items-center justify-center text-center font-ppeditorialnew font-normal text-[36px] leading-[41.4px] md:text-[44px] md:leading-[50.6px] md:max-w-[590px]">
+          <span className="flex flex-row">
             <span>Find your holy-grail&nbsp;</span>
             <span className="hidden italic md:block">
               <span className="-webkit-flex-wrap">{toRotate[text]}</span>
             </span>
-          </div>
-          <div className="flex flex-col md:block">
+          </span>
+          <span className="flex flex-col md:block">
             <span>
               <span className="italic md:hidden">
                 <span className="-webkit-flex-wrap">{toRotate[text]}</span>
@@ -72,19 +71,20 @@ export default function Hero() {
               by asking real people
             </span>
             <span className="text-center md:hidden">real people</span>
-          </div>
-        </div>
+          </span>
+        </h1>
         <div className="my-[28px] mx-[32px] text-center text-[13px] leading-[16.9px] tracking-[4%] md:text-[16px] md:leading-[20.8px] md:max-w-[520px] md:mx-auto">
           We match people who have the same skin tone, skin type, age, gender,
           weather—you get the gist. A bit like Bumble, but for beauty
         </div>
         <JoinButton>JOIN THE WAITLIST</JoinButton>
       </div>
-      <div className="h-[230px] flex justify-center">
+
+      <div className="absolute top-[100vh] left-1/2 transform -translate-x-1/2 flex justify-center">
         <Image
           src={iceberg1Mobile}
           alt="background-image-1"
-          className="animate-bounce md:hidden z-0 relative -mt-[100px] w-auto h-[277px]"
+          className="animate-bounce md:hidden z-0 relative -mt-[138.5px] w-auto h-[277px]"
           aria-hidden
           priority
           unoptimized
@@ -97,7 +97,7 @@ export default function Hero() {
         <Image
           src={iceberg1Web}
           alt="background-image-1"
-          className="animate-bounce hidden md:block -mt-[100px] w-auto h-[143px]"
+          className="animate-bounce hidden md:block -mt-[72px] w-auto h-[143px]"
           priority
           aria-hidden
           style={{
