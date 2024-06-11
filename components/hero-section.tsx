@@ -113,7 +113,7 @@ export default function Hero() {
           <Image
             src={icebergUnion}
             alt="background-image-2"
-            className=" absolute md:w-auto md:h-[935px]"
+            className="absolute w-auto h-[935px]"
           />
           <Image
             src={dashedSeparatorWeb}
