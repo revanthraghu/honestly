@@ -83,10 +83,9 @@ export default function Hero() {
         <Image
           src={iceberg1Mobile}
           alt="background-image-1"
-          className="animate-bounce md:hidden z-0 relative -mt-[138.5px] w-auto h-[277px]"
+          className="animate-bounce md:hidden z-0 relative -mt-[50%]"
           aria-hidden
           priority
-          unoptimized
           style={{
             transition: "opacity 0.5s ease-in-out",
             opacity: scrolled ? 0 : 1,
