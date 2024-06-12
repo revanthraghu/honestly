@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useRef, useEffect, useState, useCallback } from "react";
-import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
-import iceberg1Web from "@/public/background/iceberg1-web.svg";
+import iceberg1Mobile from "@/public/background/iceberg1-mobile.png";
+import iceberg1Web from "@/public/background/iceberg1-web.png";
 import JoinButton from "./ui/join-button";
-import icebergUnion from "@/public/background/icebergUnion.svg";
-import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
-import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg";
+import icebergUnion from "@/public/background/icebergUnion.png";
+import dashedSeparatorWeb from "@/public/background/dashedSeparator.png";
+import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.png";
 import UpperIceberg from "./upperIceberg";
 import LowerIceberg from "./lowerIceberg";
 

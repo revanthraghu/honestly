@@ -1,5 +1,5 @@
 "use client";
-import Vector from "@/public/messageHeader/Vector.svg";
+import Vector from "@/public/messageHeader/Vector.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import vector from "@/public/icons/vector.svg";
-import arrowLeftSvg from "@/public/icons/arrow-left.svg";
-import arrowRightSvg from "@/public/icons/arrow-right.svg";
-import messageIcon from "@/public/icons/message-icon.svg";
+import vector from "@/public/icons/vector.png";
+import arrowLeftSvg from "@/public/icons/arrow-left.png";
+import arrowRightSvg from "@/public/icons/arrow-right.png";
+import messageIcon from "@/public/icons/message-icon.png";
 import { useState, useEffect } from "react";
 import JoinButton from "./ui/join-button";
 import {

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from "react";
-import darkBg from "@/public/iceberg/dark.svg";
+import darkBg from "@/public/iceberg/dark.png";
 export default function UpperIceberg() {
   // One
   const oneRef = useRef<HTMLDivElement>(null);

@@ -28,11 +28,11 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        darkEffect: "url('/iceberg/dark.svg')",
-        fadeEffect: "url('/iceberg/fade.svg')",
-        heroBg: "url('/background/heroBG.svg')",
+        darkEffect: "url('/iceberg/dark.png')",
+        fadeEffect: "url('/iceberg/fade.png')",
+        heroBg: "url('/background/heroBG.png')",
         howItWorksBg: "url('/background/howItWorks.svg')",
-        messageIcon: "url('/icons/message-icon.svg)",
+        messageIcon: "url('/icons/message-icon.png)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -82,25 +82,25 @@ const config = {
       keyframes: {
         color: {
           "0%": {
-            backgroundImage: "url('/iceberg/fade.svg')",
+            backgroundImage: "url('/iceberg/fade.png')",
             color: "#00A8FE",
             width: "330px",
             opacity: "50%",
           },
           "30%": {
-            backgroundImage: "url('/iceberg/fade.svg')",
+            backgroundImage: "url('/iceberg/fade.png')",
             color: "#00A8FE",
             width: "330px",
             opacity: "100%",
           },
           "60%": {
-            backgroundImage: "url('/iceberg/fade.svg')",
+            backgroundImage: "url('/iceberg/fade.png')",
             color: "#00A8FE",
             width: "330px",
             opacity: "100%",
           },
           "100%": {
-            backgroundImage: "url('/iceberg/dark.svg')",
+            backgroundImage: "url('/iceberg/dark.png')",
             color: "#122B2E",
             width: "330px",
             opacity: "100%",

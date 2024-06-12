@@ -1,4 +1,4 @@
-import Vector from "@/public/messageHeader/Vector.svg";
+import Vector from "@/public/messageHeader/Vector.png";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";

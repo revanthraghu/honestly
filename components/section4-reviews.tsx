@@ -2,10 +2,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useScroll } from "framer-motion";
 import Image from "next/image";
-import review1 from "@/public/reviews/1.svg";
-import review2 from "@/public/reviews/2.svg";
-import review3 from "@/public/reviews/3.svg";
-import review4 from "@/public/reviews/4.svg";
+import review1 from "@/public/reviews/1.png";
+import review2 from "@/public/reviews/2.png";
+import review3 from "@/public/reviews/3.png";
+import review4 from "@/public/reviews/4.png";
 import reviewGif1 from "@/public/reviews/gifs/1.webp";
 import reviewGif2 from "@/public/reviews/gifs/2.webp";
 import reviewGif3 from "@/public/reviews/gifs/3.webp";
@@ -13,8 +13,8 @@ import reviewGif4 from "@/public/reviews/gifs/4.webp";
 import reviewGif5 from "@/public/reviews/gifs/5.webp";
 import reviewGif6 from "@/public/reviews/gifs/6.webp";
 import reviewGif7 from "@/public/reviews/gifs/7.webp";
-import logoMark from "@/public/reviews/logoMark.svg";
-import promise from "@/public/reviews/promise.svg";
+import logoMark from "@/public/reviews/logoMark.png";
+import promise from "@/public/reviews/promise.png";
 import JoinButton from "./ui/join-button";
 
 import {

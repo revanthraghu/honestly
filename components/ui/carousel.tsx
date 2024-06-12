@@ -5,8 +5,8 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import arrowLeftSvg from "@/public/icons/arrow-left.svg";
-import arrowRightSvg from "@/public/icons/arrow-right.svg";
+import arrowLeftSvg from "@/public/icons/arrow-left.png";
+import arrowRightSvg from "@/public/icons/arrow-right.png";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";

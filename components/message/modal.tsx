@@ -1,4 +1,4 @@
-import Cross from "@/public/messageHeader/Frame.svg";
+import Cross from "@/public/messageHeader/Frame.png";
 import Image from "next/image";
 import JoinButton from "../ui/join-button";
 

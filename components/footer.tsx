@@ -1,5 +1,5 @@
-import logoWebImg from "@/public/footer/logo-web.svg";
-import logoMobileImg from "@/public/footer/logo-mobile.svg";
+import logoWebImg from "@/public/footer/logo-web.png";
+import logoMobileImg from "@/public/footer/logo-mobile.png";
 import Image from "next/image";
 
 export default function Footer() {

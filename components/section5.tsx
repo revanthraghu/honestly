@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import logoMobileImg from "@/public/navbar/logo-mobile.svg";
+import logoMobileImg from "@/public/navbar/logo-mobile.png";
 import catSvg from "@/public/working/cat.gif";
 import JoinButton from "./ui/join-button";
-import playing from "@/public/video/playing.svg";
-import paused from "@/public/video/paused.svg";
+import playing from "@/public/video/playing.png";
+import paused from "@/public/video/paused.png";
 
 export default function Section5() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -345,7 +345,7 @@ export default function Section5() {
             ref={videoRef}
             className="h-[613px] rounded-[28px]"
             controls={false}
-            poster="/video/poster.svg"
+            poster="/video/poster.png"
           >
             <source
               src="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/intro-TTaNWNqmUITXfzxkju3Tlr4suOwUrp.MP4"

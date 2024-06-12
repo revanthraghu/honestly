@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import logoWebImg from "@/public/navbar/logo-web.svg";
-import logoMobileImg from "@/public/navbar/logo-mobile.svg";
-import chatIcon from "@/public/navbar/chatIcon.svg";
+import logoWebImg from "@/public/navbar/logo-web.png";
+import logoMobileImg from "@/public/navbar/logo-mobile.png";
+import chatIcon from "@/public/navbar/chatIcon.png";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "./ui/badge";
