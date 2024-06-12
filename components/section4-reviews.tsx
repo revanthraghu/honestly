@@ -2,17 +2,17 @@
 import { useState, useEffect, useRef } from "react";
 import { useScroll } from "framer-motion";
 import Image from "next/image";
-// import review1 from "@/public/reviews/1.svg";
-// import review2 from "@/public/reviews/2.svg";
-// import review3 from "@/public/reviews/3.svg";
-// import review4 from "@/public/reviews/4.svg";
-// import reviewGif1 from "@/public/reviews/gifs/1.webp";
-// import reviewGif2 from "@/public/reviews/gifs/2.webp";
-// import reviewGif3 from "@/public/reviews/gifs/3.webp";
-// import reviewGif4 from "@/public/reviews/gifs/4.webp";
-// import reviewGif5 from "@/public/reviews/gifs/5.webp";
-// import reviewGif6 from "@/public/reviews/gifs/6.webp";
-// import reviewGif7 from "@/public/reviews/gifs/7.webp";
+import review1 from "@/public/reviews/1.svg";
+import review2 from "@/public/reviews/2.svg";
+import review3 from "@/public/reviews/3.svg";
+import review4 from "@/public/reviews/4.svg";
+import reviewGif1 from "@/public/reviews/gifs/1.webp";
+import reviewGif2 from "@/public/reviews/gifs/2.webp";
+import reviewGif3 from "@/public/reviews/gifs/3.webp";
+import reviewGif4 from "@/public/reviews/gifs/4.webp";
+import reviewGif5 from "@/public/reviews/gifs/5.webp";
+import reviewGif6 from "@/public/reviews/gifs/6.webp";
+import reviewGif7 from "@/public/reviews/gifs/7.webp";
 import logoMark from "@/public/reviews/logoMark.svg";
 import promise from "@/public/reviews/promise.svg";
 import JoinButton from "./ui/join-button";
@@ -24,48 +24,22 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const contents = [
-  {
-    title: "Real people only",
-    description: "You can report any user who seems to be a brand rep",
-  },
-  {
-    title: "AI powered matching engine",
-    description: "We’ll find you the best match",
-  },
-  {
-    title: "Match with 5-6 folks at a time",
-    description:
-      "Too many cooks spoil the broth (aka no more being overwhelmed with too many reccos)",
-  },
-];
-
-const ReviewMedia = {
-  review1:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/1.svg",
-  review2:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/2.svg",
-  review3:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/3.svg",
-  review4:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/4.svg",
-  reviewGif1:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/1.webp",
-  reviewGif2:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/2.webp",
-  reviewGif3:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/3.webp",
-  reviewGif4:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/4.webp",
-  reviewGif5:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/5.webp",
-  reviewGif6:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/6.webp",
-  reviewGif7:
-    "https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/reviews/gifs/7.webp",
-};
-
 export default function ReviewSection() {
+  const contents = [
+    {
+      title: "Real people only",
+      description: "You can report any user who seems to be a brand rep",
+    },
+    {
+      title: "AI powered matching engine",
+      description: "We’ll find you the best match",
+    },
+    {
+      title: "Match with 5-6 folks at a time",
+      description:
+        "Too many cooks spoil the broth (aka no more being overwhelmed with too many reccos)",
+    },
+  ];
   const container = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const { scrollYProgress } = useScroll({
@@ -219,24 +193,17 @@ export function Collage() {
         className="flex justify-center items-center col-span-2 row-span-1 bg-[#E9E5DE] w-[171px] h-[100px]"
         style={hexagonStyle}
       >
-        <Image
-          src={ReviewMedia.review1}
-          alt="review1"
-          width={166}
-          height={90}
-          quality={100}
-          unoptimized
-        />
+        <Image src={review1} alt="review1" quality={100} unoptimized />
       </div>
       <div
         className="col-span-1 row-span-2 flex justify-center items-center bg-[#E9E5DE] -ml-[14px] p-[6px] w-[91px] h-[165px]"
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif1}
+          src={reviewGif1}
           alt="reviewGif1"
           quality={100}
-          width={79}
+          // width={79}
           height={153}
           unoptimized
         />
@@ -246,10 +213,10 @@ export function Collage() {
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif2}
+          src={reviewGif2}
           alt="reviewGif2"
           quality={100}
-          width={87}
+          // width={87}
           height={153}
           unoptimized
         />
@@ -259,11 +226,11 @@ export function Collage() {
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif3}
+          src={reviewGif3}
           alt="reviewGif3"
           quality={100}
           width={88}
-          height={154}
+          // height={154}
           unoptimized
         />
       </div>
@@ -273,10 +240,10 @@ export function Collage() {
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif4}
+          src={reviewGif4}
           alt="reviewGif4"
           quality={100}
-          width={82}
+          // width={82}
           height={154}
           unoptimized
         />
@@ -286,11 +253,11 @@ export function Collage() {
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif5}
+          src={reviewGif5}
           alt="reviewGif5"
           quality={100}
           width={79}
-          height={142}
+          // height={142}
           unoptimized
         />
       </div>
@@ -298,24 +265,17 @@ export function Collage() {
         className="col-start-3 col-end-5 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE] -mt-[14px] ml-[14px] w-[175px] h-[170px]"
         style={hexagonStyle}
       >
-        <Image
-          src={ReviewMedia.review2}
-          alt="review2"
-          width={176}
-          height={170}
-          quality={100}
-          unoptimized
-        />
+        <Image src={review2} alt="review2" quality={100} unoptimized />
       </div>
       <div
         className="col-start-5 col-end-6 row-start-3 row-end-5 flex justify-center items-center bg-[#E9E5DE]  ml-1 w-[94px] h-[160px]"
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif6}
+          src={reviewGif6}
           alt="reviewGif6"
           quality={100}
-          width={82}
+          // width={82}
           height={148}
           unoptimized
         />
@@ -326,11 +286,11 @@ export function Collage() {
         style={hexagonStyle}
       >
         <Image
-          src={ReviewMedia.reviewGif7}
+          src={reviewGif7}
           alt="reviewGif7"
           quality={100}
           width={93}
-          height={158}
+          // height={158}
           unoptimized
         />
       </div>
@@ -339,28 +299,14 @@ export function Collage() {
         className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] -mt-[72px] ml-[28px] w-[174px] h-[88px]"
         style={hexagonStyle}
       >
-        <Image
-          src={ReviewMedia.review3}
-          alt="review3"
-          width={174}
-          height={78}
-          quality={100}
-          unoptimized
-        />
+        <Image src={review3} alt="review3" quality={100} unoptimized />
       </div>
 
       <div
         className="col-span-2 row-span-1 flex justify-center items-center bg-[#E9E5DE] -mt-[60px] ml-6 w-[173px] h-[77px]"
         style={hexagonStyle}
       >
-        <Image
-          src={ReviewMedia.review4}
-          alt="review4"
-          width={168}
-          height={65}
-          quality={100}
-          unoptimized
-        />
+        <Image src={review4} alt="review4" quality={100} unoptimized />
       </div>
     </div>
   );
@@ -388,11 +334,11 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.review2}
+              src={review2}
               alt="review2"
               quality={100}
               width={295}
-              height={285}
+              // height={285}
               unoptimized
             />
           </div>
@@ -404,11 +350,11 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif4}
+              src={reviewGif4}
               alt="reviewGif4"
               quality={100}
               width={168}
-              height={309}
+              // height={309}
               unoptimized
             />
           </div>
@@ -420,11 +366,11 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif7}
+              src={reviewGif7}
               alt="reviewGif7"
               quality={100}
               width={189}
-              height={322}
+              // height={322}
               unoptimized
             />
           </div>
@@ -433,21 +379,21 @@ export function Slideshow() {
         <CarouselItem>
           <div className="flex min-w-[294px] min-h-[322px]  mx-2 flex-col gap-2 justify-center items-center ">
             <Image
-              src={ReviewMedia.review1}
+              src={review1}
               alt="review1"
               quality={100}
               width={286}
-              height={158}
+              // height={158}
               unoptimized
               // className="bg-[#E9E5DE]"
               style={hexagonStyle}
             />
             <Image
-              src={ReviewMedia.review3}
+              src={review3}
               alt="review3"
               quality={100}
               width={294}
-              height={138}
+              // height={138}
               unoptimized
               style={hexagonStyle}
             />
@@ -460,11 +406,11 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif5}
+              src={reviewGif5}
               alt="reviewGif5"
               quality={100}
               width={160}
-              height={287}
+              // height={287}
               unoptimized
             />
           </div>
@@ -476,7 +422,7 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif6}
+              src={reviewGif6}
               alt="reviewGif6"
               quality={100}
               width={169}
@@ -492,7 +438,7 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif1}
+              src={reviewGif1}
               alt="reviewGif1"
               quality={100}
               width={162}
@@ -508,11 +454,11 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif3}
+              src={reviewGif3}
               alt="reviewGif3"
               quality={100}
               width={177}
-              height={312}
+              // height={312}
               unoptimized
             />
           </div>
@@ -524,7 +470,7 @@ export function Slideshow() {
             style={hexagonStyle}
           >
             <Image
-              src={ReviewMedia.reviewGif2}
+              src={reviewGif2}
               alt="reviewGif2"
               quality={100}
               width={174}

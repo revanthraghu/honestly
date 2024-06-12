@@ -16,9 +16,6 @@ export default function Home() {
       <div className="relative flex flex-col">
         <Image
           src={bgImg}
-          // src="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/background/bg.png"
-          // width={1280}
-          // height={2241}
           alt="background-image"
           className="absolute bg-cover bg-center w-full h-full -z-50"
           priority

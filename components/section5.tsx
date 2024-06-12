@@ -345,11 +345,10 @@ export default function Section5() {
             ref={videoRef}
             className="h-[613px] rounded-[28px]"
             controls={false}
-            // poster="/video/poster.svg"
-            poster="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/video/poster-whHyqBUv4MY9XGeHiJl2OIqzik0heZ.svg"
+            poster="/video/poster.svg"
           >
             <source
-              src="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/video/intro.MP4"
+              src="https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/intro-TTaNWNqmUITXfzxkju3Tlr4suOwUrp.MP4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
