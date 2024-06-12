@@ -222,8 +222,8 @@ export function Collage() {
         <Image
           src={ReviewMedia.review1}
           alt="review1"
-          width={158.58}
-          height={87.67}
+          width={166}
+          height={90}
           quality={100}
           unoptimized
         />
@@ -301,8 +301,8 @@ export function Collage() {
         <Image
           src={ReviewMedia.review2}
           alt="review2"
-          width={163.2}
-          height={157.98}
+          width={176}
+          height={170}
           quality={100}
           unoptimized
         />
@@ -342,8 +342,8 @@ export function Collage() {
         <Image
           src={ReviewMedia.review3}
           alt="review3"
-          width={162.45}
-          height={76.07}
+          width={174}
+          height={78}
           quality={100}
           unoptimized
         />
@@ -356,7 +356,7 @@ export function Collage() {
         <Image
           src={ReviewMedia.review4}
           alt="review4"
-          width={161}
+          width={168}
           height={65}
           quality={100}
           unoptimized
