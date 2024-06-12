@@ -31,7 +31,9 @@ const config = {
         darkEffect: "url('/iceberg/dark.svg')",
         fadeEffect: "url('/iceberg/fade.svg')",
         heroBg: "url('/background/heroBG.svg')",
-        howItWorksBg: "url('/background/howItWorks.svg')",
+        // howItWorksBg: "url('/background/howItWorks.svg')",
+        howItWorksBg:
+          "url('https://7uwkdamk4div2qlc.public.blob.vercel-storage.com/public/background/howItWorks.svg')",
         messageIcon: "url('/icons/message-icon.svg)",
       },
       colors: {
