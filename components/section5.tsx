@@ -354,7 +354,7 @@ export default function Section5() {
             Your browser does not support the video tag.
           </video>
         </div>
-        {playbutton && (
+        {/* {playbutton && (
           <>
             {isPlaying ? (
               <div onClick={handlePlayPause} className="mt-[500px] absolute">
@@ -374,7 +374,7 @@ export default function Section5() {
               </div>
             )}
           </>
-        )}
+        )} */}
       </div>
     </div>
   );
