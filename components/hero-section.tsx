@@ -1,14 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 // import iceberg1Mobile from "@/public/background/iceberg1-mobile.svg";
 // import iceberg1Web from "@/public/background/iceberg1-web.svg";
-import JoinButton from "./ui/join-button";
-import icebergUnion from "@/public/background/icebergUnion.svg";
-import dashedSeparatorWeb from "@/public/background/dashedSeparator.svg";
-import dashedSeparatorMobile from "@/public/background/dashedSeparatorMobile.svg";
-import UpperIceberg from "./upperIceberg";
+// import icebergUnion from "@/public/background/icebergUnion.svg";
 import LowerIceberg from "./lowerIceberg";
+import JoinButton from "./ui/join-button";
+import UpperIceberg from "./upperIceberg";
 
 const toRotate = ["sunscreen", "lipstick", "lip balm", "cleanser", "concealer", "foundation", "retinol", "moisturizer"];
 
@@ -84,44 +82,19 @@ export default function Hero() {
             </div>
 
             <div className='absolute top-[100vh] left-1/2 transform -translate-x-1/2 flex justify-center'>
-                {/* <Image
-                    src={iceberg1Mobile}
-                    alt=''
-                    className='animate-bounce md:hidden z-0 relative -mt-[50%]'
-                    aria-hidden
-                    style={{
-                        transition: "opacity 0.5s ease-in-out",
-                        opacity: scrolled ? 0 : 1
-                    }}
-                    priority
-                />
-
                 <Image
-                    src={iceberg1Web}
+                    src={"/background/iceberg1-mobile.png"}
+                    sizes='(max-width: 768px) 345px, 179px'
                     alt=''
-                    className='animate-bounce hidden md:block -mt-[72px] w-auto h-[143px]'
-                    aria-hidden
+                    priority
+                    height={165}
+                    width={207}
                     style={{
                         transition: "opacity 0.5s ease-in-out",
                         opacity: scrolled ? 0 : 1
                     }}
-                    priority
-                /> */}
-                <picture>
-                    <source srcSet={"background/iceberg1-web.svg"} media='(min-width: 768px)' />
-                    <img
-                        src={"/background/iceberg1-mobile.svg"}
-                        alt=''
-                        loading='eager'
-                        height={165}
-                        width={207}
-                        style={{
-                            transition: "opacity 0.5s ease-in-out",
-                            opacity: scrolled ? 0 : 1
-                        }}
-                        className='animate-bounce -mt-[50%] -mt-md-[72px] w-md-auto h-md-[143px]'
-                    />
-                </picture>
+                    className='animate-bounce -mt-[50%] -mt-md-[72px] w-md-auto h-md-[143px]'
+                />
             </div>
             {/* )} */}
 
@@ -129,9 +102,11 @@ export default function Hero() {
 
             <div>
                 <div className='flex flex-col items-center mb-[71px] '>
-                    <Image src={icebergUnion} alt='background-image-2' className='absolute w-auto h-[935px]' />
-                    <Image src={dashedSeparatorWeb} alt='dashed-separator' className='absolute mt-[277px] hidden md:block' />
-                    <Image src={dashedSeparatorMobile} alt='dashed-separator' className='absolute mt-[277px] md:hidden' />
+                    <Image src={"/background/icebergUnion.svg"} alt='background-image-2' width={348} height={935} className='absolute w-auto h-[935px]' />
+                    <picture className='absolute'>
+                        <source srcSet='/background/dashedSeparator.svg' media='(min-width: 768px)' />
+                        <img src='/background/dashedSeparatorMobile.svg' alt='' className='mt-[277px] w-auto' width={380} height={2} />
+                    </picture>
                     <div className='flex flex-col justify-center items-center relative z-10'>
                         <div
                             id='iceberg-tip'

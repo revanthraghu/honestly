@@ -1,15 +1,14 @@
-import Hero from "@/components/hero-section";
-import Section3 from "@/components/section3";
-import Ticker from "@/components/ticker";
-import Navbar from "@/components/navbar";
-import ReviewSection from "@/components/section4-reviews";
-import Section6 from "@/components/section6";
-import Section5 from "@/components/section5";
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
-import Image from "next/image";
+import Hero from "@/components/hero-section";
+import Navbar from "@/components/navbar";
+import Section3 from "@/components/section3";
+import ReviewSection from "@/components/section4-reviews";
+import Section5 from "@/components/section5";
+import Section6 from "@/components/section6";
+import Ticker from "@/components/ticker";
 import bgImg from "@/public/background/bg.webp";
-import { Suspense } from "react";
+import Image from "next/image";
 
 export default function Home() {
     return (
