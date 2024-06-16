@@ -6,7 +6,7 @@ import arrowLeftSvg from "@/public/icons/arrow-left.svg";
 import arrowRightSvg from "@/public/icons/arrow-right.svg";
 import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
 import Image from "next/image";
-import * as React from "react";
+import React from "react";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
