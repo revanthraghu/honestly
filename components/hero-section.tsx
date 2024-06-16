@@ -110,7 +110,7 @@ export default function Hero() {
                     <div className='flex flex-col justify-center items-center relative z-10'>
                         <div
                             id='iceberg-tip'
-                            className='w-[210px] md:w-[240px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center'
+                            className='w-[210px] md:w-[260px] h-[64px] md:h-[74px] font-ppeditorialnew text-[28px] md:text-[32px] leading-[32.2px] md:leading-[36.8px] text-center'
                         >
                             How <span className='italic'>brands</span> think we buy products
                         </div>
