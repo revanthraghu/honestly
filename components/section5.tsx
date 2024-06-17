@@ -4,6 +4,7 @@ import catSvg from "@/public/working/cat.gif";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import JoinButton from "./ui/join-button";
+import { cn } from "@/lib/utils";
 
 export default function Section5() {
     const targetRef = useRef<HTMLDivElement>(null);
@@ -286,13 +287,19 @@ export default function Section5() {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen'>
-                <div>
-                    <video preload='none' onClick={handlePlayPause} ref={videoRef} className='h-[613px] rounded-[28px]' controls={false} poster='/video/poster.webp'>
-                        <source src='video/honestly_intro_video.mp4' type='video/mp4' />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div className='flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen relative'>
+                <Image
+                    className={cn("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2", isPlaying ? "hidden" : "block", "rounded-[28px]")}
+                    alt='video poster'
+                    src={"/video/poster.webp"}
+                    height={613}
+                    width={345}
+                />
+                <video style={{ height: "613px", width: "345px" }} preload='none' onClick={handlePlayPause} ref={videoRef} className='rounded-[28px]' controls={false}>
+                    <source src='video/honestly_intro_video.mp4' type='video/mp4' />
+                    Your browser does not support the video tag.
+                </video>
+
                 {/* {playbutton && (
           <>
             {isPlaying ? (
