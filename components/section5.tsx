@@ -289,7 +289,7 @@ export default function Section5() {
             </div>
             <div className='flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen relative'>
                 <Image
-                    className={cn("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2", isPlaying ? "hidden" : "block", "rounded-[28px]")}
+                    className={cn("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[28px] pointer-events-none", isPlaying ? "hidden" : "block")}
                     alt='video poster'
                     src={"/video/poster.webp"}
                     height={613}
