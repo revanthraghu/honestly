@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import logoMobileImg from "@/public/navbar/logo-mobile.svg";
 import catSvg from "@/public/working/cat.gif";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import JoinButton from "./ui/join-button";
-import playing from "@/public/video/playing.svg";
-import paused from "@/public/video/paused.svg";
+import { cn } from "@/lib/utils";
 
 export default function Section5() {
     const targetRef = useRef<HTMLDivElement>(null);
@@ -96,7 +95,14 @@ export default function Section5() {
     return (
         <div className='scroll flex md:flex-row flex-col md:w-full h-[1440px] md:h-screen' id='howitworks'>
             <div className='flex justify-center items-center h-[720px] md:h-screen relative bg-cover md:w-1/2 p-8'>
-                <Image layout='fill' className='object-center object-cover pointer-events-none' src={"/background/howItWorks.webp"} alt={""} />
+                <Image
+                    fill={true}
+                    className='object-center object-cover pointer-events-none'
+                    src={"/background/howItWorks.webp"}
+                    sizes={"(min-width: 768px) 50vw, 100vw"}
+                    alt={""}
+                    quality={85}
+                />
                 <div
                     className='flex md:flex-col flex-row w-[344.81px] h-[613px]  rounded-[28px] p-4 relative'
                     style={{
@@ -281,13 +287,19 @@ export default function Section5() {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen'>
-                <div>
-                    <video onClick={handlePlayPause} ref={videoRef} className='h-[613px] rounded-[28px]' controls={false} poster='/video/poster.webp'>
-                        <source src='video/honestly_intro_video.mp4' type='video/mp4' />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div className='flex justify-center items-center bg-[#F00832] bg-cover md:w-1/2 h-[720px] md:h-screen relative'>
+                <Image
+                    className={cn("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[28px] pointer-events-none", isPlaying ? "hidden" : "block")}
+                    alt='video poster'
+                    src={"/video/poster.webp"}
+                    height={613}
+                    width={345}
+                />
+                <video style={{ height: "613px", width: "345px" }} preload='none' onClick={handlePlayPause} ref={videoRef} className='rounded-[28px]' controls={false}>
+                    <source src='video/honestly_intro_video.mp4' type='video/mp4' />
+                    Your browser does not support the video tag.
+                </video>
+
                 {/* {playbutton && (
           <>
             {isPlaying ? (

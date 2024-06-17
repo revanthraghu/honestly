@@ -76,18 +76,18 @@ const config = {
             keyframes: {
                 color: {
                     "0%": {
+                        backgroundImage: "none",
+                        color: "#00A8FE",
+                        width: "330px",
+                        opacity: "30%"
+                    },
+                    "25%": {
                         backgroundImage: "url('/iceberg/fade.svg')",
                         color: "#00A8FE",
                         width: "330px",
                         opacity: "50%"
                     },
-                    "30%": {
-                        backgroundImage: "url('/iceberg/fade.svg')",
-                        color: "#00A8FE",
-                        width: "330px",
-                        opacity: "100%"
-                    },
-                    "60%": {
+                    "75%": {
                         backgroundImage: "url('/iceberg/fade.svg')",
                         color: "#00A8FE",
                         width: "330px",
